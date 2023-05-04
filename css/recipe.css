@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 2vh;
+    gap: 30px;
+
+    box-sizing: border-box;
+}
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    text-align: start;
+    background-color: #ccc8bd;
+    color: white;
+    padding: 2vh;
+
+}
+
+#info_wrapper {
+    padding: 10px;
+    font-size: 18px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 20px;
+    text-align: start;
+}
+
+
+#amount {
+    font-weight: bold;
+}
