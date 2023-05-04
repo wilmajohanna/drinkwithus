@@ -1,0 +1,13 @@
+#popupbox {
+    background-color: turquoise;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 70vh;
+}
+
+/* #user {}
+
+#pass {} */
