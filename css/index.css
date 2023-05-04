@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "Alumni Sans";
+    src: url(./fonts/AlumniSans-VariableFont_wght.ttf);
+}
+
+* {
+    font-family: Alumni Sans;
+}
