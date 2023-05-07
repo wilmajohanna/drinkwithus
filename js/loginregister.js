@@ -5,7 +5,3 @@ const cover_background = document.getElementById("cover");
 const register_box = document.getElementById("register");
 const login_box = document.getElementById("login");
 
-/* function popup_box(event) {
-
-
-} */

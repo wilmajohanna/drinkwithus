@@ -1,0 +1,30 @@
+async function innerhtml_fetch() {
+try {
+const resource = await (await fetch("../JSON/drinksData.json")).json();
+const pic_container = document.getElementById("pics");
+
+for (let i = 0; i < 3; i++) { pic_container.innerHTML +=` <div
+    style="background: url(${resource[0].image}); background-size: cover; background-position: center;" id="summer"
+    dataset-theme="bubbles">
+    <p>Summer Cocktails</p>
+    </div>
+    <div id="bubbles">
+        <p> Bubbles Cocktails</p>
+    </div>
+    <div id="retro">
+        <p> Retro Cocktails</p>
+    </div>
+    <div id="lessismore">
+        <p>Less is More Cocktails</p>
+    </div>
+    <div id="Punches">
+        <p> Cocktails</p>
+    </div>
+    `
+    }
+    } catch (err) {
+    console.log(err);
+    }
+    }
+
+    innerhtml_fetch()
