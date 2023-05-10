@@ -43,6 +43,7 @@ function x_button(event) {
     cover_background.querySelectorAll("*").forEach(dom => dom.style.visibility = "hidden");
 };
 
+close_button.addEventListener("click", x_button);
 
 
 function css_switch(event) {
