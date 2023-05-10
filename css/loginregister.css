@@ -54,6 +54,17 @@
     color: white;
 }
 
+#close_button:hover {
+    background-color: rgba(253, 201, 201);
+}
+
+#login_or_register_button:hover {
+    background-color: rgba(253, 201, 201);
+}
+
+#register_link:hover {
+    background-color: rgba(253, 201, 201);
+}
 
 .registration {
     /* display: grid;
