@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            const recipe = data[1]; //Använder index (recipe) data (drinksData.js);
+            const recipe = data[2]; //Använder index (recipe) data (drinksData.js);
 
             // hämtar DOM elements
             const drinkName = document.getElementById('drink_name');
