@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Sätter värde för DOM elements
             drinkName.textContent = recipe.name;
-            rating.innerHTML = '&starf;&starf;&starf;&starf;';
+            rating.innerHTML = '&starf;&starf;&starf;&starf;'; // Stjärnorna som är statiska för tillfället, för synes skull
             drinkInfo.textContent = recipe.description;
             drinkImage.src = recipe.image;
 
