@@ -10,9 +10,3 @@ close_button.addEventListener("click", (event) => { // Event Listenern till stä
     cover_background.querySelectorAll("*").forEach(dom => dom.style.visibility = "hidden");
 }); */
 "use strict"
-
-document.querySelector("#register_link").addEventListener("click", css_switch);
-
-document.querySelector("#login_home").addEventListener("click", register_or_login_box);
-
-document.querySelector("#close_button").addEventListener("click", x_button);
