@@ -53,10 +53,13 @@ function css_switch(event) {
     let login_box = document.getElementById("login");
 
     if (register_link.textContent === "No account? Register here") {
-        login_box.style.visibility = "hidden";
-        register_box.style.visibility = "visible";
-        register_link.textContent = "Already have an account? Login";
-        login_or_register_button.textContent = "Register";
+        register_box.style.visibility = "hidden";
+        login_box.style.visibility = "visible";
+        register_link.textContent = "No account? Register";
+        login_or_register_button.textContent = "Login";
+        document.querySelectorAll(".registration").forEach(reg_input => reg_input.style.visibility = "hidden");
+        document.querySelectorAll(".logination").forEach(log_input => log_input.style.visibility = "visible");
+
 
         let register_element = document.querySelectorAll(".registration")
         register_element.forEach(show_register);
@@ -72,12 +75,10 @@ function css_switch(event) {
         */
         document.querySelectorAll(".logination").forEach(log_input => log_input.style.visibility = "hidden");
     } else {
-        register_box.style.visibility = "hidden";
-        login_box.style.visibility = "visible";
-        register_link.textContent = "No account? Register";
-        login_or_register_button.textContent = "Login";
-        document.querySelectorAll(".registration").forEach(reg_input => reg_input.style.visibility = "hidden");
-        document.querySelectorAll(".logination").forEach(log_input => log_input.style.visibility = "visible");
+        login_box.style.visibility = "hidden";
+        register_box.style.visibility = "visible";
+        register_link.textContent = "Already have an account? Login";
+        login_or_register_button.textContent = "Register";
 
     }
 }
