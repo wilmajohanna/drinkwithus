@@ -1,3 +1,21 @@
+<?php
+ini_set("display_errors", 1);
+
+$sentDrink = $_GET["drink"];
+$drinksData = file_get_contents( "../JSON/drinksData.json");
+$drinks = json_decode( $drinksData, true);
+
+foreach( $drinks as $drink) {
+    if( $drink["name"] == $sentDrink) {
+        $name = $drink["name"];
+        $image = $drink["image"];
+        $ingredients = $drink["ingredients"];
+        $instructions = $drink["instructions"];
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +50,7 @@
 
     <div id="wrapper">
         <div class="containers" id="info_wrapper">
-            <h1 id="drink_name">Info</h1>
+            <h1 id="drink_name"><?php echo "$name";?></h1>
 
             <div id="information">
                 <span id="rating">
@@ -48,29 +66,39 @@
         </div>
 
         <div class="containers" id="drink_image">
-            <img src="" alt="" id="drink_bg_image">
+            <img src="<?php echo "$image"; ?>" alt="" id="drink_bg_image">
         </div>
 
         <div class="containers">
             <h1>Ingredients</h1>
             <ul id="ingredients">
-                <li></li>
+            <?php
+                    foreach($ingredients as $ingredient) {
+                        echo "<li>$ingredient</li>";
+                    }
+                ?>
             </ul>
         </div>
 
         <div class="containers">
             <h1>Instructions</h1>
             <ul id="instructions">
-                <div id="checkbox-container"></div>
-
+            <?php 
+            
+                foreach ($instructions as $instruction) : ?>
+                <li>
+                    <input type="checkbox">
+                    <?php echo $instruction; ?>
+                </li>
+            <?php endforeach; ?>
             </ul>
         </div>
+
     </div>
 
 
-    <script src="../js/data.js"></script>
     <script src="../js/loginregister.js"></script>
-    <script src="../js/recipe.js"></script>
+   <!--<script src="../js/recipe.js"></script>-->
 
 </body>
 

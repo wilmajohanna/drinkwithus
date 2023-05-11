@@ -1,3 +1,7 @@
+// Funktioner till "tema sidan"
+
+
+
 async function innerhtml_fetch() {
 try {
 const resource = await (await fetch("../JSON/drinksData.json")).json();

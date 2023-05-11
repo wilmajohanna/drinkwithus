@@ -126,7 +126,8 @@ nav>button {
 #summer,
 #bubbles,
 #retro,
-#lessismore {
+#lessismore,
+#Punches {
     font-size: 30px;
     align-items: flex-end;
     justify-content: flex-end;
@@ -172,10 +173,22 @@ nav>button {
 #lessismore {
     height: 500px;
     width: auto;
-    background-image: url();
+    background-image: url(../images/paloma.jpg);
     background-repeat: repeat;
     background-size: cover;
 
     grid-row: 1;
     grid-column: 1;
+}
+
+#Punches {
+    height: 500px;
+    width: auto;
+    background-image: url(../images/Pimms.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+
+    grid-row: 1;
+    grid-column: 2;
+
 }
