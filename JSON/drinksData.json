@@ -21,7 +21,7 @@
         "name": "Grapefruit Swirl",
         "id": "",
         "image": "../images/Grapefruit_swirl.jpg",
-        "theme": "Punches",
+        "theme": "bubbles",
         "alcohol": "gin",
         "ingredients": {
             "key1": "60 ml rosemary syrup",
@@ -79,7 +79,7 @@
         }
     },
     {
-        "name": "Pimms and Gingerbeer",
+        "name": "Pimms & Gingerbeer",
         "id": "",
         "image": "../images/Pimms.jpg",
         "theme": "Punches",

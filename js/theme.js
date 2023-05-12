@@ -1,7 +1,7 @@
 
 "use strict";
 
-
+/*
 function innerhtml_fetch() {
     fetch("../JSON/drinksData.json")
         .then(response => response.json())
@@ -32,3 +32,4 @@ function innerhtml_fetch() {
 }
 
 innerhtml_fetch();
+*/
