@@ -4,14 +4,10 @@ body {
 }
 
 
-
-#wrapper {
+/*#wrapper {
     display: flex;
     justify-content: center;
-
-
 }
-
 
 
 .theme_container {
@@ -30,6 +26,34 @@ img {
     position: absolute;
     bottom: 360px;
     right: 120px;
+    font-size: 30px;
+    color: white;
+}*/
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 60vh;
+    margin: 2vh;
+    text-align: center;
+    align-items: center;
+
+}
+
+.theme_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    height: 500px;
+    width: 300px;
+
+}
+
+h1 {
     font-size: 30px;
     color: white;
 }
