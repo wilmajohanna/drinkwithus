@@ -125,7 +125,7 @@
         "name": "Cucumber Mint Gimlet",
         "id": "",
         "image": "../images/Cucumber_gimlet.jpg",
-        "theme": "Retro",
+        "theme": "retro",
         "alcohol": "gin",
         "ingredients": {
             "key1": "2-inch slice of peeled cucumber, halved and then quartered",
@@ -163,7 +163,7 @@
         "name": "Paloma",
         "id": "",
         "image": "../images/paloma.jpg",
-        "theme": "less is more",
+        "theme": "Less is More Cocktails",
         "alcohol": "tequila",
         "ingredients": {
             "key1": "50 ml Don Julio Blanco",
@@ -184,7 +184,7 @@
         "name": "Spill the Tea",
         "id": "",
         "image": "../images/spill_my_tea.jpg",
-        "theme": "less is more",
+        "theme": "Less is More Cocktails",
         "alcohol": "gin",
         "ingredients": {
             "key1": "50 ml Tanqueray London Dry Gin",

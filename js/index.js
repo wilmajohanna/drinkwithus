@@ -24,19 +24,25 @@ document.addEventListener("DOMContentLoaded", () => {
     // Loop through theme containers and add event listener
     themeContainers.forEach(themeContainer => {
         themeContainer.addEventListener("click", () => {
+            console.log(themeContainer);
             // Retrieve theme name from clicked container's h1 element
-            const themeName = themeContainer.querySelector("p").textContent;
+            let clicked_theme_name = themeContainer.querySelector("p").innerHTML;
+            localStorage.setItem("selected_theme", clicked_theme_name);
+
+            relocateToTheme(localStorage.getItem("selected_theme"));
+
+            //const themeName = themeContainer.querySelector("p").textContent;
+            //om man ska ha window.location -> `/html/theme.html?theme=${themeName}`;
 
             // Call relocateToTheme function with theme name as argument
-            relocateToTheme(themeName);
         });
     });
 });
 
 // Function to relocate to theme page with theme name as query parameter
 function relocateToTheme(themeName) {
-    //window.location = `/html/theme.html?theme=${encodeURIComponent(themeName)}`;
-    window.location = `/html/theme.html?theme=${themeName}`;
+    //window.location = `/html/theme.php?theme=${encodeURIComponent(themeName)}`;
+    window.location.replace(`../html/theme.php?theme=${themeName}`);
 }
 
 
