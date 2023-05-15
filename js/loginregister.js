@@ -81,8 +81,7 @@ function css_switch(event) {
         register_box.style.visibility = "visible";
         register_link.textContent = "Already have an account? Login";
         login_or_register_button.textContent = "Register";
-
     }
-}
+};
 
 register_link.addEventListener("click", css_switch); // Ändrar från Login till registrering

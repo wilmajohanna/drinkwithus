@@ -1,6 +1,14 @@
 <?php 
 ini_set("display_errors", 1);
 
+ 
+function sendJSON($message, $statuscode = 200) {
+    header("content-type: application/json");
+    http_response_code($statuscode);
+    echo json_encode($message);
+
+    exit();
+}
 
 $usersJSON = file_get_contents ("users.json");
 $all_users = json_decode($usersJSON, true);
@@ -22,7 +30,7 @@ $requestData = json_decode($requestJSON, true);
         }
     }
 
-    $message = ["username" => $requestData["username"], "password" => $requestData["password"]];
+    $message = ["username" => $requestData["username"], "password" => $requestData["password"], "first_name" => $requestData["firstname"], "last_name" => $requestData["lastname"]];
     $all_users[] = $message;
     file_put_contents("users.json", json_encode($all_users, JSON_PRETTY_PRINT));
     sendJSON($message, 200);
