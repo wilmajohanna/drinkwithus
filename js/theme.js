@@ -1,35 +1,82 @@
+/*"use strict";
+
+// Add event listener to theme container
+document.addEventListener("DOMContentLoaded", () => {
+    const themeWrapper = document.getElementById("theme_wrapper");
+
+    // Fetch the JSON data
+    fetch("../JSON/drinksData.json")
+        .then(response => response.json())
+        .then(data => {
+            // Filter data for a specific theme
+            const filteredData = data.filter(theme => theme.theme === themeName);
+            // Create theme containers for the filtered data
+            filteredData.slice(0, 2).forEach(theme => {
+                const themeContainer = document.createElement("div");
+                themeContainer.classList.add("theme_container");
+
+                const themeImage = document.createElement("img");
+                themeImage.classList.add("theme_pic");
+                themeImage.src = theme.image;
+                themeImage.alt = "";
+
+                const themeText = document.createElement("div");
+                themeText.classList.add("theme_text");
+
+                const themeName = document.createElement("h1");
+                themeName.classList.add("theme_name");
+                themeName.textContent = theme.name;
+
+                themeText.appendChild(themeName);
+                themeContainer.appendChild(themeImage);
+                themeContainer.appendChild(themeText);
+                themeWrapper.appendChild(themeContainer);
+            });
+        })
+        .catch(error => {
+            console.log("Error fetching the data:", error);
+        });
+}); */
 
 "use strict";
 
-/*
-function innerhtml_fetch() {
-    fetch("../JSON/drinksData.json")
-        .then(response => response.json())
-        .then(resource => {
-            const pic_container = document.getElementsByClassName("theme_container");
-            for (let i = 0; i < 3; i++) {
-                pic_container.innerHTML += ` <div
-            style="background: url(${resource[0].image}); background-size: cover; background-position: center;" id="summer"
-            dataset-theme="bubbles">
+// Retrieve theme name from query parameter
+const urlParams = new URLSearchParams(window.location.search);
+const themeName = urlParams.get("theme");
 
-            <div class="theme_container">
-                <div class="theme_text">
-                    <h1 class="theme_name">DRINK</h1>
-                </div>
-            </div>
+// Fetch the JSON data
+fetch("../JSON/drinksData.json")
+    .then(response => response.json())
+    .then(data => {
+        // Filter data for the specified theme
+        const filteredData = data.filter(theme => theme.theme === themeName);
 
+        // Create theme containers for the filtered data
+        const themeWrapper = document.getElementById("theme_wrapper");
 
-            <div class="theme_container">
-                <div class="theme_text">
-                    <h1 class="theme_name">DRINK</h1>
-                </div>
-            </div>
+        filteredData.slice(0, 2).forEach(theme => {
+            const themeContainer = document.createElement("div");
+            themeContainer.classList.add("theme_container");
 
-            `;
-            }
-        })
-        .catch(err => console.log(err));
-}
+            const themeImage = document.createElement("img");
+            themeImage.classList.add("theme_pic");
+            themeImage.src = theme.image;
+            themeImage.alt = "";
 
-innerhtml_fetch();
-*/
+            const themeText = document.createElement("div");
+            themeText.classList.add("theme_text");
+
+            const themeName = document.createElement("h1");
+            themeName.classList.add("theme_name");
+            themeName.textContent = theme.name;
+
+            themeText.appendChild(themeName);
+            themeContainer.appendChild(themeImage);
+            themeContainer.appendChild(themeText);
+            themeWrapper.appendChild(themeContainer);
+        });
+    })
+    .catch(error => {
+        console.log("Error fetching the data:", error);
+    });
+
