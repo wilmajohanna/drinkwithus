@@ -6,6 +6,14 @@ login_register_button.addEventListener("click", login_or_register) // Event List
 
 async function login_or_register(event) {
 
+    const log_user_field = document.querySelector("#log_user");
+    const log_pass_field = document.querySelector("#log_pass");
+
+    const reg_user_field = document.querySelector("#reg_user");
+    const reg_pass_field = document.querySelector("#reg_pass");
+    const firstname_field = document.querySelector("#first_name");
+    const lastname_field = document.querySelector("#last_name")
+
     if (event.target.textContent === "Login") {
         console.log("LOG ME IN"); 7
 
@@ -18,15 +26,19 @@ async function login_or_register(event) {
                     password: user.password,
                 })
             })
-        } catch (err) {
-            console.log("kss");
+            let data = await response.json();
+
+            /*  if (response.status === 200) {
+                 document.querySelector("#css_file").href = "."
+             }; */
+
+            log_user_field.value = "";
+            log_pass_field.value = "";
+
+        } catch (error) {
+            console.log("error");
         }
 
-        let data = await response.json();
-
-        if (response.status === 200) {
-            document.querySelector("#css_file").href = "."
-        };
 
         // Anropa funktionen som loggar in!
     } else {
@@ -53,13 +65,17 @@ async function login_or_register(event) {
                 console.log("Register sucess!");
 
             }
+            reg_user_field.value = "";
+            reg_pass_field.value = "";
+            firstname_field.value = "";
+            lastname_field.value = "";
+
         } catch (error) {
             console.log("error!")
 
         }
 
-        user_field.value = "";
-        pass_field.value = "";
+
 
     }
 
