@@ -82,8 +82,6 @@ function css_switch(event) {
         2. Kör en forEach på den arrayen och anropar funktionen "visa_elementen_med_klassen_register" på varje element i arrayen.
         3. Funktionen gör bara att de elementen får visiblity = visible
         */
-
-
     }
 }
 
