@@ -90,6 +90,10 @@
 }
 
 #register_link {
+  font-size: 21px;
+  height: 35px;
+  width: 220px;
+
   text-align: center;
   margin-top: 20px;
   background-color: #fcb5a5;
