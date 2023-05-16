@@ -37,6 +37,7 @@ login_home.addEventListener("click", popup_box, register_or_login_box); // click
 function x_button(event) {
     cover_background.style.visibility = "hidden";
     cover_background.querySelectorAll("*").forEach(dom => dom.style.visibility = "hidden");
+    document.querySelector("#register_link").style.visibility = "visible";
 
 };
 
@@ -59,24 +60,26 @@ function css_switch(event) {
         document.querySelectorAll(".logination").forEach(log_input => log_input.style.visibility = "visible");
 
 
-        let register_element = document.querySelectorAll(".registration")
-        register_element.forEach(show_register);
+        // let register_element = document.querySelectorAll(".registration")
+        // register_element.forEach(show_register);
 
-        function show_register(register_elements) {
-            register_elements.style.visibility = "visible";
-            console.log(register_element)
-        }
+        // function show_register(register_elements) {
+        //     register_elements.style.visibility = "visible";
+        //     console.log(register_element)
+        // }
         /*
         1. Skapar en array av alla element som har klassen "registration" genom querySelectorAll
         2. Kör en forEach på den arrayen och anropar funktionen "visa_elementen_med_klassen_register" på varje element i arrayen.
         3. Funktionen gör bara att de elementen får visiblity = visible
         */
-        document.querySelectorAll(".logination").forEach(log_input => log_input.style.visibility = "hidden");
+        // document.querySelectorAll(".logination").forEach(log_input => log_input.style.visibility = "hidden");
     } else {
         login_box.style.visibility = "hidden";
         register_box.style.visibility = "visible";
         register_link.textContent = "Already have an account? Login";
         login_or_register_button.textContent = "Register";
+        document.querySelectorAll(".logination").forEach(reg_input => reg_input.style.visibility = "hidden");
+        document.querySelectorAll(".registration").forEach(log_input => log_input.style.visibility = "visible");
     }
 };
 
