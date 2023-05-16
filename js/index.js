@@ -1,21 +1,93 @@
-
 "use strict";
-document.getElementById("about_us").addEventListener("click", () => {
-    relocateToRecipe("Bee's Knees")
-})
-function relocateToRecipe(drinkName) {
-    window.location = `/php/recipe.php?drink=${drinkName}`;
+// Add event listener to theme container
+
+
+/*document.addEventListener("DOMContentLoaded", () => {
+    const themeContainers = document.querySelectorAll(".theme_container");
+
+    themeContainers.forEach(themeContainer => {
+        themeContainer.addEventListener("click", () => {
+            console.log(themeContainer);
+            let clicked_theme_name = themeContainer.querySelector("p").innerHTML;
+            localStorage.setItem("selected_theme", clicked_theme_name);
+            relocateToTheme(localStorage.getItem("selected_theme"));
+        });
+    });
+});
+
+function relocateToTheme(themeName) {
+    window.location.replace(`../php/theme.php?theme=${themeName}`);
 }
 
-//ett event som vi kallar på  hämtar titeln som man klickar på.
-//kalla på relocateToRecipe med drinknamnet som argument.
-// och sidan kommer ändras till recipe sidan, där displays all info via PHP(recipe.php)
+function relocateToRecipe(drinkName) {
+    window.location.replace(`../php/recipee.php?drink=${drinkName}`);
+}
+
+*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeContainers = document.querySelectorAll(".theme_container");
+
+    // Loop through theme containers and add event listener
+    themeContainers.forEach(themeContainer => {
+        themeContainer.addEventListener("click", () => {
+            console.log(themeContainer);
+            // Retrieve theme name from clicked container's p element
+            let clicked_theme_name = themeContainer.querySelector("p").innerHTML;
+            localStorage.setItem("selected_theme", clicked_theme_name);
+
+            relocateToTheme(localStorage.getItem("selected_theme"));
+        });
+    });
+});
+
+// Function to relocate to theme page with theme name as query parameter
+function relocateToTheme(themeName) {
+    window.location.replace(`../php/theme.php?theme=${themeName}`);
+}
+
+// Add event listener to recipe container
+document.addEventListener("DOMContentLoaded", () => {
+    const recipeContainer = document.getElementById("theme_wrapper");
+
+    recipeContainer.addEventListener("click", () => {
+        console.log(recipeContainer);
+
+        let clicked_drink_name = recipeContainer.querySelector(".theme_text").innerHTML;
+        localStorage.setItem("selected_drink", clicked_drink_name);
+
+        relocateToRecipe(localStorage.getItem("selected_drink"));
+    });
+
+});
+
+// Function to relocate to recipe page with drink name as query parameter
+function relocateToRecipe(drinkName) {
+    window.location.replace(`../php/recipee.php?drink=${drinkName}`);
+}
 
 
 
 
+//GAMMAL
+/*document.addEventListener("DOMContentLoaded", () => {
+    const recipeContainers = document.querySelectorAll(".recipe_wrapper");
 
-"use strict";
+    recipeContainers.forEach(recipeContainer => {
+        recipeContainer.addEventListener("click", () => {
+            console.log(recipeContainer);
+
+            let clicked_drink_name = themeContainer.querySelector("h1").innerHTML;
+            localStorage.setItem("seleceted_drink", clicked_drink_name);
+
+            relocateToRecipe(localStorage.getItem("selected_drink"));
+        });
+    });
+});
+
+function relocateToRecipe(drinkName) {
+    window.location.replace(`../php/recipee.php?drink=${drinkName}`);
+};
 
 // Add event listener to theme container
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,25 +97,22 @@ document.addEventListener("DOMContentLoaded", () => {
     themeContainers.forEach(themeContainer => {
         themeContainer.addEventListener("click", () => {
             console.log(themeContainer);
-            // Retrieve theme name from clicked container's h1 element
+            // Retrieve theme name from clicked container's p element
             let clicked_theme_name = themeContainer.querySelector("p").innerHTML;
             localStorage.setItem("selected_theme", clicked_theme_name);
 
             relocateToTheme(localStorage.getItem("selected_theme"));
 
-            //const themeName = themeContainer.querySelector("p").textContent;
-            //om man ska ha window.location -> `/html/theme.html?theme=${themeName}`;
 
-            // Call relocateToTheme function with theme name as argument
         });
     });
 });
 
 // Function to relocate to theme page with theme name as query parameter
 function relocateToTheme(themeName) {
-    //window.location = `/html/theme.php?theme=${encodeURIComponent(themeName)}`;
     window.location.replace(`../php/theme.php?theme=${themeName}`);
-}
+};
+*/
 
 
 

@@ -2,21 +2,26 @@
 ini_set("display_errors", 1);
 
 $sentDrink = $_GET["drink"];
-$drinksData = file_get_contents( "../JSON/drinksData.json");
-$drinks = json_decode( $drinksData, true);
+$drinksData = file_get_contents("../JSON/drinksData.json");
+$drinks = json_decode($drinksData, true);
 
-foreach( $drinks as $drink) {
-    if( $drink["name"] == $sentDrink) {
+$name = null;
+$image = null;
+$ingredients = null;
+$instructions = null;
+$description = null;
+
+foreach ($drinks as $drink) {
+    if ($drink["name"] == $sentDrink) {
         $name = $drink["name"];
         $image = $drink["image"];
         $ingredients = $drink["ingredients"];
         $instructions = $drink["instructions"];
-        $description = $drink ["description"];
-
+        $description = $drink["description"];
+        break; // Exit the loop after finding a matching drink
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,53 +55,45 @@ foreach( $drinks as $drink) {
         <div class="favourites"> Favourites </div>
     </div>
 
-    <div id="wrapper">
+    <div class="recipe_wrapper">
         <div class="containers" id="info_wrapper">
-            <h1 id="drink_name"><?php echo "$name";?></h1>
+            <h1 id="drink_name"><?php echo $name; ?></h1>
 
             <div id="information">
-                <span id="rating">
-                    &starf;&starf;&starf;&starf;
-                </span>
-                <div id="desc"><?php echo "$description";?></div>
+                <div id="desc"><?php echo $description; ?></div>
             </div>
         </div>
 
         <div class="containers" id="drink_image">
-            <img src="<?php echo "$image"; ?>" alt="" id="drink_bg_image">
+            <img id="drink_bg_image" src="<?php echo $image; ?>">
         </div>
 
         <div class="containers">
             <h1>Ingredients</h1>
             <ul id="ingredients">
-            <?php
-                    foreach($ingredients as $ingredient) {
+                <?php
+                if (!empty($ingredients)) {
+                    foreach ($ingredients as $ingredient) {
                         echo "<li>$ingredient</li>";
                     }
+                }
                 ?>
             </ul>
         </div>
 
         <div class="containers">
             <h1>Instructions</h1>
-            <ul id="instructions">
-            <?php 
-            
-                foreach ($instructions as $instruction) : ?>
-                <li>
-                    <input type="checkbox">
-                    <?php echo $instruction; ?>
-                </li>
-            <?php endforeach; ?>
+            <ul id="instruction">
+                <?php
+                if (!empty($instructions)) {
+                    foreach ($instructions as $instruction) {
+                        echo "<li><input type='checkbox'>$instruction</li>";
+                    }
+                }
+                ?>
             </ul>
         </div>
-
     </div>
 
-
     <script src="../js/loginregister.js"></script>
-   <!--<script src="../js/recipe.js"></script>-->
-
-</body>
-
-</html>
+    <script src="../js/index.js"></script>

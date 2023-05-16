@@ -5,6 +5,7 @@
         "image": "../images/watermelon_sangria.jpg",
         "theme": "bubbles",
         "alcohol": "liquor",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "1 bottle Rosé",
             "key2": "120 ml St. Germain (elderflower liquor)",
@@ -23,6 +24,7 @@
         "image": "../images/Grapefruit_swirl.jpg",
         "theme": "bubbles",
         "alcohol": "gin",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "60 ml rosemary syrup",
             "key2": "80 ml cardamom infused gin",
@@ -45,6 +47,7 @@
         "image": "../images/summer_cobbler.jpg",
         "theme": "summer",
         "alcohol": "whiskey",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "45 ml Buffalo Trace White Dog Mash No. 1, (white wiskey)",
             "key2": "15 ml Grand Marnier or other orange-flavored liqueur",
@@ -64,6 +67,7 @@
         "image": "../images/B_knees.jpg",
         "theme": "summer",
         "alcohol": "gin",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "45 ml Tanqueray London Dry Gin",
             "key2": "15 ml Freshly pressed lemon juice",
@@ -84,6 +88,7 @@
         "image": "../images/Pimms.jpg",
         "theme": "Punches",
         "alcohol": "liquor",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "200 ml Pimm's no 1",
             "key2": "600 ml Ginger beer",
@@ -107,6 +112,7 @@
         "image": "../images/packers.jpg",
         "theme": "Punches",
         "alcohol": "Whiskey",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "300 ml Maker's Mark bourbon",
             "key2": "100 ml triple sec",
@@ -125,8 +131,9 @@
         "name": "Cucumber Mint Gimlet",
         "id": "",
         "image": "../images/Cucumber_gimlet.jpg",
-        "theme": "retro",
+        "theme": "Retro",
         "alcohol": "gin",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "2-inch slice of peeled cucumber, halved and then quartered",
             "key2": "10 mint leaves",
@@ -146,6 +153,7 @@
         "image": "../images/OldFashioned.jpg",
         "theme": "Retro",
         "alcohol": "whiskey",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "60 ml Woodford Reserve Bourbon",
             "key2": "1 teaspoon Sugar",
@@ -163,8 +171,9 @@
         "name": "Paloma",
         "id": "",
         "image": "../images/paloma.jpg",
-        "theme": "Less is More Cocktails",
+        "theme": "less is more",
         "alcohol": "tequila",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "50 ml Don Julio Blanco",
             "key2": "10 ml freshly pressed lime juice",
@@ -184,8 +193,9 @@
         "name": "Spill the Tea",
         "id": "",
         "image": "../images/spill_my_tea.jpg",
-        "theme": "Less is More Cocktails",
+        "theme": "less is more",
         "alcohol": "gin",
+        "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
             "key1": "50 ml Tanqueray London Dry Gin",
             "key2": "1 teaspoon Orange marmelade",
