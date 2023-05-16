@@ -3,7 +3,7 @@
         "name": "Watermelon Sangria",
         "id": "",
         "image": "../images/watermelon_sangria.jpg",
-        "theme": "bubbles",
+        "theme": "Bubbles Cocktails",
         "alcohol": "liquor",
         "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
@@ -22,7 +22,7 @@
         "name": "Grapefruit Swirl",
         "id": "",
         "image": "../images/Grapefruit_swirl.jpg",
-        "theme": "bubbles",
+        "theme": "Bubbles Cocktails",
         "alcohol": "gin",
         "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
@@ -45,7 +45,7 @@
         "name": "Summer Cobbler",
         "id": "",
         "image": "../images/summer_cobbler.jpg",
-        "theme": "summer",
+        "theme": "Summer Cocktails",
         "alcohol": "whiskey",
         "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
@@ -65,7 +65,7 @@
         "name": "Bee's Knees",
         "id": "",
         "image": "../images/B_knees.jpg",
-        "theme": "summer",
+        "theme": "Summer Cocktails",
         "alcohol": "gin",
         "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
@@ -131,7 +131,7 @@
         "name": "Cucumber Mint Gimlet",
         "id": "",
         "image": "../images/Cucumber_gimlet.jpg",
-        "theme": "Retro",
+        "theme": "Retro Cocktails",
         "alcohol": "gin",
         "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
@@ -151,7 +151,7 @@
         "name": "Old Fashioned",
         "id": "",
         "image": "../images/OldFashioned.jpg",
-        "theme": "Retro",
+        "theme": "Retro Cocktails",
         "alcohol": "whiskey",
         "description": "Lorem ipsum osv osv osv osv",
         "ingredients": {
@@ -190,7 +190,7 @@
         }
     },
     {
-        "name": "Spill the Tea",
+        "name": "Spill The Tea",
         "id": "",
         "image": "../images/spill_my_tea.jpg",
         "theme": "less is more",
