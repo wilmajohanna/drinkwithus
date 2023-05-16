@@ -1,15 +1,11 @@
 "use strict";
-/* document.querySelector("#login_home").addEventListener("click", popup_box, register_or_login_box);
-document.querySelector("#close_button").addEventListener("click", x_button);
-document.querySelector("#register_link").addEventListener("click", css_switch); */
-
 
 const login_home = document.getElementById("login_home");
 const register_link = document.getElementById("register_link");
 const close_button = document.getElementById("close_button");
 const cover_background = document.getElementById("cover");
-/* const register_box = document.getElementById("register");
-const login_box = document.getElementById("login"); */
+const register_box = document.getElementById("register");
+const login_box = document.getElementById("login");
 const login_register_button = document.getElementById("login_or_register_button");
 
 function register_or_login_box(event) {
@@ -38,10 +34,10 @@ function popup_box(event) { // Gör så att popup_boxen dyker upp
 login_home.addEventListener("click", popup_box, register_or_login_box); // click event till login_home
 
 
-function x_button (event) {
+function x_button(event) {
     cover_background.style.visibility = "hidden";
     cover_background.querySelectorAll("*").forEach(dom => dom.style.visibility = "hidden");
-    
+
 };
 
 close_button.addEventListener("click", x_button);
@@ -54,7 +50,7 @@ function css_switch(event) {
     let register_box = document.getElementById("register");
     let login_box = document.getElementById("login");
 
-    if (register_link.textContent === "No account? Register here") {
+    if (register_link.textContent === "Already have an account? Login") {
         register_box.style.visibility = "hidden";
         login_box.style.visibility = "visible";
         register_link.textContent = "No account? Register";
