@@ -26,6 +26,8 @@ function popup_box(event) { // Gör så att popup_boxen dyker upp
         cover_background.querySelectorAll("#login > *").forEach(item => item.style.visibility = "visible");
         cover_background.querySelector("#content").querySelectorAll(".popup_button").forEach(button => button.style.visibility = "visible");
         close_button.style.visibility = "visible";
+        register_link.style.visibility = "visible";
+
 
     } else {
         cover_background.style.visibility = "visible";

@@ -10,5 +10,11 @@
         "password": "vic",
         "first_name": "vic",
         "last_name": "vic"
+    },
+    {
+        "username": "",
+        "password": "",
+        "first_name": "",
+        "last_name": ""
     }
 ]
