@@ -15,22 +15,23 @@ async function login_or_register(event) {
     const lastname_field = document.querySelector("#last_name")
 
     if (event.target.textContent === "Login") {
-        console.log("LOG ME IN"); 7
 
         try {
-            let response = await fetch("../php/login.php", {
-                method: "POST",
+            let response = await fetch("../php/loginregister.php", {
+                method: "GET",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    username: user.username,
-                    password: user.password,
+                    username: log_user_field.value,
+                    password: log_pass_field.value,
                 })
             })
+
             let data = await response.json();
 
-            /*  if (response.status === 200) {
-                 document.querySelector("#css_file").href = "."
-             }; */
+            if (response.status === 200) {
+                /* document.querySelector("#css_file").href = "." */
+                console.log("sucess");
+            }
 
             log_user_field.value = "";
             log_pass_field.value = "";
@@ -39,14 +40,14 @@ async function login_or_register(event) {
             console.log("error");
         }
 
-
         // Anropa funktionen som loggar in!
+
     } else {
 
 
         try {
 
-            let response = await fetch("../php/register.php", {
+            let response = await fetch("../php/loginregister.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
