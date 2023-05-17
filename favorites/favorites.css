@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Alumni Sans";
+  src: url(../fonts/AlumniSans-VariableFont_wght.ttf);
+}
+
+* {
+  font-family: Alumni Sans;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+
+#logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2vh;
+  padding: 2vh;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2vh;
+  font-size: 2vh;
+  margin: 2vw;
+  color: black;
+}
+
+nav > button {
+  border-radius: 40px;
+  color: white;
+  background-color: pink;
+  padding: 2vh;
+  width: 130px;
+  font-size: 18px;
+}
+
+#section {
+    background-color: lightblue;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    
+}
+
+p {
+    text-align: center;
+    font-size: 30px;
+    visibility: hidden;
+}
+
+#container {
+    background-color: whitesmoke;
+    height: 90vh;
+    width: 95vw;
+    margin: auto;
+    margin-top: 50px;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#favorites_list {
+
+}
+
+
