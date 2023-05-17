@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         themeContainer.addEventListener("click", () => {
             console.log(themeContainer);
             // Retrieve theme name from clicked container's p element
+            console.log(themeContainer.querySelector("p"));
             let clicked_theme_name = themeContainer.querySelector("p").innerHTML;
             localStorage.setItem("selected_theme", clicked_theme_name);
 
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     recipeContainer.addEventListener("click", () => {
         console.log(recipeContainer);
 
-        let clicked_drink_name = recipeContainer.querySelector(".theme_text").innerHTML;
+        let clicked_drink_name = recipeContainer.querySelector(".theme_name").textContent;
         localStorage.setItem("selected_drink", clicked_drink_name);
 
         relocateToRecipe(localStorage.getItem("selected_drink"));

@@ -15,12 +15,14 @@
         "username": "rataman",
         "password": "rataman",
         "first_name": "Wilma",
-        "last_name": "Gotthardsson"
+        "last_name": "Gotthardsson",
+        "favorites": [1, 3]
     },
     {
         "username": "wilma",
         "password": "wilma",
         "first_name": "Wilma",
-        "last_name": "Gotthardsson"
+        "last_name": "Gotthardsson",
+        "favorites": [2, 3]
     }
 ]
