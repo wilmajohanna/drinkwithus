@@ -11,6 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="/favouritepage/favorites.css">
         <link rel="stylesheet" href="./css/index.css">
         <link rel="stylesheet" href="./css/loginregister.css">
         <link rel="stylesheet" href="./css/home.css">
@@ -19,27 +20,23 @@
     </head>
     
     <body>
-    
-        <header>
-    
-            <div id="logo">LOGO</div>
-    
-            <nav>
-                <button id="favourite">About Us</button>
-                <button id="login_home">Log in</button>
-            </nav>
+    <header>
+      <div id="logo">LOGO</div>
+      <nav>
+        <button id="about_us">About Us</button>
+        <button id="heart">Favourites</button>
+        <button id="login_home">Log in</button>
+      </nav>
+    </header>
 
-        </header>
-    
-        <div id="home">
-    
-            <div id="options">
-                <div class="inspire"> Need some Inspiration? </div>
-                <div class="favourites"> Favourites </div>
-            </div>
-    
-
-
+    <div id="section">
+      <div id="container">
+        <div id="favorites_list">
+            <p>You have no favored drinks</p>
+          <ul></ul>
+        </div>
+      </div>
+    </div>
     
         <div id="cover">
             <div id="content">
@@ -64,9 +61,9 @@
         </div>
     
     
-        <script src="./js/loginregister.js"></script>
-        <script src="./js/user.js"></script>
-        <script src="./js/index.js"></script>
+        <script src="../poupbox/loginregister.js"></script>
+        <script src="../homepage/user.js"></script>
+        <script src="./index.js"></script>
     
     </body>
     

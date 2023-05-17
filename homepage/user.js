@@ -29,7 +29,7 @@ async function login_or_register(event) {
             let data = await response.json();
 
             if (response.status === 200) {
-                /* document.querySelector("#css_file").href = "." */
+                document.querySelector("").href = "."
                 console.log("sucess");
             }
 
