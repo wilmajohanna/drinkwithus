@@ -4,7 +4,7 @@
 ini_set("dislpay_errors", 1);
 
 $sentTheme = $_GET["theme"];
-$drinksData = file_get_contents ("../JSON/drinksData.json");
+$drinksData = file_get_contents ("../recipepage/drinksData.json");
 $themes = json_decode ($drinksData, true);
 
 ?>
@@ -16,10 +16,10 @@ $themes = json_decode ($drinksData, true);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/loginregister.css">
-    <link rel="stylesheet" href="../css/recipe.css">
-    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../homepage/index.css">
+    <link rel="stylesheet" href="../popupbox/loginregister.css">
+    <link rel="stylesheet" href="../recipepage/recipe.css">
+    <link rel="stylesheet" href="./theme.css">
 
     <title>Document</title>
 </head>
@@ -76,9 +76,9 @@ $themes = json_decode ($drinksData, true);
 
         </div>
     </div>
-    <script src="../js/loginregister.js"></script>
-    <script src="../js/user.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../popupbox/loginregister.js"></script>
+    <script src="../homepage/user.js"></script>
+    <script src="./index.js"></script>
 
 
 

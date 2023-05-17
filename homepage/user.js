@@ -17,7 +17,7 @@ async function login_or_register(event) {
     if (event.target.textContent === "Login") {
 
         try {
-            let response = await fetch("../php/loginregister.php", {
+            let response = await fetch("../popupbox/loginregister.php", {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -47,7 +47,7 @@ async function login_or_register(event) {
 
         try {
 
-            let response = await fetch("../php/loginregister.php", {
+            let response = await fetch("../popupbox/loginregister.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

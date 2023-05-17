@@ -2,7 +2,7 @@
 ini_set("display_errors", 1);
 
 $sentDrink = $_GET["drink"];
-$drinksData = file_get_contents( "../JSON/drinksData.json");
+$drinksData = file_get_contents( "../recipepage/drinksData.json");
 $drinks = json_decode( $drinksData, true);
 
 foreach( $drinks as $drink) {
@@ -25,9 +25,9 @@ foreach( $drinks as $drink) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/recipe.css">
+    <link rel="stylesheet" href="../homepage/index.css">
+    <link rel="stylesheet" href="../homepage/home.css">
+    <link rel="stylesheet" href="./recipe.css">
 
     <title>Drink with us</title>
 </head>
@@ -39,16 +39,11 @@ foreach( $drinks as $drink) {
 
         <nav>
             <button id="about_us">About Us</button>
+
             <button id="login_home">Log in</button>
         </nav>
     </header>
 
-    <div id="options">
-        <div class="find"> Find a cocktail</div>
-        <div class="make"> Make your own drink</div>
-        <div class="inspire"> Need some Inspiration? </div>
-        <div class="favourites"> Favourites </div>
-    </div>
 
     <div id="wrapper">
         <div class="containers" id="info_wrapper">
@@ -94,7 +89,7 @@ foreach( $drinks as $drink) {
     </div>
 
 
-    <script src="../js/loginregister.js"></script>
+    <script src="../popupbox/loginregister.js"></script>
    <!--<script src="../js/recipe.js"></script>-->
 
 </body>

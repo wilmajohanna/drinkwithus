@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,118 +11,81 @@
     <link rel="stylesheet" href="./homepage/home.css" />
 
     <title>Drink with us</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header>
-      <div id="logo">LOGO</div>
+        <div id="logo">LOGO</div>
 
-      <nav>
-        <button id="about_us">About Us</button>
-        <button id="heart">Favourites</button>
-        <button id="login_home">Log in</button>
-      </nav>
+        <nav>
+            <button id="about_us">About Us</button>
+            <button id="heart">Favourites</button>
+            <button id="login_home">Log in</button>
+        </nav>
     </header>
 
     <div id="home">
-      <h2>Need some inspiration?</h2>
+        <h2>Need some inspiration?</h2>
 
-      <div id="pics">
-        <div id="summer" class="theme_container">
-          <img
-            id="summer"
-            src="./homepage/images/drinks.jpg"
-            alt="summer drink"
-          />
-          <p>Summer Cocktails</p>
+        <div id="pics">
+            <div id="summer" class="theme_container">
+                <p>Summer Cocktails</p>
+                <img id="summer" src="./homepage/images/summer drinks.jpg" alt="summer drink" />
 
-          <span id="heart">&#10084;</span>
-        </div>
-        <div id="bubbles" class="theme_container">
-          <img
-            id="bubbles"
-            src="./homepage/images/Grapefruit_swirl.jpg"
-            alt=""
-          />
-          <p>Bubbles Cocktails</p>
+                <span id="heart">&#10084;</span>
+            </div>
+            <div id="bubbles" class="theme_container">
+                <p>Bubbles Cocktails</p>
+                <img id="bubbles" src="./homepage/images/Grapefruit_swirl.jpg" alt="" />
 
-          <span id="heart">&#10084;</span>
-        </div>
-        <div id="retro" class="theme_container">
-          <img id="retro" src="./homepage/images/Cucumber_gimlet.jpg" alt="" />
-          <p>Retro Cocktails</p>
+                <span id="heart">&#10084;</span>
+            </div>
+            <div id="retro" class="theme_container">
+                <p>Retro Cocktails</p>
+                <img id="retro" src="./homepage/images/Cucumber_gimlet.jpg" alt="" />
 
-          <span id="heart">&#10084;</span>
-        </div>
-        <div id="lessismore" class="theme_container">
-          <img id="lessismore" src="./homepage/images/paloma.jpg" alt="" />
-          <p>Less is More Cocktails</p>
+                <span id="heart">&#10084;</span>
+            </div>
+            <div id="lessismore" class="theme_container">
+                <p>Less is More Cocktails</p>
+                <img id="lessismore" src="./homepage/images/paloma.jpg" alt="" />
 
-          <span id="heart">&#10084;</span>
+                <span id="heart">&#10084;</span>
+            </div>
+            <div id="punches" class="theme_container">
+                <p>Punches</p>
+                <img id="punches" src="./homepage/images/Packers.jpg" alt="" />
+                <span id="heart">&#10084;</span>
+            </div>
         </div>
-        <div id="punches" class="theme_container">
-          <img id="punches" src="./homepage/images/Packers.jpg" alt="" />
-          <p>Punches</p>
-          <span id="heart">&#10084;</span>
-        </div>
-      </div>
     </div>
 
     <div id="cover">
-      <div id="content">
-        <div id="close_button">X</div>
+        <div id="content">
+            <div id="close_button">X</div>
 
-        <div id="register">
-          <input
-            class="registration"
-            id="first_name"
-            type="text"
-            placeholder="First name"
-          />
-          <input
-            class="registration"
-            id="last_name"
-            type="text"
-            placeholder="Last name"
-          />
-          <input
-            class="registration"
-            id="reg_user"
-            type="text"
-            placeholder="Username"
-          />
-          <input
-            class="registration"
-            id="reg_pass"
-            type="password"
-            placeholder="Password"
-          />
+            <div id="register">
+                <input class="registration" id="first_name" type="text" placeholder="First name" />
+                <input class="registration" id="last_name" type="text" placeholder="Last name" />
+                <input class="registration" id="reg_user" type="text" placeholder="Username" />
+                <input class="registration" id="reg_pass" type="password" placeholder="Password" />
+            </div>
+
+            <div id="login">
+                <input class="logination" id="log_user" type="text" placeholder="Username" />
+                <input class="logination" id="log_pass" type="password" placeholder="Password" />
+            </div>
+
+            <button class="popup_button" id="login_or_register_button">
+                Login
+            </button>
+            <p class="" id="register_link">No account? Register</p>
         </div>
-
-        <div id="login">
-          <input
-            class="logination"
-            id="log_user"
-            type="text"
-            placeholder="Username"
-          />
-          <input
-            class="logination"
-            id="log_pass"
-            type="password"
-            placeholder="Password"
-          />
-        </div>
-
-        <button class="popup_button" id="login_or_register_button">
-          Login
-        </button>
-        <p class="" id="register_link">No account? Register</p>
-      </div>
     </div>
 
     <script src="./popupbox/loginregister.js"></script>
     <script src="./homepage/user.js"></script>
     <script src="./themepage/index.js"></script>
-  </body>
+</body>
+
 </html>
