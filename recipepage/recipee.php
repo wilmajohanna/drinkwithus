@@ -113,4 +113,4 @@ foreach ($drinks as $drink) {
     </div>
 
     <script src="../popupbox/loginregister.js"></script>
-    <script src="./index.js"></script>
+    <script src="../index.js"></script>
