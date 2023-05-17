@@ -38,6 +38,7 @@ nav > button {
   padding: 2vh;
   width: 130px;
   font-size: 18px;
+  margin-left: 10px;
 }
 
 span {
@@ -48,6 +49,5 @@ span {
   color: white;
   background-color: pink;
   padding: 1vh;
-  width: 3vw;
-  font-size: 12px;
+  width: 2vw;
 }
