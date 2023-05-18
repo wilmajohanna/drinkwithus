@@ -48,7 +48,7 @@ $themes = json_decode ($drinksData, true);
                     echo  "<div class='theme_container'>";
                         echo "<img class='theme_pic' src= $theme_image alt=''>";
                         echo "<div class='theme_text'>";
-                            echo "<h1  class='theme_name'>$name</h1>";
+                            echo "<p  class='theme_name'>$name</p>";
                         echo "</div>";
                     echo "</div>";
                 }  
