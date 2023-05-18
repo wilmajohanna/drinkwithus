@@ -1,18 +1,12 @@
 <?php
 ini_set("display_errors", 1);
 
-$sentDrink = $_GET["drink"];
-$drinksData = file_get_contents("./recipepage/drinksData.json");
+// $sentDrink = $_GET["drink"];
+$drinksData = file_get_contents("../recipepage/drinksData.json");
 $drinks = json_decode($drinksData, true);
 
-$name = null;
-$image = null;
-$ingredients = null;
-$instructions = null;
-$description = null;
-
 foreach ($drinks as $drink) {
-    if ($drink["name"] == $sentDrink) {
+    if ($drink["name"] == "Paloma") {
         $name = $drink["name"];
         $image = $drink["image"];
         $ingredients = $drink["ingredients"];
@@ -21,6 +15,7 @@ foreach ($drinks as $drink) {
         break; // Exit the loop after finding a matching drink
     }
 }
+
 ?>
 
 <!DOCTYPE html>
