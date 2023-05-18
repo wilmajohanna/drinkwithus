@@ -1,10 +1,32 @@
 <?php
 ini_set("display_errors", 1);
 
+<<<<<<< Updated upstream:recipepage/recipee.php
 // $sentDrink = $_GET["drink"];
 $drinksData = file_get_contents("../recipepage/drinksData.json");
 $drinks = json_decode($drinksData, true);
 
+=======
+function sendJSON($message, $response_code = 200) { 
+    header("content-type: application/json");
+    http_response_code($response_code);
+    //echo json_encode($message);
+    exit();
+}
+
+$sentDrink = $_GET["drink"];
+$drinksData = file_get_contents("../JSON/drinksData.json");
+$drinks = json_decode($drinksData, true);
+
+/*
+$name = null;
+$image = null;
+$ingredients = null;
+$instructions = null;
+$description = null;
+*/
+
+>>>>>>> Stashed changes:php/recipee.php
 foreach ($drinks as $drink) {
     if ($drink["name"] == "Paloma") {
         $name = $drink["name"];
@@ -16,6 +38,17 @@ foreach ($drinks as $drink) {
     }
 }
 
+<<<<<<< Updated upstream:recipepage/recipee.php
+=======
+var_dump($name);
+
+function convertNewlinesToBr($text) {
+    return nl2br($text);
+}
+
+
+
+>>>>>>> Stashed changes:php/recipee.php
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +83,7 @@ foreach ($drinks as $drink) {
             <h1 id="drink_name"><?php echo $name; ?></h1>
 
             <div id="information">
-                <div id="desc"><?php echo $description; ?></div>
+                <div id="desc"><?php echo convertNewlinesToBr($description); ?></div>
             </div>
         </div>
 
