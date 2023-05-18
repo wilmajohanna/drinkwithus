@@ -87,3 +87,10 @@ function relocateToTheme(themeName) {
     window.location.replace(`../php/theme.php?theme=${themeName}`);
 };
 */
+
+theme.js
+
+// Add event listener to recipe container
+document.querySelectorAll(".theme_container > img").forEach(image_event => {
+    drink_images.addEventListener("click", (image) => console.log("hej"))
+});
