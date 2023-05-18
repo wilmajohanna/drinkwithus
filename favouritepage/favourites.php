@@ -24,10 +24,15 @@
         if ($all_drinks!= null) {
             foreach ($all_drinks as $drinks) {
 
-                $drinkname = $drinks["name"];
+                $drinkname = $drinks["id"];
 
                 if($drinkname == $requestData["name"]) {
                     $message = ["drink_id" => $drinks["id"]];
+                    
+                   // foreach när den hittat rätt dricka users.json
+                    // genom att hitta samma användare som har samma username som nyckeln username från datan som tagit emot
+
+
                     sendJSON($message);
                 }
             }
