@@ -10,7 +10,7 @@
             "key1": "1 bottle Rosé",
             "key2": "120 ml St. Germain (elderflower liquor)",
             "key3": "240 ml fresh watermelon juice",
-            "key4": "a bottle of Rose champagne or your desired choice of bubbles ",
+            "key4": "A bottle of Rose champagne or your desired choice of bubbles",
             "key6": "Fresh mint, lime wheels, and sliced watermelon for garnish"
         },
         "instructions": {
@@ -76,7 +76,7 @@
             "key5": "Lemon peel"
         },
         "instructions": {
-            "inst1": "To make the cocktail, fill a cocktail shaker with ice. Pour in the honey syrup (1:2 Ratio between honey and water), lemon juice and gin and a dash of orange bitters. ",
+            "inst1": "To make the cocktail, fill a cocktail shaker with ice. Pour in the honey syrup (1:2 Ratio between honey and water), lemon juice and gin and a dash of orange bitters.",
             "inst2": "fasten the lid and shake until the mixture is very cold, about 30 seconds.",
             "inst3": "Strain the drink into a rocks glass, fill the glass up with fresh ice cubes.",
             "inst4": "Twist the lemon peel over the cocktail to release some of its oils, then drop it in."
@@ -102,7 +102,7 @@
         "instructions": {
             "inst1": "Fill a glass pitcher with ice.",
             "inst2": "Mix the Pimm's with lemon juice and gingerbeer in the pitcher with the ice.",
-            "inst3": "Lightly crush the mint in your hand to release the scent and oils, and add it to the pitcher along with the cucumber slices, orange slices, and strawberries. ",
+            "inst3": "Lightly crush the mint in your hand to release the scent and oils, and add it to the pitcher along with the cucumber slices, orange slices, and strawberries.",
             "inst4": "Stir with a long-handled spoon and serve in tall glasses with ice."
         }
     },
@@ -123,7 +123,7 @@
         "instructions": {
             "inst1": "Fill a glass pitcher with ice.",
             "inst2": "Mix the bourbon and triple sec with the homemade lemonade in the pitcher with the ice.",
-            "inst3": " Add the sliced apples and stir to incorporate ingredients. ",
+            "inst3": "Add the sliced apples and stir to incorporate ingredients.",
             "inst4": "Serve over ice in a tall glass."
         }
     },
@@ -183,9 +183,9 @@
             "key6": "Pink Grapefruit wedge"
         },
         "instructions": {
-            "inst1": "Salt the rim of the glass by rubbing a grapefruit wedge around the edge and dipping it onto a small plate of salt. Fill the glass with ice",
+            "inst1": "Salt the rim of the glass by rubbing a grapefruit wedge around the edge and dipping it onto a small plate of salt. Fill the glass with ice.",
             "inst2": "Mix the tequila, lime juice and agave nectar syrup into the glass.",
-            "inst3": "top it of with Pink Grapefruit Soda. Adjust sweetness to taste with agave nectar syrup.",
+            "inst3": "Top it of with Pink Grapefruit Soda. Adjust sweetness to taste with agave nectar syrup.",
             "inst4": "Garnish with grapefruit wedge."
         }
     },
@@ -201,12 +201,12 @@
             "key2": "1 teaspoon Orange marmelade",
             "key3": "1 teabag of Earl Grey",
             "key4": "Tonic Water",
-            "key5": "Lemon wedge"
+            "key5": "Lemon Wedge"
         },
         "instructions": {
-            "inst1": "For this drink it's preferably to use a bigger glas, such as a wine glass. Add a teaspoon Orange Marmelade in the glass and fill it up with ice ",
-            "inst2": "Pour the gin over the ice and top it of with Tonic water. Add more ice if ness... ",
-            "inst3": "Drop the teabag into the drink and leave it",
+            "inst1": "For this drink it's preferred to use a bigger glas, such as a wine glass. Add a teaspoon Orange Marmelade in the glass and fill it up with ice.",
+            "inst2": "Pour the gin over the ice and top it of with Tonic water. Add more ice if necessary.",
+            "inst3": "Drop the teabag into the drink and leave it in.",
             "inst4": "Garnish with Lemon wedge."
         }
     }
