@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to relocate to theme page with theme name as query parameter
 function relocateToTheme(themeName) {
-    window.location.replace(`../themepage/theme.php?theme=${themeName}`);
+    window.location.replace(`../themepage/index.php?theme=${themeName}`);
 }
 
 /// -------------------------------------------------  recipe.js   ---------------------------------------------------------------- // 
