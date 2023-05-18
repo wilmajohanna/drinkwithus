@@ -2,7 +2,7 @@
 
 // dom content loaded 
 document.addEventListener("DOMContentLoaded", () => {
-    const themeImages = document.querySelectorAll(".theme_container > img");
+    const themeImages = document.querySelectorAll(".theme_container > .fp_images");
     /// ---------------------  behlver vi denna?
 
 
@@ -30,40 +30,16 @@ function relocateToTheme(themeName) {
 /// -------------------------------------------------  recipe.js   ---------------------------------------------------------------- // 
 
 // Lägger till en eventlyssnare på alla element med klassen "theme_container"
-var themeContainers = document.getElementsByClassName("theme_container");
-for (var i = 0; i < themeContainers.length; i++) {
-    themeContainers[i].addEventListener("click", function () {
-        // Hämtar värdet av "name" inuti den klickade containern
-        var drinkName = this.querySelector(".theme_name").textContent;
 
-        // Använder window.location för att byta sida till recipee.php med den valda drycken som parameter
-        window.location = "../recipepage/?drink=" + encodeURIComponent(drinkName);
-    });
-}
 
-/*
 // Det här under bör vara med på recipe sidan.
-addEventListener("DOMContentLoaded", () => {
-    const recipeContainer = document.getElementById("theme_wrapper");
-
-    recipeContainer.addEventListener("click", () => {
-        console.log(recipeContainer);
-
-        let clicked_drink_name = recipeContainer.querySelector(".theme_name").textContent;
-        localStorage.setItem("selected_drink", clicked_drink_name);
-        console.log(localStorage);
-
-        relocateToRecipe(localStorage.getItem("selected_drink"));
-    });
-
-});
+document.querySelectorAll(".theme_container").forEach(item => item.addEventListener("click", fetch_drink_page));
 
 // Function to relocate to recipe page with drink name as query parameter
 function relocateToRecipe(drinkName) {
-    window.location.replace(`../recipepage/recipee.php?drink=${drinkName}`);
+    window.location.replace(`../recipepage/index.php?drink=${drinkName}`);
 }
 
-*/
 
 
 

@@ -59,16 +59,17 @@ p {
     visibility: hidden;
 }
 
+
 #container {
     background-color: #ccbaa7;
-    height: 80vh;
+    min-height: 30vh;
     width: 95vw;
     margin: auto;
     margin-top: 50px;
     
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
 }
 
 #favorites_list {

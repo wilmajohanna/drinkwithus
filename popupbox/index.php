@@ -5,18 +5,17 @@
         header("content-type: application/json");
         http_response_code($statuscode);
         echo json_encode($message);
-    
         exit();
     }
 
     // register
-    $usersJSON = file_get_contents(".users.json");
+    $usersJSON = file_get_contents("./users.json");
     $all_users = json_decode($usersJSON, true);
     
     $requestJSON = file_get_contents("php://input");
     $requestData = json_decode($requestJSON, true);
     
-        if (isset($requestData["username"], $requestData["password"])) {
+        if (isset($requestData["firstname"], $requestData["username"], $requestData["password"], $requestData["lastname"])) {
     
             if($all_users!= null) { // om all_users inte är tom
             foreach ($all_users as $user) { // om användaren finns
@@ -44,7 +43,7 @@
     $requestJSON = file_get_contents("php://input");
     $requestData = json_decode($requestJSON, true);
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($requestData["username"], $requestData["password"])) {
         if(isset($requestData["username"], $requestData["password"])) {
             foreach ($all_users as $user) {
 
@@ -52,7 +51,8 @@
                 $password = $user["password"];
 
                 if ($username == $requestData["username"] and $password == $requestData["password"]) {  
-                    sendJSON($user); 
+                    $message = ["username" => $user["username"], "password" => $user["password"]];
+                    sendJSON($message); 
                 }
             }
 

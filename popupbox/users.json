@@ -1,5 +1,15 @@
 [
     {
-        "username": "Wilma"
+        "username": "vic",
+        "password": "vic",
+        "first_name": "victoria",
+        "last_name": "tanner"
+    },
+    {
+        "username": "ss",
+        "password": "ss",
+        "first_name": "ss",
+        "last_name": "ss",
+        "fav_drinks": ""
     }
 ]

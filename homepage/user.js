@@ -1,83 +1,163 @@
 "use strict";
 
-
-
-login_register_button.addEventListener("click", login_or_register) // Event Listenern till Login/Register knapparna
+console.log(login_register_button.textContent);
+login_register_button.addEventListener("click", login_or_register); // Event Listenern till Login/Register knapparna
 
 async function login_or_register(event) {
+  const log_user_field = document.querySelector("#log_user");
+  const log_pass_field = document.querySelector("#log_pass");
 
-    const log_user_field = document.querySelector("#log_user");
-    const log_pass_field = document.querySelector("#log_pass");
+  const reg_user_field = document.querySelector("#reg_user");
+  const reg_pass_field = document.querySelector("#reg_pass");
+  const firstname_field = document.querySelector("#first_name");
+  const lastname_field = document.querySelector("#last_name");
 
-    const reg_user_field = document.querySelector("#reg_user");
-    const reg_pass_field = document.querySelector("#reg_pass");
-    const firstname_field = document.querySelector("#first_name");
-    const lastname_field = document.querySelector("#last_name")
+  if (login_register_button.textContent === "Login") {
+    try {
+      let response = await fetch("../popupbox/index.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: log_user_field.value,
+          password: log_pass_field.value,
+        }),
+      });
 
-    if (event.target.textContent === "Login") {
+      if (response.status === 200) {
+        let data = await response.json();
+        window.localStorage.setItem("username", data.username);
 
-        try {
-            let response = await fetch("../popupbox/loginregister.php", {
-                method: "GET",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    username: log_user_field.value,
-                    password: log_pass_field.value,
-                })
-            })
+        // En inbyggd popup funktion av HTML och Javascript! Kolla HTML:n och CSS:n för att hänga med.. ditt monster!
+        // document.getElementById("notification").innerHTML = `
+        // <div><h1>You are logged on!</h1></div>`;
+        // document.getElementById("notification").showModal();
+        // document.querySelector("#notification > div").addEventListener("click", () => document.getElementById("notification").close());
 
-            let data = await response.json();
+        document.getElementById("home").innerHTML = `
+                <h2>Need some inspiration?</h2>
 
-            if (response.status === 200) {
-                document.querySelector("").href = "."
-                console.log("sucess");
-            }
+        <div id="pics">
+            <div id="summer" class="theme_container">
+                <p>Summer Cocktails</p>
+                <img id="summer" src="./images/summer drinks.jpg" alt="summer drink" />
 
-            log_user_field.value = "";
-            log_pass_field.value = "";
+                 <span class="hearts">&#10084;</span>
+            </div>
+            <div id="bubbles" class="theme_container">
+                <p>Bubbles Cocktails</p>
+                <img class="fp_images" id="bubbles" src="./images/Grapefruit_swirl.jpg" alt="" />
 
-        } catch (error) {
-            console.log("error");
-        }
+                 <span class="hearts">&#10084;</span>
+            </div>
+            <div id="retro" class="theme_container">
+                <p>Retro Cocktails</p>
+                <img  class="fp_images" id="retro" src="./images/Cucumber_gimlet.jpg" alt="" />
 
-        // Anropa funktionen som loggar in!
+                 <span class="hearts">&#10084;</span>
+            </div>
+            <div id="lessismore" class="theme_container">
+                <p>Less is More Cocktails</p>
+                <img class="fp_images" id="lessismore" src="./images/paloma.jpg" alt="" />
 
-    } else {
+                 <span class="hearts">&#10084;</span>
+            </div>
+            <div id="punches" class="theme_container">
+                <p>Punches</p>
+                <img class="fp_images" id="punches" src="./images/Packers.jpg" alt="" />
+                 <span class="hearts">&#10084;</span>
+            </div>
+        </div>
+    </div>`;
 
-
-        try {
-
-            let response = await fetch("../popupbox/loginregister.php", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    username: document.querySelector("#reg_user").value,
-                    password: document.querySelector("#reg_pass").value,
-                    firstname: document.querySelector("#first_name").value,
-                    lastname: document.querySelector("#last_name").value
-                }),
+    document.addEventListener("DOMContentLoaded", () => {
+        const themeImages = document.querySelectorAll(".theme_container > .fp_images");
+        /// ---------------------  behlver vi denna?
+    
+    
+        // gör så att vi kan klicka på enbart bilden för att komma till theme ist för hela containern
+        themeImages.forEach(themeSingleImage => {
+            themeSingleImage.addEventListener("click", () => {
+                console.log(themeSingleImage);
+                const drink_name = themeSingleImage.parentElement.querySelector("p").textContent;
+                relocateToTheme(drink_name);
+    
+    
+                // Retrieve theme name from clicked container's p element 
+                // Tar bort mellanrummet i drinkname
+    
+                // G = global -> global e för alla drinknamn
             });
+        });
+    });
 
-            let data = await response.json();
+        // Lägger eventlistener på like-knapparna!
+        const like_buttons = document.querySelectorAll(".hearts");
+        like_buttons.forEach((like_button) =>
+          addEventListener("click", send_to_favorites)
+        );
 
-            if (!response.ok) {
-                console.log("Register fail!");
-            } else {
-                console.log("Register sucess!");
+        async function send_to_favorites(event) {
+          // Hämtar värdet av "name" inuti den klickade containern
+          console.log(event.target.parentElement.querySelector("p").textContent);
 
-            }
-            reg_user_field.value = "";
-            reg_pass_field.value = "";
-            firstname_field.value = "";
-            lastname_field.value = "";
+          // LocalStorage är ett objekt. Här hämtar vi namnet på användarens namn som vi har sparat i nyckeln "username".
+          let current_username = localStorage.getItem("username");
+          let drink_name = event.target.parentElement.querySelector("p").textContent;
 
-        } catch (error) {
-            console.log("error!")
+          let data_to_send = {
+            username: current_username,
+            drinkname: drink_name,
+          };
 
+          await fetch("../favouritepage/favourites.php", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data_to_send),
+          });
         }
 
-
-
+        document.getElementById("cover").remove();
+        // Logga in knappen ska bli log out och få en annan funktion som eventListener som loggar ut en!
+      } // denna bracket stänger if-satsen.
+    } catch (error) {
+      console.log(error);
     }
 
+    // Anropa funktionen som loggar in!
+  } else {
+    try {
+      let response = await fetch("../popupbox/index.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username: document.querySelector("#reg_user").value,
+          password: document.querySelector("#reg_pass").value,
+          firstname: document.querySelector("#first_name").value,
+          lastname: document.querySelector("#last_name").value,
+        }),
+      });
+
+      let data = await response.json();
+
+      if (!response.ok) {
+        console.log("Register fail!");
+      } else {
+        console.log("Register success!");
+      }
+      reg_user_field.value = "";
+      reg_pass_field.value = "";
+      firstname_field.value = "";
+      lastname_field.value = "";
+    } catch (error) {
+      console.log("error!");
+    }
+  }
 }
+
+function fetch_drink_page (event) {
+    const drink_name = event.target.parentElement.querySelector("h1").textContent;
+    relocateToRecipe(localStorage.getItem("selected_drink"));
+    
+    localStorage.setItem("selected_drink", drink_name);
+
+    };

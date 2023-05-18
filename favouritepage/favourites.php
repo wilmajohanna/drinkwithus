@@ -5,30 +5,35 @@
         header("content-type: application/json");
         http_response_code($statuscode);
         echo json_encode($message);
-    
         exit();
     }
     
-    //hämta drink
+    // hämtar drinkarna
     $drinkJSON = file_get_contents("../recipepage/drinksData.json");
     $all_drinks = json_decode($drinkJSON, true);
 
+    // hämtar användarna
     $usersJSON = file_get_contents ("../popupbox/users.json");
     $all_users = json_decode($usersJSON, true);
     
+    // hämtar informationen som tas emot
     $requestJSON = file_get_contents("php://input");
     $requestData = json_decode($requestJSON, true);
 
-    if (isset($requestData["username"], $requestData["drinkname"])) {
-
-        if ($all_drinks!= null) {
             foreach ($all_drinks as $drinks) {
-
-                $drinkname = $drinks["id"];
-
-                if($drinkname == $requestData["drinkname"]) {
-                    for ($i=0; $i < count($all_users); i++) {
-
+                $drinkname = $drinks["name"];
+                if ($drinkname === $drinknameTEST) {
+                    sendJSON($drinkid);
+                    $drinkid = $drinks["id"];
+                    for ($i = 0; $i < count($all_users); $i++) {
+                        // hittar användaren
+                        $user = $all_users[$i]["username"];
+                        if ($user == $requestData["username"]) {
+                            $user["fav_drinks"] = $drinkid;
+                            file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
+                            exit();
+                        }
+                    
                     }
 
 
@@ -38,15 +43,14 @@
 
 
     
-                }
+                
             }
   }
-            $message = ["drinkname" => $requestData["drinkname"], "username" => $requestData["username"]];
-            $all_drinks[] = $message;
-            file_put_contents("favourite_drink", json_encode($all_users, JSON_PRETTY_PRINT));
-            sendJSON($message, 200);
+            // $message = ["drinkname" => $requestData["drinkname"], "username" => $requestData["username"]];
+            // $all_drinks[] = $message;
+            // file_put_contents("favourite_drink", json_encode($all_users, JSON_PRETTY_PRINT));
+            // sendJSON($message, 200);
   
-    }
 
     //ändra drink
     // if($SERVER["PATCH_METHOD"] == "PATCH") {

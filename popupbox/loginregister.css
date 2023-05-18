@@ -4,6 +4,7 @@
 
 /* ------------------------------------------------------------------------------------------------------------------------------------ */
 
+/*
 #popupbox {
   background-color: turquoise;
   display: flex;
@@ -12,10 +13,10 @@
   align-items: center;
   width: 80vw;
   height: 70vh;
-}
+}*/
 
 #cover {
-  height: 135vh;
+  height: 145vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -52,20 +53,15 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  color: white;
+  color: #f5f5f5;
 }
 
-#close_button:hover {
-  background-color: rgba(253, 201, 201);
+#close_button:hover, #login_or_register_button:hover, #register_link:hover {
+  background-color: rgba(135, 110, 97, 0.726);
+  user-select: none;
 }
 
-#login_or_register_button:hover {
-  background-color: rgba(253, 201, 201);
-}
 
-#register_link:hover {
-  background-color: rgba(253, 201, 201);
-}
 
 .registration {
   height: 60px;
@@ -87,7 +83,7 @@
   background-color: #876e61;
   border: 0;
   border-radius: 31.1rem;
-  color: white;
+  color: #f5f5f5;
 }
 
 #register_link {
@@ -95,12 +91,11 @@
   height: 35px;
   width: 220px;
 
-  text-align: center;
   margin-top: 20px;
   background-color: #876e61;
   border: 0;
   border-radius: 31.1rem;
-  color: white;
+  color: #f5f5f5;
 }
 
 #log_user,

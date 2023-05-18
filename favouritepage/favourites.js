@@ -1,5 +1,5 @@
 "use strict";
-const favourite_button = document.getElementById("heart");
+const favourite_button = document.getElementsByClassName("hearts");
 
 function activate_favourites(event) {
 
