@@ -9,6 +9,7 @@
 
 body {
   margin: 0;
+  background-color: #ccbaa7;
 }
 
 header {
@@ -34,7 +35,7 @@ nav {
 nav>button {
   border-radius: 40px;
   color: white;
-  background-color: pink;
+  background-color: #876e61;
   padding: 2vh;
   width: 130px;
   font-size: 18px;

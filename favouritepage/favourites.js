@@ -7,7 +7,7 @@ function activate_favourites(event) {
 
 };
 
-const body_object = { name: "Paloma", username: "Wilma" }
+const body_object = { drinkname: "Paloma", username: "Wilma" }
 fetch("favourites.php", {
     method: "POST",
     header: { "content-type": "application/json" },
