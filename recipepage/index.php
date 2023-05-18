@@ -24,7 +24,7 @@ foreach ($drinks as $drink) {
 }
 
 
-var_dump($name);
+
 
 function convertNewlinesToBr($text) {
     return nl2br($text);
