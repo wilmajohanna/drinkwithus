@@ -15,8 +15,17 @@ h2 {
     width: fit-content;
 }
 
+p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+}
 
-.theme_container {
+#summer,
+#bubbles,
+#retro,
+#lessismore,
+#punches {
     align-items: flex-end;
     justify-content: flex-end;
     height: 40vh;

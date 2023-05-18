@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Alumni Sans";
-  src: url(./fonts/AlumniSans-VariableFont_wght.ttf);
+  src: url(../fonts/AlumniSans-VariableFont_wght.ttf);
 }
 
 * {
@@ -31,7 +31,7 @@ nav {
   color: black;
 }
 
-nav > button {
+nav>button {
   border-radius: 40px;
   color: white;
   background-color: pink;
