@@ -49,5 +49,7 @@ span {
   color: white;
   background-color: pink;
   padding: 1vh;
-  width: 2vw;
+  width: 3vw;
+  height: 4vh;
+  margin-bottom: 4vh;
 }
