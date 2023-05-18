@@ -1,16 +1,8 @@
 <?php
 ini_set("display_errors", 1);
 
-
-function sendJSON($message, $response_code = 200) { 
-    header("content-type: application/json");
-    http_response_code($response_code);
-    //echo json_encode($message);
-    exit();
-}
-
-$sentDrink = $_GET["drink"];
-$drinksData = file_get_contents("../recipepage/drinksData.json", JSON_PRETTY_PRINT);
+// $sentDrink = $_GET["drink"];
+$drinksData = file_get_contents("../recipepage/drinksData.json");
 $drinks = json_decode($drinksData, true);
 
 foreach ($drinks as $drink) {
@@ -23,14 +15,6 @@ foreach ($drinks as $drink) {
         break; // Exit the loop after finding a matching drink
     }
 }
-
-var_dump($name);
-
-function convertNewlinesToBr($text) {
-    return nl2br($text);
-}
-
-
 
 ?>
 
@@ -66,7 +50,7 @@ function convertNewlinesToBr($text) {
             <h1 id="drink_name"><?php echo $name; ?></h1>
 
             <div id="information">
-                <div id="desc"><?php echo convertNewlinesToBr($description); ?></div>
+                <div id="desc"><?php echo $description; ?></div>
             </div>
         </div>
 

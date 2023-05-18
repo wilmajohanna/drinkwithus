@@ -85,13 +85,8 @@
         }
     },
     {
-<<<<<<< Updated upstream:recipepage/drinksData.json
         "name": "Pimms & Gingerbeer",
         "id": 5,
-=======
-        "name": "Pimms and Gingerbeer",
-        "id": "",
->>>>>>> Stashed changes:JSON/drinksData.json
         "image": "../images/Pimms.jpg",
         "theme": "Punches",
         "alcohol": "liquor",
