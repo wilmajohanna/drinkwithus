@@ -33,6 +33,8 @@ async function login_or_register(event) {
         // document.getElementById("notification").showModal();
         // document.querySelector("#notification > div").addEventListener("click", () => document.getElementById("notification").close());
 
+        
+        // När användaren loggar in syns html-strukturen för favorit-markörerna
         document.getElementById("home").innerHTML = `
                 <h2>Need some inspiration?</h2>
 
@@ -69,28 +71,26 @@ async function login_or_register(event) {
         </div>
     </div>`;
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const themeImages = document.querySelectorAll(".theme_container > .fp_images");
-        /// ---------------------  behlver vi denna?
-    
-    
-        // gör så att vi kan klicka på enbart bilden för att komma till theme ist för hela containern
-        themeImages.forEach(themeSingleImage => {
-            themeSingleImage.addEventListener("click", () => {
-                console.log(themeSingleImage);
-                const drink_name = themeSingleImage.parentElement.querySelector("p").textContent;
-                relocateToTheme(drink_name);
-    
-    
-                // Retrieve theme name from clicked container's p element 
-                // Tar bort mellanrummet i drinkname
-    
-                // G = global -> global e för alla drinknamn
-            });
-        });
-    });
+        document.addEventListener("DOMContentLoaded", () => {
+          const themeImages = document.querySelectorAll(
+            ".theme_container > .fp_images"
+          );
 
-        // Lägger eventlistener på like-knapparna!
+          // Gör så att vi kan klicka på enbart bilden för att komma till theme istället för hela containern
+          themeImages.forEach((themeSingleImage) => {
+            themeSingleImage.addEventListener("click", () => {
+              console.log(themeSingleImage);
+              const drink_name =
+                themeSingleImage.parentElement.querySelector("p").textContent;
+              relocateToTheme(drink_name);
+
+              // Retrieve theme name from clicked container's p element
+              // Tar bort mellanrummet i drinkname
+            });
+          });
+        });
+
+        // Lägger eventlistener på like-knapparna
         const like_buttons = document.querySelectorAll(".hearts");
         like_buttons.forEach((like_button) =>
           addEventListener("click", send_to_favorites)
@@ -102,7 +102,8 @@ async function login_or_register(event) {
 
           // LocalStorage är ett objekt. Här hämtar vi namnet på användarens namn som vi har sparat i nyckeln "username".
           let current_username = localStorage.getItem("username");
-          let drink_name = event.target.parentElement.querySelector("p").textContent;
+          let drink_name =
+            event.target.parentElement.querySelector("p").textContent;
 
           let data_to_send = {
             username: current_username,
@@ -122,8 +123,6 @@ async function login_or_register(event) {
     } catch (error) {
       console.log(error);
     }
-
-    // Anropa funktionen som loggar in!
   } else {
     try {
       let response = await fetch("../popupbox/index.php", {
@@ -140,24 +139,23 @@ async function login_or_register(event) {
       let data = await response.json();
 
       if (!response.ok) {
-        console.log("Register fail!");
+        console.log("Register Fail");
       } else {
-        console.log("Register success!");
+        console.log("Register Success");
       }
       reg_user_field.value = "";
       reg_pass_field.value = "";
       firstname_field.value = "";
       lastname_field.value = "";
     } catch (error) {
-      console.log("error!");
+      console.log("Error");
     }
   }
 }
 
-function fetch_drink_page (event) {
-    const drink_name = event.target.parentElement.querySelector("h1").textContent;
-    relocateToRecipe(localStorage.getItem("selected_drink"));
-    
-    localStorage.setItem("selected_drink", drink_name);
+function fetch_drink_page(event) {
+  const drink_name = event.target.parentElement.querySelector("h1").textContent;
+  relocateToRecipe(localStorage.getItem("selected_drink"));
 
-    };
+  localStorage.setItem("selected_drink", drink_name);
+}

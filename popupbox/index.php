@@ -8,7 +8,7 @@
         exit();
     }
 
-    // register
+    // Register
     $usersJSON = file_get_contents("./users.json");
     $all_users = json_decode($usersJSON, true);
     
@@ -23,7 +23,7 @@
                 $username = $user["username"];
         
                 if($username == $requestData["username"]) {
-                    $errorMessage = ["message" => "Conflict (the username is already taken)"];
+                    $errorMessage = ["message" => "Conflict (The username is already taken)"];
                     sendJSON($errorMessage, 409);
                 } 
             }
@@ -36,7 +36,7 @@
     }
 
 
-    // login
+    // Login
     $usersJSON = file_get_contents("users.json");
     $all_users = json_decode($usersJSON, true);
 
