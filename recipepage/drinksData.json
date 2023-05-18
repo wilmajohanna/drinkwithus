@@ -3,7 +3,7 @@
         "name": "Watermelon Sangria",
         "id": 1,
         "image": "../images/watermelon_sangria.jpg",
-        "theme": "Bubbles Cocktails",
+        "theme": "BubblesCocktails",
         "alcohol": "liquor",
         "description": "Indulge in the seductive allure of juicy, cool watermelon, a tantalizing summer treat. This pink sangria entices with hints of tart lime, velvety mint, and a touch of floral sweetness. Its alluring blush hue is a result of the tantalizing blend of fresh watermelon juice, rosé, and rosé Champagne, heightened by St. Germain elderflower liquor.\n\nSip this sensuous elixir by the pool, on a moonlit porch, or at the beach, as it entwines still and sparkling rosé wines.\n\nServe it in highball glasses or captivating mason jars, adorned with patterned pink paper straws to match its irresistible color.",
         "ingredients": {
@@ -23,7 +23,7 @@
         "name": "Grapefruit Swirl",
         "id": 2,
         "image": "../images/Grapefruit_swirl.jpg",
-        "theme": "Bubbles Cocktails",
+        "theme": "BubblesCocktails",
         "alcohol": "gin",
         "description": "Step into a winter wonderland with this fun and seductive cardamom & grapefruit gin fizz. <br><br>It's like a burst of sunshine in a glass, with warm, woodsy flavors and a splash of citrusy brightness. <br><br>Whether it's Christmas Eve or just a cocktail craving, this festive drink is perfect for toasting. Infused with cardamom and rosemary, it's easy to make and adds a touch of magic. Cozy up with the wintery spice of cardamom-infused gin, the tartness of fresh grapefruit, and the subtle earthiness of rosemary syrup. <br><br>Fancy meets holiday cheer in this blushing grapefruit gin fizz! Cheers!",
         "ingredients": {
@@ -46,7 +46,7 @@
         "name": "Summer Cobbler",
         "id": 3,
         "image": "../images/summer_cobbler.jpg",
-        "theme": "Summer Cocktails",
+        "theme": "SummerCocktails",
         "alcohol": "whiskey",
         "description": "Savor the seductive Summer Cobbler Cocktail, a refreshing blend of fresh blackberries, white whiskey, lime juice, and orange liqueur. This tantalizing drink proves that whiskey can be light and perfect for summer. Serve it by the pool and watch guests line up to try this fruity delight. <br><br>Effortlessly shake up this cocktail and garnish with a blackberry twist or a sprig of mint. Get ready to embrace the season in style with the Summer Cobbler Cocktail. your irresistible sip of summer.",
         "ingredients": {
@@ -67,7 +67,7 @@
         "name": "Bee's Knees",
         "id": 4,
         "image": "../images/B_knees.jpg",
-        "theme": "Summer Cocktails",
+        "theme": "SummerCocktails",
         "alcohol": "gin",
         "description": "Indulge in the sublime sweetness of the Bee's Knees, a delightful gin-based cocktail that embodies the essence of summer. With a harmonious blend of Tanqueray London Dry Gin, freshly pressed lemon juice, honey syrup, and a dash of orange bitters, this drink is a symphony of flavors. The honey syrup adds a luscious touch of natural sweetness, while the lemon juice provides a refreshing tang. Finished with a twist of lemon peel to release its aromatic oils, this cocktail is a true treat for the senses.",
         "ingredients": {
@@ -133,7 +133,7 @@
         "name": "Cucumber Mint Gimlet",
         "id": 7,
         "image": "../images/Cucumber_gimlet.jpg",
-        "theme": "Retro Cocktails",
+        "theme": "RetroCocktails",
         "alcohol": "gin",
         "description": "Experience retro elegance with the Cucumber Mint Gimlet, a refreshing cocktail that combines the coolness of cucumber and the invigorating essence of mint. Muddled cucumber, fresh mint leaves, light agave nectar (or simple syrup), lime juice, and gin (preferably Hendrick's) blend harmoniously in this timeless libation.\n\nMuddle the cucumber, mint, and agave nectar, then shake vigorously with ice, lime juice, and gin until thoroughly chilled. Strain into a martini glass and garnish with a sprig of mint for an added touch of sophistication.\n\nIndulge in the cool and revitalizing flavors of the Cucumber Mint Gimlet, embracing the charm of a bygone era. Cheers!",
         "ingredients": {
@@ -153,7 +153,7 @@
         "name": "Old Fashioned",
         "id": 8,
         "image": "../images/OldFashioned.jpg",
-        "theme": "Retro Cocktails",
+        "theme": "RetroCocktails",
         "alcohol": "whiskey",
         "description": "Step back in time and indulge in the timeless elegance of the Old Fashioned cocktail. This classic libation is a harmonious blend of quality whiskey, a touch of sweetness from a sugar cube, and aromatic bitters. Garnished with a citrus twist, it embodies the art of mixology in a single glass.\n\nSavor the rich flavors of the whiskey, the subtle sweetness of the sugar, and the complexity added by the bitters. With each sip, be transported to an era where craftsmanship and attention to detail were paramount.\n\nThe Old Fashioned is an embodiment of sophistication and refinement, making it a beloved choice for those seeking a taste of tradition. Raise your glass and enjoy the enduring allure of this timeless cocktail. Cheers!",
         "ingredients": {
@@ -173,7 +173,7 @@
         "name": "Paloma",
         "id": 9,
         "image": "../images/paloma.jpg",
-        "theme": "Less is More Cocktails",
+        "theme": "LessisMoreCocktails",
         "alcohol": "tequila",
         "description": "Transport yourself to a sun-kissed Mexican paradise with the Paloma cocktail. This vibrant libation blends zesty grapefruit, tangy lime, and a touch of fizz for a refreshing and invigorating experience.\n\nSip and savor the lively combination of freshly squeezed grapefruit juice, bright lime, and carbonated soda. The Paloma captures the essence of celebration and relaxation, evoking memories of carefree moments under the sun.\n\nGarnished with a sprig of mint or a wedge of grapefruit, this visually stunning cocktail is as delightful to look at as it is to taste. Indulge in the Paloma's vibrant flavors and let it whisk you away to a tropical paradise.\n\nRaise your glass and toast to the Paloma, a sip of Mexican sunshine that brings joy to any occasion. Salud!",
         "ingredients": {
@@ -195,7 +195,7 @@
         "name": "Spill The Tea",
         "id": 10,
         "image": "../images/spill_my_tea.jpg",
-        "theme": "Less is More Cocktails",
+        "theme": "LessisMoreCocktails",
         "alcohol": "gin",
         "description": "Unveil the seductive charm of the Spill The Tea cocktail. With a theme of less is more, this libation exudes elegance and sophistication.\n\nIndulge in the allure of Tanqueray London Dry Gin and the vibrant essence of orange marmalade. A teabag of Earl Grey adds a touch of mystery, infusing the drink with delicate notes of bergamot and black tea.\n\nServed in a wine glass filled with ice, the Spill The Tea cocktail shimmers with effervescence, inviting you to savor its enticing flavors. Garnished with a zesty lemon wedge, it balances playfulness and sensuality.\n\nEmbrace the art of less and let the Spill The Tea cocktail reveal its hidden secrets. Raise your glass and surrender to its seductive charm. Cheers to indulgence and discovery.",
         "ingredients": {
