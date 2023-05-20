@@ -122,5 +122,5 @@ function convertNewlinesToBr($text) {
     </div>
 
     <script src="../popupbox/loginregister.js"></script>
-    <script src="../homepage/user.js"></script>
+    <script src="../favouritepage/favourites.js"></script>
     <script src="../index.js"></script>

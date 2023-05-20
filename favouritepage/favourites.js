@@ -1,14 +1,12 @@
 "use strict";
-const favourite_button = document.getElementsById("favourites");
 
-function relocateToFavourites(event) {
-    window.location.replace(`../favouritepage/`);
 
-}
 
-favourite_button.addEventListener("click", relocateToFavourites);
 
-const body_object = { drinkname: "Paloma", username: "Wilma" };
+
+
+
+/*const body_object = { drinkname: "Paloma", username: "Wilma" };
 fetch("favourites.php", {
     method: "POST",
     header: { "content-type": "application/json" },
@@ -17,4 +15,4 @@ fetch("favourites.php", {
     .then((r) => r.json())
     .then(console.log);
 
-
+*/
