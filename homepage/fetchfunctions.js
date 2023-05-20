@@ -24,17 +24,14 @@ async function login_or_register(event) {
       });
 
 
-      // En inbyggd popup funktion av HTML och Javascript! Kolla HTML:n och CSS:n för att hänga med.. ditt monster!
-      document.getElementById("notification").innerHTML = `
-      <div><h1>Contacting Server!</h1></div>`;
-      document.getElementById("notification").showModal();
-      document.querySelector("#notification > div").addEventListener("click", () => document.getElementById("notification").close());
+      loading_alert();
+
 
       if (response.status === 200) {
         let data = await response.json();
         window.localStorage.setItem("username", data.username);
-        const dialog = document.querySelector("dialog");
-        dialog.remove();
+        remove_loading_alert();
+
 
         // När användaren loggar in syns html-strukturen för favorit-markörerna
         document.getElementById("home").innerHTML = `
