@@ -1,9 +1,12 @@
 "use strict";
-const favourite_button = document.getElementsByClassName("hearts");
-/* 
-function activate_favourites(event) {
-    if (favourite_button.addEventListener)
-} */
+const favourite_button = document.getElementsById("favourites");
+
+function relocateToFavourites(event) {
+    window.location.replace(`../favouritepage/`);
+
+}
+
+favourite_button.addEventListener("click", relocateToFavourites);
 
 const body_object = { drinkname: "Paloma", username: "Wilma" };
 fetch("favourites.php", {
@@ -14,5 +17,4 @@ fetch("favourites.php", {
     .then((r) => r.json())
     .then(console.log);
 
-favourite_button.addEventListener("click", activate_favourites);
 
