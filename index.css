@@ -58,12 +58,12 @@ nav>button {
 #notification {
   height: 100vh;
   width: 100vw;
-  background: rgba(0,0,0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 
 /* SE RAD 30 I USER.JS FÖR INFO OM VAD DETTA GÖR*/
-#notification > div {
+#notification>div {
   height: 200px;
   width: 200px;
   background-color: red;

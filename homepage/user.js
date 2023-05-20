@@ -23,17 +23,19 @@ async function login_or_register(event) {
         }),
       });
 
+
+      // En inbyggd popup funktion av HTML och Javascript! Kolla HTML:n och CSS:n för att hänga med.. ditt monster!
+      document.getElementById("notification").innerHTML = `
+      <div><h1>Contacting Server!</h1></div>`;
+      document.getElementById("notification").showModal();
+      document.querySelector("#notification > div").addEventListener("click", () => document.getElementById("notification").close());
+
       if (response.status === 200) {
         let data = await response.json();
         window.localStorage.setItem("username", data.username);
+        const dialog = document.querySelector("dialog");
+        dialog.remove();
 
-        // En inbyggd popup funktion av HTML och Javascript! Kolla HTML:n och CSS:n för att hänga med.. ditt monster!
-        // document.getElementById("notification").innerHTML = `
-        // <div><h1>You are logged on!</h1></div>`;
-        // document.getElementById("notification").showModal();
-        // document.querySelector("#notification > div").addEventListener("click", () => document.getElementById("notification").close());
-
-        
         // När användaren loggar in syns html-strukturen för favorit-markörerna
         document.getElementById("home").innerHTML = `
                 <h2>Need some inspiration?</h2>
@@ -102,8 +104,7 @@ async function login_or_register(event) {
 
           // LocalStorage är ett objekt. Här hämtar vi namnet på användarens namn som vi har sparat i nyckeln "username".
           let current_username = localStorage.getItem("username");
-          let drink_name =
-            event.target.parentElement.querySelector("p").textContent;
+          let drink_name = event.target.parentElement.querySelector("p").textContent;
 
           let data_to_send = {
             username: current_username,
