@@ -19,14 +19,15 @@ foreach ($drinks as $drink) {
         $ingredients = $drink["ingredients"];
         $instructions = $drink["instructions"];
         $description = $drink["description"];
-        break; // Exit the loop after finding a matching drink
+        break; // Exit loop efter att ha hittat en matchande dryck
     }
 }
 
 
 
-
+//convertNewlinesToBr($text): En funktion som konverterar radbrytningar i texten till HTML <br>-taggar.
 function convertNewlinesToBr($text) {
+    //nl2br — Infogar HTML-radbrytningar före alla "newlines" i en sträng
     return nl2br($text);
 }
 
