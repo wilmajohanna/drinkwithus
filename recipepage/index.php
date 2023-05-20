@@ -72,7 +72,7 @@ function convertNewlinesToBr($text) {
             <img id="drink_bg_image" src="<?php echo $image; ?>">
         </div>
 
-        <div class="containers" id="ingredients">
+        <div class="containers">
             <h1>Ingredients</h1>
             <ul id="ingredients">
                 <?php
@@ -85,7 +85,7 @@ function convertNewlinesToBr($text) {
             </ul>
         </div>
 
-        <div class="containers" id="instructions">
+        <div class="containers">
             <h1>Instructions</h1>
             <ul id="instruction">
                 <?php
