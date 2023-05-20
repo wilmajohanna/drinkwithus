@@ -40,7 +40,6 @@ function relocateToRecipe (drinkName) {
 /// -------------------------------------------------  favoritepage   ---------------------------------------------------------------- //
 
 const favourite_button = document.getElementById("favourites");
-console.log(favourite_button);
 
 favourite_button.addEventListener("click", relocateToFavourites);
 

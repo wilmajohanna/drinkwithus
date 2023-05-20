@@ -154,6 +154,7 @@ async function login_or_register(event) {
   }
 }
 
+//Be Adam förklara
 function fetch_drink_page(event) {
   const drink_name = event.target.parentElement.querySelector("h1").textContent;
   localStorage.setItem("selected_drink", drink_name);
