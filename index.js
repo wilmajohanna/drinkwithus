@@ -31,7 +31,6 @@ function relocateToTheme(themeName) {
 // Det här under bör vara med på recipe sidan.
 document.querySelectorAll(".theme_container").forEach((item) => item.addEventListener("click", fetch_drink_page));
 
-window.location = "../recipepage/?drink=" + encodeURIComponent(drinkName);
 
 // Function to relocate to recipe page with drink name as query parameter
 function relocateToRecipe(drinkName) {
