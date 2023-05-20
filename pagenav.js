@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to relocate to theme page with theme name as query parameter
-function relocateToTheme (themeName) {
+function relocateToTheme(themeName) {
     window.location.replace(`../themepage/index.php?theme=${themeName}`);
 }
 
@@ -33,7 +33,7 @@ document.querySelectorAll(".theme_container").forEach((item) => item.addEventLis
 
 
 // Function to relocate to recipe page with drink name as query parameter
-function relocateToRecipe (drinkName) {
+function relocateToRecipe(drinkName) {
     window.location.replace(`../recipepage/index.php?drink=${drinkName}`);
 }
 
