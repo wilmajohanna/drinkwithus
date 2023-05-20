@@ -27,10 +27,6 @@ function relocateToTheme(themeName) {
 
 /// -------------------------------------------------  recipe.js   ---------------------------------------------------------------- //
 
-/* const themeContainers = document.getElementsByClassName("theme_container");
-for (var i = 0; i < 0; i < themeContainers.length; i++) */
-
-// Lägger till en eventlyssnare på alla element med klassen "theme_container"
 
 // Det här under bör vara med på recipe sidan.
 document.querySelectorAll(".theme_container").forEach((item) => item.addEventListener("click", fetch_drink_page));
