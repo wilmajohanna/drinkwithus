@@ -50,7 +50,7 @@ async function login_or_register(event) {
             <div id="bubbles" class="theme_container">
                 <p>Bubbles Cocktails</p>
                 <img class="fp_images" id="bubbles" src="./images/Grapefruit_swirl.jpg" alt="" />
-
+              
                  <span class="hearts">&#10084;</span>
             </div>
             <div id="retro" class="theme_container">
