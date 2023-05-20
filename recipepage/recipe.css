@@ -17,7 +17,6 @@ body {
     flex-direction: column;
     box-sizing: border-box;
 
-    text-align: start;
     color: #876e61;
     border: #876e61 solid 2px;
     border-radius: 20px;
@@ -25,14 +24,19 @@ body {
 
 }
 
+/* #ingredients,
+#instructions,
 #info_wrapper {
-    padding: 10px;
-    font-size: 18px;
-}
+    padding: 4vh;
 
-img {
-    height: 100%;
-    width: 100%;
+
+} */
+
+#drink_image {
+    height: 80%;
+    width: 80%;
+    padding: 0;
+    border-radius: 20px;
 }
 
 ul {
@@ -42,9 +46,4 @@ ul {
 li {
     font-size: 20px;
     text-align: start;
-}
-
-
-#amount {
-    font-weight: bold;
 }
