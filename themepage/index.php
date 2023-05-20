@@ -76,8 +76,9 @@ $themes = json_decode ($drinksData, true);
 
         </div>
     </div>
+    <script src="../homepage/fetchfunction.js"></script>
     <script src="../popupbox/loginregister.js"></script>
-    <script src="../homepage/fetchfunctions"></script>
+    <script src="./allfunctions.js"></script>
     <script src="./pagenav.js"></script>
 
 
