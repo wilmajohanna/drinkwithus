@@ -36,3 +36,13 @@ document.querySelectorAll(".theme_container").forEach((item) => item.addEventLis
 function relocateToRecipe(drinkName) {
     window.location.replace(`../recipepage/index.php?drink=${drinkName}`);
 }
+
+/// -------------------------------------------------  favoritepage   ---------------------------------------------------------------- //
+
+const favourite_button = document.getElementById("favourites");
+
+favourite_button.addEventListener("click", relocateToFavourites);
+
+function relocateToFavourites (event) {
+    window.location.replace(`../favouritepage`);
+}
