@@ -32,7 +32,6 @@ function relocateToTheme(themeName) {
 document.querySelectorAll(".theme_container").forEach((item) => item.addEventListener("click", fetch_drink_page));
 
 
-
 // Function to relocate to recipe page with drink name as query parameter
 function relocateToRecipe(drinkName) {
     window.location.replace(`../recipepage/index.php?drink=${drinkName}`);
