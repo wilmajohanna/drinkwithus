@@ -1,6 +1,5 @@
 "use strict";
-
-console.log(login_register_button.textContent);
+const login_register_button = document.getElementById("login_or_register_button");
 login_register_button.addEventListener("click", login_or_register); // Event Listenern till Login/Register knapparna
 
 async function login_or_register(event) {

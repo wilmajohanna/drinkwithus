@@ -6,7 +6,6 @@ const close_button = document.getElementById("close_button");
 const cover_background = document.getElementById("cover");
 const register_box = document.getElementById("register");
 const login_box = document.getElementById("login");
-const login_register_button = document.getElementById("login_or_register_button");
 
 function register_or_login_box(event) {
 
@@ -27,7 +26,6 @@ function popup_box(event) { // Gör så att popup_boxen dyker upp
         cover_background.querySelector("#content").querySelectorAll(".popup_button").forEach(button => button.style.visibility = "visible");
         close_button.style.visibility = "visible";
         register_link.style.visibility = "visible";
-
 
     } else {
         cover_background.style.visibility = "visible";
