@@ -2,11 +2,6 @@
 
 login_register_button.addEventListener("click", login_or_register);
 
-
-function relocateToFavourites(event) {
-    window.location.replace(`../favouritepage`);
-}
-
 function loading_alert(alert) {
 
     let alert_box = document.createElement("div");
@@ -20,7 +15,7 @@ function remove_loading_alert() {
 }
 
 function relocateToFavourites() {
-    window.location.replace("../favouritepage");
+    window.location.replace("../favouritepage/");
 }
 
 function relocateToAllRecipes() {

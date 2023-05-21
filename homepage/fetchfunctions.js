@@ -8,7 +8,6 @@ function refresh_page() {
     load_loggedOnPage();
     login_home.textContent = "Log out";
   }
-
 };
 
 console.log(window.localStorage);
@@ -44,12 +43,8 @@ async function login_or_register(event) {
         remove_loading_alert();
         load_loggedOnPage();
 
-
-        // När användaren loggar in syns html-strukturen för favorit-markörerna
-
         document.getElementById("cover").remove();
-        // Logga in knappen ska bli log out och få en annan funktion som eventListener som loggar ut en!
-      } // denna bracket stänger if-satsen.
+      } 
 
       if (response.status === 404) {
         alert("hej wilma");
@@ -85,14 +80,14 @@ async function login_or_register(event) {
       console.log("Error");
     }
   }
-}
+};
 
 function fetch_drink_page(event) {
   const drink_name = event.target.parentElement.querySelector("h1").textContent;
   localStorage.setItem("selected_drink", drink_name);
   relocateToRecipe(localStorage.getItem("selected_drink"));
 
-}
+};
 
 function load_loggedOnPage() {
 
@@ -104,43 +99,6 @@ function load_loggedOnPage() {
   if (login_home.textContent === "Log in") {
     login_home.textContent = "Log out";
   }
-
-  if (document.getElementById("home") != null) {
-    document.getElementById("home").innerHTML = `
-            <h2>Need some inspiration?</h2>
-  
-    <div id="pics">
-        <div id="summer" class="theme_container">
-            <p>Summer Cocktails</p>
-            <img id="summer" src="./images/summer drinks.jpg" alt="summer drink" />
-  
-             <span class="hearts">&#10084;</span>
-        </div>
-        <div id="bubbles" class="theme_container">
-            <p>Bubbles Cocktails</p>
-            <img class="fp_images" id="bubbles" src="./images/Grapefruit_swirl.jpg" alt="" />
-          
-             <span class="hearts">&#10084;</span>
-        </div>
-        <div id="retro" class="theme_container">
-            <p>Retro Cocktails</p>
-            <img  class="fp_images" id="retro" src="./images/Cucumber_gimlet.jpg" alt="" />
-  
-             <span class="hearts">&#10084;</span>
-        </div>
-        <div id="lessismore" class="theme_container">
-            <p>Less is More Cocktails</p>
-            <img class="fp_images" id="lessismore" src="./images/paloma.jpg" alt="" />
-  
-             <span class="hearts">&#10084;</span>
-        </div>
-        <div id="punches" class="theme_container">
-            <p>Punches</p>
-            <img class="fp_images" id="punches" src="./images/Packers.jpg" alt="" />
-             <span class="hearts">&#10084;</span>
-        </div>
-    </div>
-  </div>`;
 
     function load_content(event) {
       document.addEventListener("DOMContentLoaded", () => {
@@ -167,9 +125,5 @@ function load_loggedOnPage() {
     document.querySelectorAll(".theme_container").forEach((item) =>
       item.addEventListener("click", fetch_drink_page)
     );
-
-
-
   };
 
-}

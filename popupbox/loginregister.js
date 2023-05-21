@@ -36,6 +36,7 @@ function login_or_logout(event) {
         register_or_login_box();
         popup_box();
         favourite_button.addEventListener("click", relocateToFavourites);
+       document.querySelector(".hearts").style.visibility = "visible";
     } else {
         localStorage.clear();
         document.querySelectorAll(".hearts").forEach(heart => heart.remove());

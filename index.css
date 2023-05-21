@@ -53,11 +53,14 @@ nav>button {
   width: 3vw;
   height: 4vh;
   margin-bottom: 4vh;
+  visibility: hidden;
 }
 
 .hearts:hover {
   user-select: none;
 }
+
+
 
 #notification {
   height: 100vh;
