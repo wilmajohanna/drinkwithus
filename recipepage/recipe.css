@@ -1,61 +1,64 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .recipe_wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 10vh;
-    gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
 
-    box-sizing: border-box;
+  padding: 5vw;
+  box-sizing: border-box;
+  margin: 0 20px 20px 20px;
 }
 
 .containers {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 
-    text-align: start;
-    border-radius: 20px;
-    padding: 4vh;
-
+  text-align: start;
+  border-radius: 20px;
+  padding: 4vh;
 }
 
 #info_wrapper,
 #ingredients,
 #instructions {
-    color: #876e61;
-    border: #876e61 solid 2px;
+  color: #876e61;
+  background-color: #f0e4cbc4;
+  border: #876e61 solid 2px;
+}
+
+#instructions, #ingredients {
+    height: 60vh;
 }
 
 #info_wrapper {
-    padding: 10px;
-    font-size: 18px;
+  padding: 10px;
+  font-size: 18px;
 }
 
 #drink_image {
-    padding: 0;
+  padding: 0;
 }
 
-
 img {
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 li {
-    font-size: 20px;
-    text-align: start;
+  font-size: 20px;
+  text-align: start;
 }
 
-
 #amount {
-    font-weight: bold;
+  font-weight: bold;
 }

@@ -10,12 +10,15 @@
 body {
   margin: 0;
   background-color: #f5f5f5;
-  
 }
 
 header {
   display: grid;
   grid-template-columns: 2fr 2fr;
+  height: 15vh;
+
+  background-image: url(../images/cocktails.webp);
+  background-repeat: repeat;
 }
 
 #logo {
@@ -47,30 +50,26 @@ nav > button {
 }
 
 #section {
-    background-color: #ccbaa7;
-    height: 95vh;
-    width: 100vw;
-    display: flex;
-    
+  background-color: #ccbaa7;
+  height: 95vh;
+  width: 100vw;
+  display: flex;
 }
 
 p {
-    text-align: center;
-    font-size: 30px;
-    visibility: hidden;
+  text-align: center;
+  font-size: 30px;
+  visibility: hidden;
 }
-
 
 #container {
-    background-color: #ccbaa7;
-    min-height: 30vh;
-    width: 95vw;
-    margin: auto;
-    margin-top: 50px;
-    
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(2, 1fr); */
+  background-color: #ccbaa7;
+  min-height: 30vh;
+  width: 95vw;
+  margin: auto;
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
 }
-
-
