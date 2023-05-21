@@ -27,7 +27,12 @@ body {
 #ingredients,
 #instructions {
   color: #876e61;
+  background-color: #f0e4cbc4;
   border: #876e61 solid 2px;
+}
+
+#instructions, #ingredients {
+    height: 60vh;
 }
 
 #info_wrapper {
