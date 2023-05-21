@@ -7,7 +7,6 @@ function relocateToFavourites(event) {
     window.location.replace(`../favouritepage`);
 }
 
-
 function loading_alert(alert) {
 
     let alert_box = document.createElement("div");
@@ -20,9 +19,12 @@ function remove_loading_alert() {
     document.querySelector("#white_box").remove();
 }
 
-
 function relocateToFavourites() {
     window.location.replace("../favouritepage");
+}
+
+function relocateToAllRecipes() {
+    window.location.replace("../allrecipepage");
 }
 
 function loading_alert(alertMessage) {
