@@ -1,6 +1,5 @@
 "use strict";
 
-const login_home = document.getElementById("login_home");
 const register_link = document.getElementById("register_link");
 const close_button = document.getElementById("close_button");
 const cover_background = document.getElementById("cover");
@@ -32,7 +31,25 @@ function popup_box(event) { // Gör så att popup_boxen dyker upp
     }
 };
 
-login_home.addEventListener("click", popup_box, register_or_login_box); // click event till login_home
+function login_or_logout(event) {
+    if (login_home.textContent === "Log in") {
+        register_or_login_box();
+        popup_box();
+        favourite_button.addEventListener("click", relocateToFavourites);
+    } else {
+        localStorage.clear();
+        document.querySelectorAll(".hearts").forEach(heart => heart.remove());
+        login_home.textContent = "Log in";
+        favourite_button.remove();
+        location.reload();
+
+        /*  favourite_button.addEventListener("click", relocateToFavourites); */
+
+
+    }
+}
+
+login_home.addEventListener("click", login_or_logout); // click event till login_home
 
 
 function x_button(event) {

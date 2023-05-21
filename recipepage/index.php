@@ -54,7 +54,6 @@ function convertNewlinesToBr($text) {
 
         <nav>
             <button id="about_us">About Us</button>
-            <button id="heart">Favourites</button>
             <button id="login_home">Log in</button>
         </nav>
     </header>
@@ -75,7 +74,7 @@ function convertNewlinesToBr($text) {
 
         <div class="containers" id="ingredients">
             <h1>Ingredients</h1>
-            <ul id="ingredients">
+            <ul id="ingredient">
                 <?php
                 if (!empty($ingredients)) {
                     foreach ($ingredients as $ingredient) {

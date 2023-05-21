@@ -1,14 +1,7 @@
 "use strict";
 
-function make_nav_buttons_work() {
-    document.getElementById("login_home").addEventListener("click", login_or_register)
-    document.getElementById("favourites").addEventListener("click", relocateToFavourites);
+login_register_button.addEventListener("click", login_or_register);
 
-}
-
-
-const favourite_button = document.getElementById("favourites");
-favourite_button.addEventListener("click", relocateToFavourites);
 
 function relocateToFavourites(event) {
     window.location.replace(`../favouritepage`);
@@ -45,3 +38,8 @@ function remove_loading_alert() {
         alert_box.remove();
     }
 }
+
+/* function front_page () {
+
+
+} */
