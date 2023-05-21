@@ -1,8 +1,6 @@
 "use strict";
-/*
-const favourite_button = document.getElementById("favourites");
-console.log(favourite_button);
 
+const favourite_button = document.getElementById("favourites");
 favourite_button.addEventListener("click", relocateToFavourites);
 
 function relocateToFavourites(event) {
@@ -20,13 +18,6 @@ function loading_alert(alert) {
 
 function remove_loading_alert() {
     document.querySelector("#white_box").remove();
-}
-*/
-
-const favourite_button = document.getElementById("favourites");
-
-if (favourite_button) {
-    favourite_button.addEventListener("click", relocateToFavourites);
 }
 
 function relocateToFavourites() {
