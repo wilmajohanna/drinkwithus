@@ -50,17 +50,3 @@ window.addEventListener("popstate", function (event) {
     }
     window.history.back();
 });
-
-
-
-
-
-/// -------------------------------------------------  favoritepage   ---------------------------------------------------------------- //
-/* 
-const favourite_button = document.getElementById("favourites");
-
-favourite_button.addEventListener("click", relocateToFavourites);
-
-function relocateToFavourites (event) {
-    window.location.replace(`../favouritepage`);
-} */
