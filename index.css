@@ -10,6 +10,7 @@
 body {
   margin: 0;
   background-color: #ccbaa7;
+  color: #353535;
 }
 
 header {
@@ -29,12 +30,11 @@ header {
 nav {
   font-size: 2vh;
   margin: 2vw;
-  color: black;
+  color: #353535;
 }
 
 nav>button {
   border-radius: 40px;
-  color: white;
   background-color: #876e61;
   padding: 2vh;
   width: 130px;
