@@ -1,8 +1,13 @@
 "use strict";
-/*
-const favourite_button = document.getElementById("favourites");
-console.log(favourite_button);
 
+function make_nav_buttons_work() {
+    document.getElementById("login_home").addEventListener("click", login_or_register)
+    document.getElementById("favourites").addEventListener("click", relocateToFavourites);
+
+}
+
+
+const favourite_button = document.getElementById("favourites");
 favourite_button.addEventListener("click", relocateToFavourites);
 
 function relocateToFavourites(event) {
@@ -21,21 +26,7 @@ function loading_alert(alert) {
 function remove_loading_alert() {
     document.querySelector("#white_box").remove();
 }
-*/
 
-function make_nav_buttons_work() {
-    document.getElementById("login_home").addEventListener("click", login_or_register)
-    document.getElementById("favourites").addEventListener("click",);
-
-
-}
-
-
-const favourite_button = document.getElementById("favourites");
-
-if (favourite_button) {
-    favourite_button.addEventListener("click", relocateToFavourites);
-}
 
 function relocateToFavourites() {
     window.location.replace("../favouritepage");
