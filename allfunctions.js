@@ -23,6 +23,14 @@ function remove_loading_alert() {
 }
 */
 
+function make_nav_buttons_work() {
+    document.getElementById("login_home").addEventListener("click", login_or_register)
+    document.getElementById("favourites").addEventListener("click",);
+
+
+}
+
+
 const favourite_button = document.getElementById("favourites");
 
 if (favourite_button) {
