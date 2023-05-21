@@ -41,6 +41,7 @@ function login_or_logout(event) {
         document.querySelectorAll(".hearts").forEach(heart => heart.remove());
         login_home.textContent = "Log in";
         favourite_button.remove();
+        location.reload();
 
         /*  favourite_button.addEventListener("click", relocateToFavourites); */
 
