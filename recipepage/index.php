@@ -54,7 +54,6 @@ function convertNewlinesToBr($text) {
 
         <nav>
             <button id="about_us">About Us</button>
-            <button id="heart">Favourites</button>
             <button id="login_home">Log in</button>
         </nav>
     </header>
