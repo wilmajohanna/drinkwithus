@@ -69,7 +69,6 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 5vh 0 5vh;
-    gap: 1.5vw;
     justify-content: center;
 }
 
