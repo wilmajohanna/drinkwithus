@@ -9,7 +9,7 @@ h2 {
     text-align: center;
     font-size: 7vh;
     margin: 0;
-    padding-top: 20px;
+    padding: 20px 0 20px 0;
 }
 
 #pics {
@@ -37,7 +37,6 @@ p {
     height: 300px;
     width: 100%;
 
-
     background-repeat: repeat;
     background-size: cover;
 }
@@ -49,11 +48,11 @@ p {
     align-items: center;
     margin: 2vh;
     margin-top: 7vh;
-    margin: 0 10vh 0 10vh;
+    margin: 0 5vh 0 5vh;
 }
 
 #cocktails>h1 {
-    font-size: 50px;
+    font-size: 70px;
 }
 
 #cocktails>button {
@@ -69,41 +68,28 @@ p {
 #flip_card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2fr 1fr;
-    height: 40vh;
-
-    gap: 3.5vw;
-    width: fit-content;
+    margin: 0 5vh 0 5vh;
+    gap: 1.5vw;
     justify-content: center;
-    align-items: center;
-    margin: 0 10vh 0 10vh;
-
-}
-
-#old_fashioned,
-#cucumber_gimlet,
-#grapefruit_swirl {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr 1fr;
-
 }
 
 #old_fashioned>p,
 #cucumber_gimlet>p,
-#grapefruit_swirl>p,
-.hearts {
+#grapefruit_swirl>p {
     display: flex;
     justify-content: space-between;
     grid-row: 2;
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .show_hover {
-    height: 40vh;
-    width: 100%;
     background-repeat: repeat;
     background-size: cover;
-    border-radius: 20px;
-    grid-row: 1;
+
+    height: 80%;
+    width: 95%;
+    border-radius: 30px;
 
 }
