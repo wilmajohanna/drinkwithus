@@ -10,7 +10,18 @@
         "password": "ss",
         "first_name": "ss",
         "last_name": "ss",
-        "fav_drinks": ""
+        "fav_drinks": [
+            8,
+            7,
+            2,
+            2,
+            7,
+            2,
+            2,
+            2,
+            7,
+            2
+        ]
     },
     {
         "username": "wilmajohanna",
