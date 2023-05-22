@@ -42,19 +42,20 @@ nav>button {
   margin-left: 10px;
 }
 
+
 .hearts {
   display: flex;
+  position: absolute;
   align-items: center;
   justify-content: center;
+
   border-radius: 20px;
   color: #f5f5f5;
-  background-color: #876e61;
-  padding: 1vh;
-  width: 3vw;
-  height: 4vh;
-  margin-bottom: 4vh;
+  width: 37vw;
+  height: 6vh;
   visibility: hidden;
-
+  padding: 2vw;
+  bottom: -200px;
 }
 
 .hearts:hover {

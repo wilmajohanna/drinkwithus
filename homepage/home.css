@@ -1,9 +1,8 @@
 #home {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(4, auto);
     justify-content: center;
     align-items: center;
-    margin: 0 10vh 0 10vh;
 }
 
 h2 {
@@ -18,24 +17,26 @@ h2 {
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     gap: 1.5vw;
+    margin: 0 10vh 0 10vh;
 }
 
 p {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
 }
 
-#summer,
-#bubbles,
-#retro,
-#lessismore,
-#punches {
+#summer>img,
+#bubbles>img,
+#retro>img,
+#lessismore>img,
+#punches>img {
     align-items: flex-end;
     justify-content: flex-end;
-    height: 40vh;
-    width: 18vw;
     font-size: 30px;
+    height: 100%;
+    width: 100%;
+
 
     background-repeat: repeat;
     background-size: cover;
@@ -44,9 +45,11 @@ p {
 #cocktails {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     align-items: center;
     margin: 2vh;
     margin-top: 7vh;
+    margin: 0 10vh 0 10vh;
 }
 
 #cocktails>h1 {
@@ -67,20 +70,22 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    height: 40vh;
 
-    margin: 2vh;
     gap: 2.5vw;
     width: fit-content;
     justify-content: center;
     align-items: center;
+    margin: 0 10vh 0 10vh;
 
 }
 
-
 .show_hover {
-    height: 60vh;
-    width: 30vw;
+    position: relative;
+    height: 40vh;
+    width: 100%;
     background-repeat: repeat;
     background-size: cover;
     border-radius: 20px;
+
 }
