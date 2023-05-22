@@ -45,17 +45,14 @@ nav>button {
 
 .hearts {
   display: flex;
-  position: absolute;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
   border-radius: 20px;
   color: #f5f5f5;
-  width: 37vw;
-  height: 6vh;
   visibility: hidden;
-  padding: 2vw;
-  bottom: -200px;
+  bottom: -150px;
+  font-size: 30px;
 }
 
 .hearts:hover {
