@@ -46,6 +46,7 @@ p {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     margin: 2vh;
+    margin-top: 7vh;
 }
 
 #cocktails>h1 {

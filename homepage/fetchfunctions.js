@@ -42,8 +42,17 @@ async function login_or_register(event) {
         window.localStorage.setItem("username", data.username);
         remove_loading_alert();
         load_loggedOnPage();
+        favourite_button.addEventListener("click", relocateToFavourites);
+
 
         document.getElementById("cover").remove();
+        document.querySelectorAll(".hearts").forEach(heart => {
+          if (login_home.textContent === "Log in") {
+            heart.style.visibility = "hidden";
+          } else {
+            heart.style.visibility = "visible";
+          }
+        })
       }
 
       if (response.status === 404) {

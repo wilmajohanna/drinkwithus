@@ -35,8 +35,3 @@ function remove_loading_alert() {
         alert_box.remove();
     }
 }
-
-/* function front_page () {
-
-
-} */
