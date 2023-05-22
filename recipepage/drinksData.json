@@ -3,7 +3,7 @@
         "name": "Watermelon Sangria",
         "id": 1,
         "image": "../images/watermelon_sangria.jpg",
-        "theme": "BubblesCocktails",
+        "theme": "BubblyCocktails",
         "alcohol": "liquor",
         "description": "Indulge in the seductive allure of juicy watermelon sangria, blending tangy lime and velvety mint. With its blush hue, this sensual elixir of rosé, Champagne, and St. Germain liquor enchants by the pool or on a moonlit porch. Sip from highball glasses or mason jars, and savor the temptation.",
         "ingredients": {
@@ -23,7 +23,7 @@
         "name": "Grapefruit Swirl",
         "id": 2,
         "image": "../images/Grapefruit_swirl.jpg",
-        "theme": "BubblesCocktails",
+        "theme": "BubblyCocktails",
         "alcohol": "gin",
         "description": "Savor the winter sunshine with a cardamom and grapefruit gin fizz. This festive cocktail sparkles with prosecco and citrus brightness. With rosemary-infused syrup and cardamom-infused gin, it's the perfect blend of warmth and tartness. Embrace the magic in a glass, and toast to special occasions.",
         "ingredients": {
