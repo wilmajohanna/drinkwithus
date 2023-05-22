@@ -3,7 +3,7 @@
     grid-template-rows: auto;
     justify-content: center;
     align-items: center;
-    margin: 0 4vh 0 4vh;
+    margin: 0 10vh 0 10vh;
 }
 
 h2 {
@@ -22,7 +22,7 @@ h2 {
 
 p {
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     margin: 0;
 }
 

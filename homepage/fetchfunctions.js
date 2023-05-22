@@ -44,7 +44,7 @@ async function login_or_register(event) {
         load_loggedOnPage();
 
         document.getElementById("cover").remove();
-      } 
+      }
 
       if (response.status === 404) {
         alert("hej wilma");
@@ -100,30 +100,30 @@ function load_loggedOnPage() {
     login_home.textContent = "Log out";
   }
 
-    function load_content(event) {
-      document.addEventListener("DOMContentLoaded", () => {
-        const themeImages = document.querySelectorAll(".theme_container > .fp_images");
+  function load_content(event) {
+    document.addEventListener("DOMContentLoaded", () => {
+      const themeImages = document.querySelectorAll(".theme_container > .fp_images");
 
-        // gör så att vi kan klicka på enbart bilden för att komma till theme ist för hela containern i detta fallet theme_container i theme.php
-        themeImages.forEach((themeSingleImage) => {
-          themeSingleImage.addEventListener("click", () => {
+      // gör så att vi kan klicka på enbart bilden för att komma till theme ist för hela containern i detta fallet theme_container i theme.php
+      themeImages.forEach((themeSingleImage) => {
+        themeSingleImage.addEventListener("click", () => {
 
 
-            // Hämta temanamn från den klickade containers p-element
-            const drink_name =
-              themeSingleImage.parentElement.querySelector("p").textContent;
-            relocateToTheme(drink_name.replace(/ /g, ""));
-            // G = global -> global e för alla drinknamn
-            // Tar bort mellanrummet i drinkname
+          // Hämta temanamn från den klickade containers p-element
+          const drink_name =
+            themeSingleImage.parentElement.querySelector("p").textContent;
+          relocateToTheme(drink_name.replace(/ /g, ""));
+          // G = global -> global e för alla drinknamn
+          // Tar bort mellanrummet i drinkname
 
-            console.log(themeSingleImage);
+          console.log(themeSingleImage);
 
-          });
         });
       });
-    };
-    document.querySelectorAll(".theme_container").forEach((item) =>
-      item.addEventListener("click", fetch_drink_page)
-    );
+    });
   };
+  document.querySelectorAll(".theme_container").forEach((item) =>
+    item.addEventListener("click", fetch_drink_page)
+  );
+};
 
