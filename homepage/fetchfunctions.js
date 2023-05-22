@@ -91,12 +91,12 @@ async function login_or_register(event) {
   }
 };
 
-function fetch_drink_page(event) {
-  const drink_name = event.target.parentElement.querySelector("p").textContent;
-  localStorage.setItem("selected_drink", drink_name);
-  relocateToRecipe(localStorage.getItem("selected_drink"));
+// function fetch_drink_page(event) {
+//   const drink_name = event.target.parentElement.querySelector("p").textContent;
+//   localStorage.setItem("selected_drink", drink_name);
+//   relocateToRecipe(localStorage.getItem("selected_drink"));
 
-};
+// };
 
 function load_loggedOnPage() {
 
@@ -131,8 +131,8 @@ function load_loggedOnPage() {
       });
     });
   };
-  document.querySelectorAll(".theme_container").forEach((item) =>
-    item.addEventListener("click", fetch_drink_page)
-  );
+  // document.querySelectorAll(".theme_container").forEach((item) =>
+  //   item.addEventListener("click", fetch_drink_page)
+  // );
 };
 
