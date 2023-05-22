@@ -19,17 +19,19 @@
     // hämtar informationen som tas emot
     $requestJSON = file_get_contents("php://input");
     $requestData = json_decode($requestJSON, true);
+
         
     foreach ($all_drinks as $drinks) {
         $drinkname = $drinks["name"];
-        if ($drinkname === $drinknameTEST) {
-            sendJSON($drinkid);
+        if ($drinkname === $requestData["drinkname"]) {
             $drinkid = $drinks["id"];
             for ($i = 0; $i < count($all_users); $i++) {
             // hittar användaren
-                $user = $all_users[$i]["username"];
-                if ($user == $requestData["username"]) {
-                    $user["fav_drinks"] = $drinkid;
+                $user = $all_users[$i];
+                if ($user["username"] == $requestData["username"]) {
+                    // $user["fav_drinks"] = $drinkid;
+                    array_push($user["fav_drinks"], $drinkid);
+                    $all_users[$i] = $user;
                     file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
                     exit();
                 }

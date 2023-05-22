@@ -4,11 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
   async function send_to_favorites(event) {
     // Hämtar värdet av "name" inuti den klickade containern
-    console.log(event.target.parentElement.querySelector("p").textContent); 
-
+    event.target.style.color = "red";
+    
     // LocalStorage är ett objekt. Här hämtar vi namnet på användarens namn som vi har sparat i nyckeln "username".
     let current_username = localStorage.getItem("username");
     let drink_name = event.target.parentElement.querySelector("p").textContent;
+    console.log(drink_name);
 
     let data_to_send = {
       username: current_username,
