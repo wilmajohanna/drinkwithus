@@ -3,7 +3,7 @@
         "name": "Watermelon Sangria",
         "id": 1,
         "image": "../images/watermelon_sangria.jpg",
-        "theme": "BubblyCocktails",
+        "theme": "BUBBLY",
         "alcohol": "liquor",
         "description": "Indulge in the seductive allure of juicy watermelon sangria, blending tangy lime and velvety mint. With its blush hue, this sensual elixir of rosé, Champagne, and St. Germain liquor enchants by the pool or on a moonlit porch. Sip from highball glasses or mason jars, and savor the temptation.",
         "ingredients": {
@@ -23,7 +23,7 @@
         "name": "Grapefruit Swirl",
         "id": 2,
         "image": "../images/Grapefruit_swirl.jpg",
-        "theme": "BubblyCocktails",
+        "theme": "BUBBLY",
         "alcohol": "gin",
         "description": "Savor the winter sunshine with a cardamom and grapefruit gin fizz. This festive cocktail sparkles with prosecco and citrus brightness. With rosemary-infused syrup and cardamom-infused gin, it's the perfect blend of warmth and tartness. Embrace the magic in a glass, and toast to special occasions.",
         "ingredients": {
@@ -46,7 +46,7 @@
         "name": "Summer Cobbler",
         "id": 3,
         "image": "../images/summer_cobbler.jpg",
-        "theme": "SummerCocktails",
+        "theme": "SUMMER",
         "alcohol": "whiskey",
         "description": "Embrace summer with the seductive Summer Cobbler Cocktail. A tantalizing blend of blackberries, white whiskey, and citrus, this refreshing drink is perfect for poolside enjoyment. Shake it up effortlessly and garnish for added charm. Indulge in the irresistible taste of summer.",
         "ingredients": {
@@ -67,7 +67,7 @@
         "name": "Bee's Knees",
         "id": 4,
         "image": "../images/B_knees.jpg",
-        "theme": "SummerCocktails",
+        "theme": "SUMMER",
         "alcohol": "gin",
         "description": "Experience the sublime Bee's Knees cocktail, capturing the essence of summer. Tanqueray gin, fresh lemon juice, honey syrup, and a hint of orange bitters create a symphony of flavors. Savor the luscious sweetness and refreshing tang, garnished with a twist of lemon peel. A true sensory delight.",
         "ingredients": {
@@ -88,7 +88,7 @@
         "name": "Pimms and Gingerbeer",
         "id": 5,
         "image": "../images/Pimms.jpg",
-        "theme": "Punches",
+        "theme": "PUNCHES",
         "alcohol": "liquor",
         "description": "Experience the refreshing delight of Pimm's & Gingerbeer cocktail, a vibrant summer punch. Pimm's No. 1, lemon juice, and ginger beer create a harmonious blend of sweet and spicy flavors. Watch as the glass pitcher transforms into a colorful mosaic with cucumber, orange, and strawberries. Stir, pour over ice, and be transported to a sun-soaked paradise.",
         "ingredients": {
@@ -112,7 +112,7 @@
         "name": "Packers Punch",
         "id": 6,
         "image": "../images/packers.jpg",
-        "theme": "Punches",
+        "theme": "PUNCHES",
         "alcohol": "Whiskey",
         "description": "Celebrate with Packers Punch, a whiskey-infused delight capturing the essence of perfect punch. Maker's Mark bourbon, triple sec, and homemade lemonade blend harmoniously. Sliced apples add natural sweetness and crunch. Stir with anticipation, then pour over ice, and let Packers Punch become your gateway to joy and camaraderie.",
         "ingredients": {
@@ -133,7 +133,7 @@
         "name": "Cucumber Gimlet",
         "id": 7,
         "image": "../images/Cucumber_gimlet.jpg",
-        "theme": "RetroCocktails",
+        "theme": "RETRO",
         "alcohol": "gin",
         "description": "Embrace retro elegance with the Cucumber Mint Gimlet, a refreshing cocktail blending cucumber, mint, lime, and gin. Muddle and shake with ice for a cool libation. Strain into a martini glass, garnish with mint, and indulge in the revitalizing flavors of this timeless drink. Cheers to the charm of a bygone era!",
         "ingredients": {
@@ -153,7 +153,7 @@
         "name": "Old Fashioned",
         "id": 8,
         "image": "../images/OldFashioned.jpg",
-        "theme": "RetroCocktails",
+        "theme": "RETRO",
         "alcohol": "whiskey",
         "description": "Experience timeless elegance with the Old Fashioned cocktail, a harmonious blend of quality whiskey, sugar, and aromatic bitters. Garnished with a citrus twist, it embodies the art of mixology. Savor the rich flavors, subtle sweetness, and complexity. Transport yourself to an era of craftsmanship and sophistication. Cheers to tradition and refined taste!",
         "ingredients": {
@@ -173,7 +173,7 @@
         "name": "Paloma",
         "id": 9,
         "image": "../images/paloma.jpg",
-        "theme": "LessisMoreCocktails",
+        "theme": "LESSISMORE",
         "alcohol": "tequila",
         "description": "Escape to a sun-kissed Mexican paradise with the Paloma cocktail. This vibrant libation combines zesty grapefruit, tangy lime, and a touch of fizz for a refreshing experience. Sip and savor the lively blend of grapefruit juice, lime, and soda, evoking carefree moments under the sun. Indulge in this visually stunning and flavorful cocktail, raising your glass to Mexican sunshine. Salud!",
         "ingredients": {
@@ -195,7 +195,7 @@
         "name": "Spill The Tea",
         "id": 10,
         "image": "../images/spill_my_tea.jpg",
-        "theme": "LessisMoreCocktails",
+        "theme": "LESSISMORE",
         "alcohol": "gin",
         "description": "Discover the allure of the Spill The Tea cocktail, where elegance meets sophistication. Tanqueray Gin, orange marmalade, and Earl Grey tea blend seamlessly, creating a mysterious and effervescent libation. Served in a wine glass with ice and a zesty lemon wedge, it captivates with playful sensuality. Surrender to its seductive charm and raise your glass in indulgence. Cheers!",
         "ingredients": {
