@@ -51,7 +51,6 @@ nav>button {
   border-radius: 20px;
   color: #f5f5f5;
   visibility: hidden;
-  bottom: -150px;
   font-size: 30px;
 }
 
@@ -123,3 +122,9 @@ nav>button {
   } 
 
 }*/
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10vh;
+}
