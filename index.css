@@ -123,8 +123,13 @@ nav>button {
 
 }*/
 
+
+
 footer {
-  display: flex;
-  justify-content: flex-start;
-  padding: 10vh;
+  background-image: url(../images/cocktails.webp);
+  background-repeat: no-repeat;
+  height: 10vh;
+  margin-top: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

@@ -65,7 +65,7 @@ function convertNewlinesToBr($text) {
 
             <div id="information">
                 <div id="desc"><?php echo convertNewlinesToBr($description); ?></div>
-            </div>
+            </div> 
         </div>
 
         <div class="containers" id="drink_image">
