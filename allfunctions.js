@@ -35,3 +35,17 @@ function remove_loading_alert() {
         alert_box.remove();
     }
 }
+
+// Funktion för att flytta till recipe med dryckens namn query parameter
+function relocateToRecipe(drinkName) {
+    const previousPage = window.location.href; // Spara den nuvarande sidans URL som den föregående sidan
+    window.history.pushState({ previousPage }, "", ""); // Lägg till den föregående sidan i webbläsarens historikstack
+    window.location.replace(`../recipepage/index.php?drink=${drinkName}`); // Byt till den nya sidan
+}
+
+window.addEventListener("popstate", function (event) {
+    if (event.state && event.state.previousPage) {
+        window.location.href = event.state.previousPage;
+    }
+    window.history.back();
+});

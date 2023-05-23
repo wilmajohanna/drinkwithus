@@ -1,14 +1,3 @@
-
-<?php
-
-ini_set("dislpay_errors", 1);
-
-$sentTheme = $_GET["theme"];
-$drinksData = file_get_contents ("../recipepage/drinksData.json");
-$themes = json_decode ($drinksData, true);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +7,9 @@ $themes = json_decode ($drinksData, true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="../popupbox/loginregister.css">
-    <link rel="stylesheet" href="../recipepage/recipe.css">
-    <link rel="stylesheet" href="./theme.css">
+    <link rel="stylesheet" href="./recipe.css">
 
-    <title>Document</title>
+    <title>Drink with us</title>
 </head>
 
 <body>
@@ -35,24 +23,50 @@ $themes = json_decode ($drinksData, true);
         </nav>
     </header>
 
-    <div id="theme_wrapper">
-        <?php 
-            foreach ($themes as $drinks) {
-                if($drinks["theme"] == $sentTheme){
-                    
-                    $theme = $drinks ["theme"];
-                    $name = $drinks ["name"];
-                    $theme_image = $drinks ["image"];
-        
-                    echo  "<div class='theme_container'>";
-                        echo "<img class='theme_pic' src= $theme_image alt=''>";
-                        echo "<div class='theme_text'>";
-                            echo "<h1  class='theme_name'>$name</h1>";
-                        echo "</div>";
-                    echo "</div>";
-                }  
-            }?> 
-    </div> 
+
+    <div class="recipe_wrapper">
+        <div class="containers" id="info_wrapper">
+            <h1 id="drink_name">
+                <!--    <?php echo $name; ?> -->
+            </h1>
+
+            <div id="information">
+
+                <div id="desc">
+                    <!-- <?php echo convertNewlinesToBr($description); ?> -->
+                </div>
+            </div>
+
+        <div class="containers" id="drink_image">
+           <!--  <img id="drink_bg_image" src="<?php echo $image; ?>"> -->
+        </div>
+
+        <div class="containers" id="ingredients">
+            <h1>Ingredients</h1>
+            <ul id="ingredient">
+                <!-- <?php
+                if (!empty($ingredients)) {
+                    foreach ($ingredients as $ingredient) {
+                        echo "<li>$ingredient</li>";
+                    }
+                }
+                ?> -->
+            </ul>
+        </div>
+
+        <div class="containers" id="instructions">
+            <h1>Instructions</h1>
+            <ul id="instruction">
+                <!-- <?php
+                if (!empty($instructions)) {
+                    foreach ($instructions as $instruction) {
+                        echo "<li><input type='checkbox'>$instruction</li>";
+                    }
+                }
+                ?> -->
+            </ul>
+        </div>
+    </div>
 
     <div id="cover">
         <div id="content">
@@ -74,14 +88,10 @@ $themes = json_decode ($drinksData, true);
             <p class="" id="register_link"> No account? Register</p>
 
         </div>
+
     </div>
+
     <script src="../homepage/fetchfunctions.js"></script>
     <script src="../popupbox/loginregister.js"></script>
+    <script src="../favouritepage/favourites.js"></script>
     <script src="../allfunctions.js"></script>
-    <script src="../pagenav.js"></script>
-
-
-
-</body>
-
-</html>
