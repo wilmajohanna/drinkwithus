@@ -1,38 +1,3 @@
-<?php
-ini_set("display_errors", 1);
-
-function sendJSON($message, $response_code = 200) { 
-    header("content-type: application/json");
-    http_response_code($response_code);
-    //echo json_encode($message);
-    exit();
-}
-
-$sentDrink = $_GET["drink"]; 
-$drinksData = file_get_contents("../recipepage/drinksData.json");
-$drinks = json_decode($drinksData, true);
-
-foreach ($drinks as $drink) {
-    if ($drink["name"] == $sentDrink) {
-        $name = $drink["name"];
-        $image = $drink["image"];
-        $ingredients = $drink["ingredients"];
-        $instructions = $drink["instructions"];
-        $description = $drink["description"];
-        break; // Exit loop efter att ha hittat en matchande dryck
-    }
-}
-
-
-
-//convertNewlinesToBr($text): En funktion som konverterar radbrytningar i texten till HTML <br>-taggar.
-function convertNewlinesToBr($text) {
-    //nl2br — Infogar HTML-radbrytningar före alla "newlines" i en sträng
-    return nl2br($text);
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,10 +26,14 @@ function convertNewlinesToBr($text) {
 
     <div class="recipe_wrapper">
         <div class="containers" id="info_wrapper">
-            <h1 id="drink_name"><?php echo $name; ?></h1>
+            <h1 id="drink_name">
+                <!--    <?php echo $name; ?> -->
+            </h1>
 
             <div id="information">
-                <div id="desc"><?php echo convertNewlinesToBr($description); ?></div>
+                <div id="desc">
+                    <!-- <?php echo convertNewlinesToBr($description); ?> -->
+                </div>
             </div>
         </div>
 
@@ -75,26 +44,26 @@ function convertNewlinesToBr($text) {
         <div class="containers" id="ingredients">
             <h1>Ingredients</h1>
             <ul id="ingredient">
-                <?php
+                <!-- <?php
                 if (!empty($ingredients)) {
                     foreach ($ingredients as $ingredient) {
                         echo "<li>$ingredient</li>";
                     }
                 }
-                ?>
+                ?> -->
             </ul>
         </div>
 
         <div class="containers" id="instructions">
             <h1>Instructions</h1>
             <ul id="instruction">
-                <?php
+                <!-- <?php
                 if (!empty($instructions)) {
                     foreach ($instructions as $instruction) {
                         echo "<li><input type='checkbox'>$instruction</li>";
                     }
                 }
-                ?>
+                ?> -->
             </ul>
         </div>
     </div>
@@ -126,4 +95,3 @@ function convertNewlinesToBr($text) {
     <script src="../popupbox/loginregister.js"></script>
     <script src="../favouritepage/favourites.js"></script>
     <script src="../allfunctions.js"></script>
-    <script src="../pagenav.js"></script>
