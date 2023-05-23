@@ -33,11 +33,15 @@
                     array_push($user["fav_drinks"], $drinkid);
                     $all_users[$i] = $user;
                     file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
-                    exit();
+                    sendJSON($message, 200);
                 }
             }
         // foreach när den hittat rätt dricka users.json
         // genom att hitta samma användare som har samma username som nyckeln username från datan som tagit emot    
         }
+
+
+        $message = ["name" => $requestData["name"], "drinkname" => $requestData["drinkname"]];
+        $all_users
     }
 ?>
