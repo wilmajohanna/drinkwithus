@@ -4,32 +4,48 @@ body {
 
 #theme_wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-  gap: 3vw;
 }
 
 .theme_container {
-  display: flex;
-  position: relative;
-  height: 500px;
-  width: 400px;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  
 }
 
-.theme_text {
-  position: absolute;
-  bottom: 70px;
-  right: 70px;
+.theme_container > div {
+  display: flex;
+  height: 347px;
+  width: 265px;
+  border: 1px solid black;
+}
+
+#theme_text {
+  grid-column: 1;
+  grid-row: 1;
   font-size: 20px;
   color: white;
   text-align: center;
-  width: 250px;
-  height: 100px;
 }
 
-.theme_img {
-  width: 100%;
-  height: 100%;
+#theme_img {
+  grid-column: 2;
+  grid-row: 1;
   object-fit: cover;
+ 
 }
+
+#ingredients {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#instructions {
+  grid-column: 2;
+  grid-row: 2;
+}
+
