@@ -26,45 +26,25 @@
 
     <div class="recipe_wrapper">
         <div class="containers" id="info_wrapper">
-            <h1 id="drink_name">
-                <!--    <?php echo $name; ?> -->
-            </h1>
+            <h1 id="drink_name"></h1>
 
             <div id="information">
-
-                <div id="desc">
-                    <!-- <?php echo convertNewlinesToBr($description); ?> -->
-                </div>
+                <div id="desc"></div>
             </div>
+        </div>
 
         <div class="containers" id="drink_image">
-           <!--  <img id="drink_bg_image" src="<?php echo $image; ?>"> -->
+            <img id="drink_bg_image" src="">
         </div>
 
         <div class="containers" id="ingredients">
             <h1>Ingredients</h1>
-            <ul id="ingredient">
-                <!-- <?php
-                if (!empty($ingredients)) {
-                    foreach ($ingredients as $ingredient) {
-                        echo "<li>$ingredient</li>";
-                    }
-                }
-                ?> -->
-            </ul>
+            <ul id="ingredient"></ul>
         </div>
 
         <div class="containers" id="instructions">
             <h1>Instructions</h1>
-            <ul id="instruction">
-                <!-- <?php
-                if (!empty($instructions)) {
-                    foreach ($instructions as $instruction) {
-                        echo "<li><input type='checkbox'>$instruction</li>";
-                    }
-                }
-                ?> -->
-            </ul>
+            <ul id="instruction"></ul>
         </div>
     </div>
 
@@ -95,3 +75,4 @@
     <script src="../popupbox/loginregister.js"></script>
     <script src="../favouritepage/favourites.js"></script>
     <script src="../allfunctions.js"></script>
+    <script src="./recipe.js"></script>
