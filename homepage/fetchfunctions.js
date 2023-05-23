@@ -98,7 +98,6 @@ function fetch_drink_page(event) {
 };
 
 function load_loggedOnPage() {
-
   const favourite_button = document.createElement("button");
   favourite_button.id = "favourite_button";
   favourite_button.textContent = "Favourites";
@@ -107,30 +106,29 @@ function load_loggedOnPage() {
   if (login_home.textContent === "Log in") {
     login_home.textContent = "Log out";
   }
+}
 
-  function load_content(event) {
-    document.addEventListener("DOMContentLoaded", () => {
-      const themeImages = document.querySelectorAll(".theme_container > .fp_images");
+function load_theme_page(event) {
+  const theme_images = document.querySelectorAll(".theme_container > .fp_images");
 
-      // gör så att vi kan klicka på enbart bilden för att komma till theme ist för hela containern i detta fallet theme_container i theme.php
-      themeImages.forEach((themeSingleImage) => {
-        themeSingleImage.addEventListener("click", () => {
+  function load_on_click(event) {
+    const temporary = single_theme_image.parentElement.querySelector("p").textContent
+    const drink_name = temporary.replace(/ /g, "");  // G = global -> global e för alla drinknamn
+    localStorage.setItem("selected_drink", drink_name);
+    relocateToTheme(drink_name);
 
 
-          // Hämta temanamn från den klickade containers p-element
-          const drink_name =
-            themeSingleImage.parentElement.querySelector("p").textContent;
-          relocateToTheme(drink_name.replace(/ /g, ""));
-          // G = global -> global e för alla drinknamn
-          // Tar bort mellanrummet i drinkname
+    // gör så att vi kan klicka på enbart bilden för att komma till theme ist för hela containern i detta fallet theme_container i theme.php
+    theme_images.forEach((single_theme_image) => {
+      single_theme_image.addEventListener("click", load_on_click);
 
-          console.log(themeSingleImage);
+      console.log(themeSingleImage);
 
-        });
-      });
     });
+
   };
-  // document.querySelectorAll(".theme_container").forEach((item) =>
-  //   item.addEventListener("click", fetch_drink_page)
-  // );
+  document.addEventListener("DOMContentLoaded", load_theme_page);
+
+  document.querySelectorAll(".theme_container").forEach((item) =>
+    item.addEventListener("click", fetch_drink_page));
 };
