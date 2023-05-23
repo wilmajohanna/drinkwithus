@@ -91,12 +91,6 @@ async function login_or_register(event) {
   }
 };
 
-function fetch_drink_page(event) {
-  const drink_name = event.target.parentElement.querySelector("h1").textContent;
-  localStorage.setItem("selected_drink", drink_name);
-  relocateToRecipe(localStorage.getItem("selected_drink"));
-};
-
 function load_loggedOnPage() {
   const favourite_button = document.createElement("button");
   favourite_button.id = "favourite_button";
@@ -108,27 +102,8 @@ function load_loggedOnPage() {
   }
 }
 
-function load_theme_page(event) {
-  const theme_images = document.querySelectorAll(".theme_container > .fp_images");
-
-  function load_on_click(event) {
-    const temporary = single_theme_image.parentElement.querySelector("p").textContent
-    const drink_name = temporary.replace(/ /g, "");  // G = global -> global e för alla drinknamn
-    localStorage.setItem("selected_drink", drink_name);
-    relocateToTheme(drink_name);
-
-
-    // gör så att vi kan klicka på enbart bilden för att komma till theme ist för hela containern i detta fallet theme_container i theme.php
-    theme_images.forEach((single_theme_image) => {
-      single_theme_image.addEventListener("click", load_on_click);
-
-      console.log(themeSingleImage);
-
-    });
-
-  };
-  document.addEventListener("DOMContentLoaded", load_theme_page);
-
-  document.querySelectorAll(".theme_container").forEach((item) =>
-    item.addEventListener("click", fetch_drink_page));
-};
+async function fetchThemeRecipe(rqst) {
+  let response = await fetch(rqst);
+  let resource = response.json();
+  return resource;
+}

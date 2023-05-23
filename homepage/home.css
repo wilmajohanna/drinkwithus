@@ -76,7 +76,7 @@ p {
 #cucumber_gimlet>p,
 #grapefruit_swirl>p {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     grid-row: 2;
     margin-top: 10px;
     font-size: 50px;
