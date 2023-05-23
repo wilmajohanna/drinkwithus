@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       })
 
-
+/* 
         .then(response => response.json())
         .then(data => {
 
@@ -33,13 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>User ID: $()</p>;
 
 
-        });
+        }); */
 
 
 
     } catch (error) {
       console.log("An error occurred:", error);
     }
+    
+    load_loggedOnPage()
   }
 
   // Lägger eventlistener på like-knapparna
@@ -47,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   like_buttons.forEach((like_button) =>
     like_button.addEventListener("click", send_to_favorites)
   );
+
 });
 
 /* function retrieve_favourites(event) {
