@@ -1,5 +1,6 @@
 "use strict";
 
+let current_username = localStorage.getItem("username");
 document.addEventListener("DOMContentLoaded", () => {
 
   async function send_to_favorites(event) {
@@ -15,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       heartsSpan.style.color = ''; // Remove inline color style to revert to original color
     }
     // LocalStorage är ett objekt. Här hämtar vi namnet på användarens namn som vi har sparat i nyckeln "username".
-    let current_username = localStorage.getItem("username");
     let drink_name = event.target.parentElement.querySelector("p").textContent;
     console.log(drink_name);
 
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       username: current_username,
       drinkname: drink_name,
     };
+<<<<<<< Updated upstream
 
     try {
       await fetch("../favouritepage/favourites.php", {
@@ -49,6 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("An error occurred:", error);
     }
 
+=======
+    
+>>>>>>> Stashed changes
     load_loggedOnPage()
   }
 
@@ -60,10 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* function retrieve_favourites(event) {
-  const container = document.getElementById("container");
-
-
-
+async function display_FavoriteDrinks () {
+  try {
+    await fetch(`../favouritepage/favourites.php?un=${current_username}`);
+    
+    
+  } catch (error) {
+    console.log("An error occurred:", error);
+  }
 }
- */
+
+display_FavoriteDrinks();

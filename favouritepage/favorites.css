@@ -56,7 +56,7 @@ nav > button {
   display: flex;
 }
 
-p {
+footer > p {
   text-align: center;
   font-size: 25px;
   margin: 0;
@@ -85,5 +85,11 @@ footer {
 
 #favourite_button {
   background-color: #ce7474;;
+}
+
+.index_p {
+  text-align: center;
+  font-size: 25px;
+  
 }
 
