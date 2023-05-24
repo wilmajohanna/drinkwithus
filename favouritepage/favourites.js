@@ -1,6 +1,7 @@
 "use strict";
 
 let current_username = localStorage.getItem("username");
+
 document.addEventListener("DOMContentLoaded", () => {
 
   async function send_to_favorites(event) {
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       heartsSpan.style.color = ''; // Remove inline color style to revert to original color
     }
     // LocalStorage är ett objekt. Här hämtar vi namnet på användarens namn som vi har sparat i nyckeln "username".
+    let current_username = localStorage.getItem("username");
     let drink_name = event.target.parentElement.querySelector("p").textContent;
     console.log(drink_name);
 
@@ -23,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
       username: current_username,
       drinkname: drink_name,
     };
-<<<<<<< Updated upstream
 
     try {
       await fetch("../favouritepage/favourites.php", {
@@ -33,42 +34,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
       })
 
-      /* 
-              .then(response => response.json())
-              .then(data => {
-      
-      
-                document.getElementById("container").innerHTML =
-                  <p>User ID: $()</p>;
-      
-      
-              }); */
-
-
-
     } catch (error) {
       console.log("An error occurred:", error);
     }
 
-=======
-    
->>>>>>> Stashed changes
     load_loggedOnPage()
   }
 
-  // Lägger eventlistener på like-knapparna
+   // Lägger eventlistener på like-knapparna
   const like_buttons = document.querySelectorAll(".hearts");
   like_buttons.forEach((like_button) =>
     like_button.addEventListener("click", send_to_favorites)
-  );
+  ); 
 
 });
 
-async function display_FavoriteDrinks () {
+async function display_FavoriteDrinks() {
   try {
-    await fetch(`../favouritepage/favourites.php?un=${current_username}`);
+    const response = await fetch(`../favouritepage/favourites.php?un=${current_username}`);
+    const data = await response.json();
     
-    
+    // Check if the response contains favorite drinks
+    if (Array.isArray(data) && data.length > 0) {
+      // Display the favorite drinks
+      const container = document.getElementById("container");
+      container.innerHTML = ""; // Clear the container
+
+      data.forEach((drink) => {
+        const drinkContainer = document.createElement("div");
+        drinkContainer.classList.add("drink-container");
+
+        const drinkName = document.createElement("p");
+        drinkName.textContent = drink.name;
+
+        const image = document.createElement("img");
+        image.setAttribute("src", drink.image);
+        drinkContainer.appendChild(image);
+
+        drinkContainer.appendChild(drinkName);
+        container.appendChild(drinkContainer);
+      });
+    } else {
+      const indexP = document.querySelector(".index_p");
+      indexP.style.display = "block";
+    }
   } catch (error) {
     console.log("An error occurred:", error);
   }
