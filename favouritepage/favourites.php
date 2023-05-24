@@ -35,13 +35,13 @@
                     file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
                     sendJSON($message, 200);
                 }
-            }
-        // foreach när den hittat rätt dricka users.json
+            }   
+        }// foreach när den hittat rätt dricka users.json
         // genom att hitta samma användare som har samma username som nyckeln username från datan som tagit emot    
-        }
+        
 
 
         $message = ["name" => $requestData["name"], "drinkname" => $requestData["drinkname"]];
-        $all_users
+        /* $all_users */
     }
 ?>
