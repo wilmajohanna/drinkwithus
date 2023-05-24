@@ -9,42 +9,42 @@
 
 body {
   margin: 0;
-  background-color: #ccbaa7;
+  background-color: #f4efec;
   color: #353535;
 }
 
 header {
-  height: 15vh;
   display: grid;
   grid-template-columns: 2fr 2fr;
-  background-image: url(../images/cocktails.webp);
-  background-repeat: no-repeat;
-  /*     background-size: cover; */
+  background-color: #f4efec;
+  padding: 2vh;
 }
 
 #logo {
   display: flex;
+  background-image: url(./images/logo1.jpg);
+  background-repeat: no-repeat;
   justify-content: flex-start;
-  align-items: center;
-  font-size: 2vh;
-  padding: 2vh;
+  height: 15vh;
 }
 
 nav {
-  font-size: 2vh;
+  display: flex;
   margin: 2vw;
-  color: #353535;
-
+  color: #f4efec;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 nav>button {
   border-radius: 40px;
-  background-color: #876e61;
-  padding: 2vh;
+  padding: 1vh;
   width: 130px;
-  font-size: 18px;
   margin-left: 10px;
-
+  background-color: #353535;
+  ;
+  font-size: 20px;
+  color: #f4efec;
 }
 
 
