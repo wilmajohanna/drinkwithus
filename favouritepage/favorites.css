@@ -60,7 +60,6 @@ footer > p {
   text-align: center;
   font-size: 25px;
   margin: 0;
-
 }
 
 #container {
@@ -78,23 +77,22 @@ footer > p {
 footer {
   background-image: url(../images/cocktails.webp);
   background-repeat: no-repeat;
-  height: 10vh;
+  height: 3vh;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  margin-top: 30px;
 }
 
 #favourite_button {
-  background-color: #ce7474;;
+  background-color: #ce7474;
 }
 
 .index_p {
   text-align: center;
   font-size: 25px;
-  
 }
 
 img {
   height: 150px;
   width: 150px;
 }
-
