@@ -5,9 +5,6 @@ let current_username = localStorage.getItem("username");
 document.addEventListener("DOMContentLoaded", () => {
 
   async function send_to_favorites(event) {
-    // Hämtar värdet av "name" inuti den klickade containern
-    /*     event.target.style.color = "red";
-     */
     const heartsSpan = event.currentTarget;
     heartsSpan.classList.toggle('liked');
 
@@ -37,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (error) {
       console.log("An error occurred:", error);
     }
-
-    load_loggedOnPage()
   }
 
    // Lägger eventlistener på like-knapparna

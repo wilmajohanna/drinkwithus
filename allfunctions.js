@@ -45,8 +45,3 @@ document.querySelectorAll(".fp_images").forEach(container => {
     })
 })
 
-/* function go_home(event) {
-    window.reloade(".index.html");
-}
-
-home_button.addEventListener("click", go_home); */
