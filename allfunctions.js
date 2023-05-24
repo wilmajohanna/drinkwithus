@@ -44,3 +44,9 @@ document.querySelectorAll(".fp_images").forEach(container => {
         window.location = `./themepage/theme.html?theme=${themeName.toUpperCase()}`;
     })
 })
+
+/* function go_home(event) {
+    window.reloade(".index.html");
+}
+
+home_button.addEventListener("click", go_home); */

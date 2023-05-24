@@ -2,6 +2,7 @@
 const login_register_button = document.getElementById("login_or_register_button");
 const login_home = document.getElementById("login_home");
 refresh_page();
+const home_button = document.getElementById("home_button");
 
 function refresh_page() {
   if (window.localStorage.getItem("username") !== null) {
@@ -97,13 +98,13 @@ function load_loggedOnPage() {
   favourite_button.textContent = "Favourites";
   document.querySelector("nav").appendChild(favourite_button);
 
-  if (login_home.textContent === "Log in") {
-    login_home.textContent = "Log out";
+  if (login_home.textContent === "LOG IN") {
+    login_home.textContent = "LOG OUT";
   }
 }
 
-async function fetchThemeRecipe(rqst) {
-  let response = await fetch(rqst);
+async function fetchThemeRecipe(request) {
+  let response = await fetch(request);
   let resource = response.json();
   return resource;
 }
