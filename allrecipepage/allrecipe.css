@@ -12,25 +12,6 @@ h1 {
     padding-top: 20px;
 }
 
-#navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 10vh;
-    gap: 1.5vw;
-}
-
-#navigation>button {
-    border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0);
-    border: #876e61 2px;
-    color: #876e61;
-    height: 5vh;
-    font-size: 20px;
-}
-
-
 #all_recipes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
