@@ -15,3 +15,8 @@ function redirectToTheme(theme) {
 
 
 
+see_all_button.addEventListener("click", relocateToAllRecipes);
+
+function load_allrecipes_page(event) {
+
+}
