@@ -1,9 +1,10 @@
 "use strict";
 
-const see_all_button = document.getElementById("see_all");
+"use strict";
 
-see_all_button.addEventListener("click", relocateToAllRecipes);
-
-console.log("hej");
+function redirectToRecipe(drinkName) {
+    const encodedDrinkName = encodeURIComponent(drinkName);
+    window.location.href = `../recipepage/recipe.html?drink=${encodedDrinkName}`;
+}
 
 
