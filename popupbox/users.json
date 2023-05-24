@@ -13,24 +13,9 @@
         "fav_drinks": [
             8,
             7,
-            2,
-            2,
             7,
             2,
-            2,
-            2,
-            7,
-            2,
-            8,
-            8,
-            8,
-            8,
-            7,
-            7,
-            8,
-            2,
-            8,
-            7
+            8
         ]
     },
     {
@@ -44,5 +29,26 @@
         "password": "w",
         "first_name": "w",
         "last_name": "w"
+    },
+    {
+        "username": "at",
+        "password": "at",
+        "first_name": "at",
+        "last_name": "at",
+        "fav_drinks": [
+            7,
+            7,
+            4,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+        ]
     }
 ]

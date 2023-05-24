@@ -96,9 +96,16 @@ function css_switch(event) {
 
 register_link.addEventListener("click", css_switch); // Ändrar från Login till registrering
 
+
 if (login_home.textContent === "LOG IN") {
+
     document.querySelectorAll(".hearts").forEach(heart => { heart.style.visibility = "hidden" });
 } else {
     document.querySelectorAll(".hearts").forEach(heart => { heart.style.visibility = "visible" });
     favourite_button.addEventListener("click", relocateToFavourites);
+
 }
+/*----------------------------*/
+const see_all_button = document.getElementById("see_all");
+see_all_button.addEventListener("click", relocateToAllRecipes);
+

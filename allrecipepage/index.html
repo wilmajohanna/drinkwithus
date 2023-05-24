@@ -29,64 +29,75 @@
     </div>
 
     <div id="navigation">
-        <button id="summer"> SUMMER</button>
-        <button id="bubbly">BUBBLY</button>
-        <button id="retro">RETRO</button>
-        <button id="lessismore">LESS IS MORE</button>
-        <button id="punches">PUNCHES</button>
+        <button id="summer" onclick="redirectToTheme('SUMMER')"> SUMMER</button>
+        <button id="bubbly" onclick="redirectToTheme('BUBBLY')">BUBBLY</button>
+        <button id="retro" onclick="redirectToTheme('RETRO')">RETRO</button>
+        <button id="lessismore" onclick="redirectToTheme('LESSISMORE')">LESS IS MORE</button>
+        <button id="punches" onclick="redirectToTheme('PUNCHES')" PUNCHES</button>
     </div>
     <div id="all_recipes">
 
         <div id="summer_cobbler">
-            <img src="./images/summer_cobbler.jpg" alt="" class="show_hover" id="summer_cobbler">
+            <img src="./images/summer_cobbler.jpg" alt="" class="show_hover" id="summer_cobbler"
+                onclick="redirectToRecipe('Summer Cobbler')">
             <p>Summer Cobbler</p>
+            <span class="hearts">&#10084;</span>
             <!--  <img src="" alt="" class="hover_recipe"> -->
         </div>
 
         <div id="bees_knees">
-            <img src="./images/Bees_Knees .jpg" alt="" class="show_hover" div id="bees_knees">
+            <img src="./images/Bees_Knees .jpg" alt="" class="show_hover" div id="bees_knees"
+                onclick="redirectToRecipe('Bee\'s Knees')">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Bee's Knees</p>
+            <span class="hearts">&#10084;</span>
         </div>
 
 
         <div id="watermelon_sangria">
-
-            <img src="./images/watermelon_sangria.jpg" alt="" class="show_hover">
-
+            <img src="./images/watermelon_sangria.jpg" alt="" class="show_hover"
+                onclick="redirectToRecipe('Watermelon Sangria')">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Watermelon Sangria</p>
+            <span class="hearts">&#10084;</span>
         </div>
 
         <div id="grapefruit_swirl">
-            <img src="./images/Grapefruit_swirl.jpg" alt="" class="show_hover">
+            <img src="./images/Grapefruit_swirl.jpg" alt="" class="show_hover"
+                onclick="redirectToRecipe('Grapefruit Swirl')">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Grapefruit Swirl</p>
+            <span class="hearts">&#10084;</span>
         </div>
 
 
         <div id="old_fashioned">
-            <img src="./images/OldFashioned.jpg" alt="" class="show_hover">
+            <img src="./images/OldFashioned.jpg" alt="" class="show_hover" onclick="redirectToRecipe('Old Fashioned')">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Old Fashioned</p>
+            <span class="hearts">&#10084;</span>
         </div>
 
         <div id="cucumber_gimlet">
-            <img src="./images/Cucumber_gimlet.jpg" alt="" class="show_hover">
+            <img src="./images/Cucumber_gimlet.jpg" alt="" class="show_hover"
+                onclick="redirectToRecipe('Cucumber Gimlet')">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Cucumber Gimlet</p>
+            <span class="hearts">&#10084;</span>
         </div>
 
 
         <div id="paloma">
-            <img src="./images/paloma.jpg" alt="" class="show_hover">
+            <img src="./images/paloma.jpg" alt="" class="show_hover" onclick="redirectToRecipe('Paloma')">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Paloma</p>
+            <span class="hearts">&#10084;</span>
         </div>
         <div id="spill_the_tea">
-            <img src="./images/spill_my_tea.jpg" alt="" class="show_hover">
+            <img src="./images/spill_my_tea.jpg" alt="" class="show_hover" onclick="redirectToRecipe('Spill The Tea')">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Spill The Tea</p>
+            <span class="hearts">&#10084;</span>
         </div>
 
 
@@ -95,11 +106,13 @@
             <img src="./images/Pimms.jpg" alt="" class="show_hover">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Pimms and Gingerbeer</p>
+            <span class="hearts">&#10084;</span>
         </div>
         <div id="packers_punch">
             <img src="./images/Packers.jpg" alt="" class="show_hover">
             <!--  <img src="" alt="" class="hover_recipe"> -->
             <p>Packers Punch</p>
+            <span class="hearts">&#10084;</span>
         </div>
     </div>
 
@@ -129,7 +142,7 @@
     <script src="./allfunctions.js"></script>
     <script src="./popupbox/loginregister.js"></script>
     <script src="./favouritepage/favourites.js"></script>
-    <!--   <script src="../allrecipepage/index.js"></script> -->
+    <script src="../allrecipepage/index.js"></script>
 
 </body>
 
