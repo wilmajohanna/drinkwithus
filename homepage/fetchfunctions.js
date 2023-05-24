@@ -108,3 +108,24 @@ async function fetchThemeRecipe(request) {
   let resource = response.json();
   return resource;
 }
+
+
+async function delete_account() {
+
+  const userToDelete = {
+    username: localStorage.getItem("username")
+  }
+
+  const response = await fetch("./homepage/account_management.php", {
+    method: "DELETE",
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify(userToDelete)
+  });
+
+  if (response.ok) {
+    const resource = await response.json();
+    console.log(resource);
+  }
+}
+
+document.getElementById("delete_p").addEventListener("click", delete_account);

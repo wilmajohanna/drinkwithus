@@ -36,11 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-   // Lägger eventlistener på like-knapparna
+  // Lägger eventlistener på like-knapparna
   const like_buttons = document.querySelectorAll(".hearts");
   like_buttons.forEach((like_button) =>
     like_button.addEventListener("click", send_to_favorites)
-  ); 
+  );
 
 });
 
@@ -48,7 +48,7 @@ async function display_FavoriteDrinks() {
   try {
     const response = await fetch(`../favouritepage/favourites.php?un=${current_username}`);
     const data = await response.json();
-    
+
     // Check if the response contains favorite drinks
     if (Array.isArray(data) && data.length > 0) {
       // Display the favorite drinks

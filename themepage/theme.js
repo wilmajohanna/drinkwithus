@@ -41,7 +41,3 @@ async function renderThemePage() {
 }
 
 renderThemePage();
-
-
-
-

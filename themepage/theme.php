@@ -1,4 +1,3 @@
-
 <?php
 ini_set("dislpay_errors", 1);
 

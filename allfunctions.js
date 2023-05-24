@@ -44,4 +44,3 @@ document.querySelectorAll(".fp_images").forEach(container => {
         window.location = `./themepage/theme.html?theme=${themeName.toUpperCase()}`;
     })
 })
-

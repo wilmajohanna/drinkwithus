@@ -3,7 +3,8 @@ ini_set("display_errors", 1);
 
 $request_method = $_SERVER["REQUEST_METHOD"];
 
-function sendJSON($message, $statuscode = 200) {
+function sendJSON($message, $statuscode = 200)
+{
     header("Content-Type: application/json");
     http_response_code($statuscode);
     echo json_encode($message);
@@ -15,31 +16,62 @@ $drinkJSON = file_get_contents("../recipepage/drinksData.json");
 $all_drinks = json_decode($drinkJSON, true);
 
 // Retrieve user data
-$usersJSON = file_get_contents("../popupbox/users.json"); 
+$usersJSON = file_get_contents("../popupbox/users.json");
 $all_users = json_decode($usersJSON, true);
 
 // Retrieve the received information
-$username = $_GET["un"];
+$incomingData = json_decode(file_get_contents("php://input"), true);
+$incomingUsername = $incomingData["username"];
+$incomingDrinkName = $incomingData["drinkname"];
+$incomingDrinkID;
 
 $message = [];
 $favorite_drinks = [];
+$test;
 
-foreach ($all_users as $user) {
-    if ($username == $user["username"]) {
-        $fav_drinks = $user["fav_drinks"];
 
-        foreach ($fav_drinks as $fav_drink) {
-            foreach ($all_drinks as $drink) {
-                if ($fav_drink == $drink["id"]) {
-                    $favorite_drinks[] = $drink;
-                }
-            }
-        }
-
-        sendJSON($favorite_drinks);
+foreach ($all_drinks as $drink) {
+    if ($drink["name"] == $incomingDrinkName) {
+        $incomingDrinkID = $drink["id"];
     }
 }
 
+foreach ($all_users as $index => $user) {
+
+    if ($incomingUsername == $user["username"]) {
+        $fav_drinks = $user["fav_drinks"];
+
+        if (count($fav_drinks) != 0) {
+
+            for ($i = 0; $i < count($fav_drinks); $i++) {
+
+                // If-satsen är för att det ej ska bli dupletter.
+                // Den kollar om ID:n redan finns och ifall det gör det tar bort det.
+                if ($fav_drinks[$i] == $incomingDrinkID) {
+                    array_splice($fav_drinks, $i, 1);
+                    $user["fav_drinks"] = $fav_drinks;
+                    // sendJSON($user); Avkommentera detta för att se vad det är som skickas tillbaka
+                    $all_users[$index] = $user;
+                    file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
+                    $message = ["Notification" => "Drink removed!"];
+                    sendJSON($all_users);
+                }
+
+            }
+        }
+
+
+        // Om drickan inte redan finns med i arrayen.
+        // Då lägger den till drickan i användarens array.
+        $fav_drinks[] = $incomingDrinkID;
+        $user["fav_drinks"] = $fav_drinks;
+        $all_users[$index] = $user;
+        file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
+        $message = ["Notification" => "Fuck you Victoria"];
+        sendJSON($message);
+
+    }
+}
 $message = ["message" => "User not found or has no favorite drinks."];
 sendJSON($message, 404);
 ?>

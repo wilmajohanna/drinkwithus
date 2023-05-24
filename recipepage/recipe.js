@@ -41,4 +41,3 @@ async function renderRecipePage() {
 
 
 renderRecipePage();
-
