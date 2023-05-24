@@ -44,5 +44,11 @@
         "password": "w",
         "first_name": "w",
         "last_name": "w"
+    },
+    {
+        "username": "at",
+        "password": "at",
+        "first_name": "at",
+        "last_name": "at"
     }
 ]
