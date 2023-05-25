@@ -66,7 +66,7 @@ if ($request_method == "PATCH") {
             $user["fav_drinks"] = $fav_drinks;
             $all_users[$index] = $user;
             file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
-            $message = ["Notification" => "Fuck you Victoria"];
+            $message = ["Notification" => "Success"];
             sendJSON($message);
 
         }

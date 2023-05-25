@@ -9,16 +9,13 @@
 
 body {
   margin: 0;
-  background-color: #ccbaa7;
+  background-color: #f4efec;
 }
 
 header {
   display: grid;
   grid-template-columns: 2fr 2fr;
   height: 15vh;
-
-  background-image: url(../images/cocktails.webp);
-  background-repeat: repeat;
 }
 
 #logo {
@@ -36,7 +33,7 @@ nav {
   gap: 2vh;
   font-size: 2vh;
   margin: 2vw;
-  color: black;
+  background-color: #f4efec;
 }
 
 nav > button {
@@ -87,7 +84,7 @@ footer {
   background-color: #ce7474;
 }
 
-.index_p {
+#index_p {
   text-align: center;
   font-size: 25px;
 }

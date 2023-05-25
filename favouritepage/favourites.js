@@ -17,20 +17,23 @@ async function display_FavoriteDrinks() {
       // Display the favorite drinks
       const container = document.getElementById("container");
       container.innerHTML = ""; // Clear the container
-
+      
       data.forEach((drink) => {
         const drinkContainer = document.createElement("div");
         drinkContainer.classList.add("drink-container");
-
+        
         const drinkName = document.createElement("p");
         drinkName.textContent = drink.name;
-
+        
         const image = document.createElement("img");
         image.setAttribute("src", drink.image);
         drinkContainer.appendChild(image);
-
+        
         drinkContainer.appendChild(drinkName);
         container.appendChild(drinkContainer);
+
+        const indexP = document.getElementById("index_p");
+        indexP.style.visibility = "visible";
 
         drinkContainer.addEventListener("click", (event) => {
           const drinkName = event.target.parentElement.querySelector("p").textContent
@@ -38,8 +41,8 @@ async function display_FavoriteDrinks() {
         });
       });
     } else {
-      const indexP = document.querySelector(".index_p");
-      indexP.style.display = "block";
+      const indexP = document.getElementById("index_p");
+      indexP.style.display = "none";
     }
   } catch (error) {
     console.log("An error occurred:", error);

@@ -12,6 +12,12 @@ function loading_alert(alert) {
     alert_box.innerHTML = `<div class="loading_text">${alert}</div>`;
 }
 
+function home_button_page () {
+    window.location.replace("../index.html")
+}
+home_button.addEventListener("click", home_button_page)
+
+
 function remove_loading_alert() {
     document.querySelector("#white_box").remove();
 }
@@ -46,3 +52,4 @@ document.querySelectorAll(".fp_images").forEach(container => {
         window.location = `./themepage/theme.html?theme=${themeName.toUpperCase()}`;
     })
 })
+
