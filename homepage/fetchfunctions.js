@@ -95,7 +95,7 @@ async function login_or_register(event) {
 function load_loggedOnPage() {
   const favourite_button = document.createElement("button");
   favourite_button.id = "favourite_button";
-  favourite_button.textContent = "Favourites";
+  favourite_button.textContent = "FAVORITES";
   document.querySelector("nav").appendChild(favourite_button);
 
   if (login_home.textContent === "LOG IN") {
