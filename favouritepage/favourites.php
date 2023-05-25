@@ -97,6 +97,6 @@ if ($request_method == "GET") {
         }
     }
     sendJSON($userDrinkNames);
-}
+};
 
 ?>

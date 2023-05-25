@@ -7,7 +7,7 @@ const home_button = document.getElementById("home_button");
 function refresh_page() {
   if (window.localStorage.getItem("username") !== null) {
     load_loggedOnPage();
-    login_home.textContent = "Log out";
+    login_home.textContent = "LOG OUT";
   }
 };
 
@@ -23,7 +23,7 @@ async function login_or_register(event) {
   const firstname_field = document.querySelector("#first_name");
   const lastname_field = document.querySelector("#last_name");
 
-  if (login_register_button.textContent === "Login") {
+  if (login_register_button.textContent === "LOG IN") {
     try {
       let response = await fetch("../popupbox/index.php", {
         method: "POST",

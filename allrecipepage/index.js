@@ -11,14 +11,6 @@ function redirectToTheme(theme) {
     window.location.href = `../themepage/theme.html?theme=${encodedTheme}`;
 }
 
-
-
-// see_all_button.addEventListener("click", relocateToAllRecipes);
-
-// function load_allrecipes_page(event) {
-
-// }
-
 document.addEventListener("DOMContentLoaded", () => {
 
     async function send_to_favorites(event) {
@@ -63,5 +55,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 );
-
-// fetch("localhost:1234/recipe.php?drinkname=localStorage")
