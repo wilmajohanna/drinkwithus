@@ -1,7 +1,5 @@
 "use strict";
 
-
-
 async function renderRecipePage() {
 
     const sentDrink = new URLSearchParams(window.location.search).get("drink");
@@ -38,6 +36,5 @@ async function renderRecipePage() {
     });
 
 }
-
 
 renderRecipePage();

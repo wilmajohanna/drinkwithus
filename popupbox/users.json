@@ -43,6 +43,10 @@
         "password": "ss",
         "first_name": "ss",
         "last_name": "ss",
-        "fav_drinks": []
+        "fav_drinks": [
+            10,
+            1,
+            4
+        ]
     }
 ]

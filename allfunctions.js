@@ -1,6 +1,8 @@
 "use strict";
 
-login_register_button.addEventListener("click", login_or_register);
+if (login_register_button !== undefined) {
+    login_register_button.addEventListener("click", login_or_register);
+}
 
 function loading_alert(alert) {
 

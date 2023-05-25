@@ -1,6 +1,14 @@
 <?php
 ini_set("dislpay_errors", 1);
 
+function sendJSON($message, $statuscode = 200)
+{
+    header("Content-Type: application/json");
+    http_response_code($statuscode);
+    echo json_encode($message);
+    exit();
+}
+
 $sentTheme = $_GET["theme"];
 $drinksData = file_get_contents("../recipepage/drinksData.json");
 $themes = json_decode($drinksData, true);
