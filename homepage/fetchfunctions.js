@@ -14,7 +14,7 @@ function refresh_page() {
 console.log(window.localStorage);
 
 async function login_or_register(event) {
-  console.log("hej");
+  console.log("Welcome");
   const log_user_field = document.querySelector("#log_user");
   const log_pass_field = document.querySelector("#log_pass");
 
@@ -23,7 +23,7 @@ async function login_or_register(event) {
   const firstname_field = document.querySelector("#first_name");
   const lastname_field = document.querySelector("#last_name");
 
-  if (login_register_button.textContent === "LOG IN") {
+  if (login_register_button.textContent === "Login") {
     try {
       let response = await fetch("../popupbox/index.php", {
         method: "POST",
@@ -35,7 +35,7 @@ async function login_or_register(event) {
       });
 
 
-      loading_alert();
+      /* loading_alert(); */
 
 
       if (response.status === 200) {
@@ -44,6 +44,7 @@ async function login_or_register(event) {
         remove_loading_alert();
         load_loggedOnPage();
         favourite_button.addEventListener("click", relocateToFavourites);
+        loading_alert("Login Success. Welcome!")
 
 
         document.getElementById("cover").remove();
@@ -57,7 +58,7 @@ async function login_or_register(event) {
       }
 
       if (response.status === 404) {
-        alert("hej wilma");
+        alert("Error");
       }
     } catch (error) {
       console.log(error);
