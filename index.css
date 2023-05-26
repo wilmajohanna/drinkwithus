@@ -22,7 +22,7 @@ header {
 
 #logo {
   display: flex;
-  background-image: url(./images/logo1.jpg);
+  background-image: url(./images/logo.jpg);
   background-repeat: no-repeat;
   justify-content: flex-start;
   height: 15vh;
