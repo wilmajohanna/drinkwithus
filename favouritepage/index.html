@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="#" />
-  <link rel="stylesheet" href="/index.css">
-  <link rel="stylesheet" href="/favouritepage/favorites.css" />
-  <link rel="stylesheet" href="/popupbox/loginregister.css">
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="../favouritepage/favorites.css" />
+  <link rel="stylesheet" href="../popupbox/loginregister.css">
 
   <title>Drink with us</title>
 </head>
@@ -53,10 +53,16 @@
   </div>
 
 
-  <script src="/popupbox/loginregister.js"></script>
-  <script src="/homepage/fetchfunctions.js"></script>
-  <script src="../favouritepage/favourites.js"></script>
-  <script src="../allfunctions.js"></script>
+  <script src="../../drink_with_us/popupbox/loginregister.js"></script>
+  <script src="../../drink_with_us/homepage/fetchfunctions.js"></script>
+  <script src="../../drink_with_us/favouritepage/favourites.js"></script>
+  <script src="../../drink_with_us/allfunctions.js"></script>
+  <script>
+    document.querySelector("#home_button").addEventListener("click", () => {
+      window.location.replace("../../drink_with_us/index.html")
+
+    })
+  </script>
 
 </body>
 

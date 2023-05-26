@@ -14,6 +14,7 @@ $incomingUser = json_decode(file_get_contents("php://input"), true);
 
 
 if ($_SERVER["REQUEST_METHOD"] == "DELETE") {
+    sendJSON(["test" =>"test"]);
     foreach ($all_users as $userIndex => $user) {
         $username = $user["username"];
         if ($username == $incomingUser["username"]) {

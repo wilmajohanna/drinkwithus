@@ -2,13 +2,14 @@
 
 function redirectToRecipe(drinkName) {
     const encodedDrinkName = encodeURIComponent(drinkName);
-    window.location.href = `../recipepage/recipe.html?drink=${encodedDrinkName}`;
+    console.log("test");
+    window.location.href = `../drink_with_us/recipepage/recipe.html?drink=${encodedDrinkName}`;
 }
 
 
 function redirectToTheme(theme) {
     const encodedTheme = encodeURIComponent(theme);
-    window.location.href = `../themepage/theme.html?theme=${encodedTheme}`;
+    window.location.href = `../drink_with_us/themepage/theme.html?theme=${encodedTheme}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            await fetch("./favouritepage/favourites.php", {
+            await fetch("../favouritepage/favourites.php", {
                 method: "PATCH",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(data_to_send)
