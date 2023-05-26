@@ -36,7 +36,7 @@ nav {
   background-color: #f4efec;
 }
 
-nav > button {
+nav>button {
   color: #f4efec;
   background-color: #353535;
   font-size: 20px;
@@ -46,30 +46,34 @@ nav > button {
   margin-left: 10px;
 }
 
-#section {
-  background-color: #ccbaa7;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-}
-
-footer > p {
+footer>p {
   text-align: center;
   font-size: 25px;
   margin: 0;
 }
 
-#container {
+/* #container {
   background-color: #ccbaa7;
   min-height: 30vh;
   width: 95vw;
-  margin: auto;
-  margin-top: 50px;
+  margin:
+    margin-top: 50px;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: repeat(2, 1fr); */
+} */
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0 10vh 0 10vh;
+  gap: 1.5vw;
+  justify-content: center;
 }
+
+.drink-container {}
+
 
 footer {
   background-image: url(../images/cocktails.webp);
