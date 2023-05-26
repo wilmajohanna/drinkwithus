@@ -26,43 +26,6 @@ header {
   padding: 2vh;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2vh;
-  font-size: 2vh;
-  margin: 2vw;
-  background-color: #f4efec;
-}
-
-nav>button {
-  color: #f4efec;
-  background-color: #353535;
-  font-size: 20px;
-  border-radius: 40px;
-  padding: 1vh;
-  width: 130px;
-  margin-left: 10px;
-}
-
-footer>p {
-  text-align: center;
-  font-size: 25px;
-  margin: 0;
-}
-
-/* #container {
-  background-color: #ccbaa7;
-  min-height: 30vh;
-  width: 95vw;
-  margin:
-    margin-top: 50px;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-} */
-
 #container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -72,16 +35,20 @@ footer>p {
   justify-content: center;
 }
 
-.drink-container {}
+h2 {
+  text-align: center;
+  font-size: 7vh;
+  margin: 0;
+}
 
+.drink-container {
+  font-size: 30px;
+  margin: 3vh 0 3vh 0;
 
-footer {
-  background-image: url(../images/cocktails.webp);
-  background-repeat: no-repeat;
-  height: 3vh;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  margin-top: 30px;
+}
+
+.drink-container>p {
+  margin-top: 0;
 }
 
 #favourite_button {
@@ -94,6 +61,8 @@ footer {
 }
 
 img {
-  height: 150px;
-  width: 150px;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
 }
