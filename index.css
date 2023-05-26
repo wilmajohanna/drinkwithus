@@ -89,7 +89,6 @@ nav>button {
 #images {
   display: flex;
   position: relative;
-
 }
 
 .show_hover {
@@ -121,4 +120,21 @@ nav>button {
 
 .hover_recipe:hover {
   opacity: 0;
+}
+
+footer {
+  background-image: url(../images/cocktails.webp);
+  background-repeat: no-repeat;
+
+  height: 15vh;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+
+  display: flex;
+}
+
+footer>p{
+  font-size: 10px;
+  text-align: left;
 }
