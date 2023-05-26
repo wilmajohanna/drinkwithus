@@ -77,7 +77,7 @@ async function login_or_register(event) {
         console.log("Register Fail");
       } else {
         console.log("Register Success");
-        alert("Register Success")
+        alert("Register Success");
       }
       reg_user_field.value = "";
       reg_pass_field.value = "";
@@ -98,16 +98,17 @@ function load_loggedOnPage() {
   if (login_home.textContent === "LOG IN") {
     login_home.textContent = "LOG OUT";
   }
-}
+};
 
 async function fetchThemeRecipe(request) {
   let response = await fetch(request);
   let resource = response.json();
   return resource;
-}
+};
 
 
 async function delete_account() {
+
   const userToDelete = {
     username: localStorage.getItem("username")
   }
@@ -116,13 +117,13 @@ async function delete_account() {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userToDelete)
-  });
+  })
 
   if (response.ok) {
     const resource = await response.json();
-    alert("Account delete success");
     console.log(resource);
+    alert(userToDelete("has been deleted"));
   }
 }
 
-document.getElementById("delete_p").addEventListener("click", delete_account, refresh_page);
+document.getElementById("delete_p").addEventListener("click", delete_account);

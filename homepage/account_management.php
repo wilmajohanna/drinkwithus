@@ -21,6 +21,5 @@ if ($_SERVER["REQUEST_METHOD"] == "DELETE") {
             file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
         }
     }
-
 }
 ?>

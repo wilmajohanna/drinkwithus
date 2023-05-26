@@ -18,52 +18,10 @@
         "last_name": "w"
     },
     {
-        "username": "at",
-        "password": "at",
-        "first_name": "at",
-        "last_name": "at",
-        "fav_drinks": [
-            7,
-            7,
-            4,
-            3,
-            3,
-            3,
-            3,
-            3,
-            3,
-            3,
-            3,
-            3,
-            3
-        ]
-    },
-    {
-        "username": "",
-        "password": "",
-        "first_name": "",
-        "last_name": "",
-        "fav_drinks": []
-    },
-    {
         "username": "besh",
         "password": "besh",
         "first_name": "besh",
         "last_name": "besh",
-        "fav_drinks": []
-    },
-    {
-        "username": "ss",
-        "password": "ss",
-        "first_name": "ss",
-        "last_name": "ss",
-        "fav_drinks": []
-    },
-    {
-        "username": "h",
-        "password": "h",
-        "first_name": "h",
-        "last_name": "h",
         "fav_drinks": []
     }
 ]
