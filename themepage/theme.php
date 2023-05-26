@@ -9,10 +9,6 @@ function sendJSON($message, $statuscode = 200)
     exit();
 }
 
-if (!file_exists("drinksData.json")){
-    $message = ["error" => "Internal Server Error: Ett internt fel uppstod på servern."];
-    sendJSON($message, 500);
-}
 
 $sentTheme = $_GET["theme"];
 $drinksData = file_get_contents("../recipepage/drinksData.json");
