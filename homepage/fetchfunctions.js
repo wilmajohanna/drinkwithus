@@ -23,7 +23,7 @@ async function login_or_register(event) {
   const firstname_field = document.querySelector("#first_name");
   const lastname_field = document.querySelector("#last_name");
 
-  if (login_register_button.textContent === "Login") {
+  if (login_register_button.textContent === "LOG IN") {
     try {
       let response = await fetch("../popupbox/index.php", {
         method: "POST",
@@ -44,7 +44,7 @@ async function login_or_register(event) {
 
         document.getElementById("cover").remove();
         document.querySelectorAll(".hearts").forEach(heart => {
-          if (login_home.textContent === "Log in") {
+          if (login_home.textContent === "LOG IN") {
             heart.style.visibility = "hidden";
           } else {
             heart.style.visibility = "visible";
