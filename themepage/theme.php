@@ -9,6 +9,7 @@ function sendJSON($message, $statuscode = 200)
     exit();
 }
 
+
 $sentTheme = $_GET["theme"];
 $drinksData = file_get_contents("../recipepage/drinksData.json");
 $themes = json_decode($drinksData, true);

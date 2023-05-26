@@ -57,5 +57,12 @@
             4,
             3
         ]
+    },
+    {
+        "username": "besh",
+        "password": "besh",
+        "first_name": "besh",
+        "last_name": "besh",
+        "fav_drinks": []
     }
 ]
