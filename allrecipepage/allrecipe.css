@@ -1,16 +1,9 @@
 #inspo {
     display: flex;
-    height: 15vh;
     justify-content: center;
     align-items: center;
 }
 
-h1 {
-    text-align: center;
-    font-size: 80px;
-    margin: 0;
-    padding-top: 20px;
-}
 
 #all_recipes {
     display: grid;
@@ -21,8 +14,11 @@ h1 {
     justify-content: center;
 }
 
+#inspo>h1 {
+    margin: var(--storlek);
+}
+
+
 p {
-    font-size: 40px;
-    margin: 10px 0 10px 0;
-    text-align: center;
+    font-size: calc(1.3 * var(--storlek))
 }
