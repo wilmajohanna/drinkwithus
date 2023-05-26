@@ -46,23 +46,24 @@
         "fav_drinks": []
     },
     {
-        "username": "ss",
-        "password": "ss",
-        "first_name": "ss",
-        "last_name": "ss",
-        "fav_drinks": [
-            2,
-            8,
-            7,
-            4,
-            3
-        ]
-    },
-    {
         "username": "besh",
         "password": "besh",
         "first_name": "besh",
         "last_name": "besh",
+        "fav_drinks": []
+    },
+    {
+        "username": "ss",
+        "password": "ss",
+        "first_name": "ss",
+        "last_name": "ss",
+        "fav_drinks": []
+    },
+    {
+        "username": "h",
+        "password": "h",
+        "first_name": "h",
+        "last_name": "h",
         "fav_drinks": []
     }
 ]

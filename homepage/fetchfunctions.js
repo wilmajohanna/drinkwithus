@@ -77,6 +77,7 @@ async function login_or_register(event) {
         console.log("Register Fail");
       } else {
         console.log("Register Success");
+        alert("Register Success")
       }
       reg_user_field.value = "";
       reg_pass_field.value = "";
@@ -119,8 +120,9 @@ async function delete_account() {
 
   if (response.ok) {
     const resource = await response.json();
+    alert("Account delete success");
     console.log(resource);
   }
 }
 
-document.getElementById("delete_p").addEventListener("click", delete_account);
+document.getElementById("delete_p").addEventListener("click", delete_account, refresh_page);

@@ -157,4 +157,15 @@ footer>h2 {
   font-weight: normal;
   padding: 0;
   margin-top: 28px;
+  width: 13vw;
+  margin-left: 45vw;
+  
+  border-radius: 40px;
+  background-color: rgba(53, 53, 53, 0.301);
+  color: rgba(244, 239, 236, 0.876);
+  text-align: center;
+}
+
+footer>h2:hover {
+  user-select: none;
 }
