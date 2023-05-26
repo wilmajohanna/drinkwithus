@@ -34,17 +34,12 @@ async function login_or_register(event) {
         }),
       });
 
-
-      /* loading_alert(); */
-
-
       if (response.status === 200) {
         let data = await response.json();
         window.localStorage.setItem("username", data.username);
-        remove_loading_alert();
         load_loggedOnPage();
         favourite_button.addEventListener("click", relocateToFavourites);
-        loading_alert("Login Success. Welcome!")
+        alert("Welcome!")
 
 
         document.getElementById("cover").remove();
@@ -112,7 +107,6 @@ async function fetchThemeRecipe(request) {
 
 
 async function delete_account() {
-
   const userToDelete = {
     username: localStorage.getItem("username")
   }
