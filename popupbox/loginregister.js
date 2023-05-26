@@ -13,7 +13,7 @@ function register_or_login_box(event) {
         cover_background.querySelector("#login").style.visibility = "visible";
         cover_background.querySelectorAll("#login > *").forEach(item => item.style.visibility = "visible");
 
-        document.getElementById("login_or_register_button").textContent = "Login";
+        document.getElementById("login_or_register_button").textContent = "LOG IN";
         document.getElementById("register_link").textContent = "No account? Register";
         cover_background.querySelectorAll("*").forEach(dom => dom.style.visibility = "visible");
         document.getElementById("reg_pass").style.visibility = "hidden";
@@ -81,14 +81,14 @@ function css_switch(event) {
         register_box.style.visibility = "hidden";
         login_box.style.visibility = "visible";
         register_link.textContent = "No account? Register";
-        login_or_register_button.textContent = "Login";
+        login_or_register_button.textContent = "LOG IN";
         document.querySelectorAll(".registration").forEach(reg_input => reg_input.style.visibility = "hidden");
         document.querySelectorAll(".logination").forEach(log_input => log_input.style.visibility = "visible");
     } else {
         login_box.style.visibility = "hidden";
         register_box.style.visibility = "visible";
         register_link.textContent = "Already have an account? Login";
-        login_or_register_button.textContent = "Register";
+        login_or_register_button.textContent = "REGISTER";
         document.querySelectorAll(".logination").forEach(reg_input => reg_input.style.visibility = "hidden");
         document.querySelectorAll(".registration").forEach(log_input => log_input.style.visibility = "visible");
     }
