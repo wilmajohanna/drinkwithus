@@ -142,8 +142,14 @@ p {
 }
 
 footer {
-  height: 3vh;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  background-color: rgba(223, 217, 213, 0.891);
+  height: 8vh;
   margin-top: 30px;
+}
+
+footer>h2 {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 0;
+  margin-top: 28px;
 }

@@ -97,6 +97,13 @@ if ($request_method == "GET") {
         }
     }
     sendJSON($userDrinkNames);
-};
+
+    } else {
+    $errorMessage = ["error" => "User not found or has no favorite drinks."];
+    sendJSON($errorMessage, 404);
+    };
+
+
+
 
 ?>
