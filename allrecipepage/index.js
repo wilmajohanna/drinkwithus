@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (heartsSpan.classList.contains('liked')) {
             heartsSpan.style.color = 'red'; // Set heart color to red
+            alert("Added to favorites");
         } else {
             heartsSpan.style.color = ''; // Remove inline color style to revert to original color
         }
@@ -49,9 +50,4 @@ document.addEventListener("DOMContentLoaded", () => {
     like_buttons.forEach((like_button) =>
         like_button.addEventListener("click", send_to_favorites)
     );
-
-
-}
-
-
-);
+});

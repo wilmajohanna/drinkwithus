@@ -1,6 +1,8 @@
 "use strict";
 
 let current_username = localStorage.getItem("username");
+const indexP = document.getElementById("index_p");
+
 if (current_username !== null) {
   display_FavoriteDrinks();
 }
@@ -32,8 +34,7 @@ async function display_FavoriteDrinks() {
         drinkContainer.appendChild(drinkName);
         container.appendChild(drinkContainer);
 
-        const indexP = document.getElementById("index_p");
-        indexP.style.visibility = "visible";
+        indexP.style.visibility = "hidden";
 
         drinkContainer.addEventListener("click", (event) => {
           const drinkName = event.target.parentElement.querySelector("p").textContent
@@ -41,8 +42,7 @@ async function display_FavoriteDrinks() {
         });
       });
     } else {
-      const indexP = document.getElementById("index_p");
-      indexP.style.display = "none";
+      indexP.style.visibility = "visible";
     }
   } catch (error) {
     console.log("An error occurred:", error);
