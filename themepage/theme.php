@@ -11,6 +11,13 @@ function sendJSON($message, $statuscode = 200)
 
 
 $sentTheme = $_GET["theme"];
+
+if(empty($sentTheme)){
+    $errorMessage = ["error" => "Bad Request!"];
+    sendJSON($errorMessage, 400);
+}
+
+
 $drinksData = file_get_contents("../recipepage/drinksData.json");
 $themes = json_decode($drinksData, true);
 
@@ -28,7 +35,12 @@ foreach ($themes as $drinks) {
     }
 }
 
-echo json_encode($themeData);
-exit();
+if(empty($themeData)){
+    $errorMessage = ["error" => "No data found for the specified theme"];
+    sendJSON($errorMessage, 404);
+}
+
+sendJSON($themeData);
+
 
 ?>

@@ -29,6 +29,11 @@ foreach ($drinks as $drink) {
     }
 }
 
+if (empty($name)) {
+    $errorMessage = ["error" => "Drink not found"];
+    sendJSON($errorMessage, 404);
+}
+
 
 // Skapa en array med relevant data
 $response = array(
