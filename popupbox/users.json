@@ -39,14 +39,17 @@
         ]
     },
     {
+        "username": "",
+        "password": "",
+        "first_name": "",
+        "last_name": "",
+        "fav_drinks": []
+    },
+    {
         "username": "ss",
         "password": "ss",
         "first_name": "ss",
         "last_name": "ss",
-        "fav_drinks": [
-            10,
-            1,
-            4
-        ]
+        "fav_drinks": []
     }
 ]
