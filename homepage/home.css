@@ -74,22 +74,13 @@ p {
 
 }
 
-#images>p {
+#flip_card>div>p {
     display: flex;
     justify-content: center;
     grid-row: 2;
     margin-top: 10px;
     font-size: 50px;
     font-weight: bold;
-}
-
-footer {
-    background-image: url(../images/cocktails.webp);
-    background-repeat: no-repeat;
-    height: 3vh;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    margin-top: 30px;
 }
 
 #delete_p {
