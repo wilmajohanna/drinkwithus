@@ -37,6 +37,7 @@
 
 #cocktails>h1 {
     display: flex;
+    font-size: 80px;
     margin: 5vh 5vh 3vh 5vh;
     justify-content: flex-start;
 }
