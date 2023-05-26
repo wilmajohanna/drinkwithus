@@ -71,10 +71,6 @@ nav>button {
 
 /* ALERT BOX */
 #white_box {
-  height: 666px;
-  width: 337px;
-  padding: 3vh;
-  background-color: rgba(255, 255, 255, 0.701);
 
   display: flex;
   position: absolute;
@@ -84,8 +80,6 @@ nav>button {
 }
 
 #white_box>.loading_text {
-  height: 70px;
-  width: 300px;
   text-align: center;
   font-size: 20px;
   background-color: lightcoral;
@@ -141,4 +135,41 @@ nav>button {
   color: #876e61;
   height: 5vh;
   font-size: 20px;
+}
+
+#images {
+  display: flex;
+  position: relative;
+
+}
+
+.show_hover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  position: absolute;
+  opacity: 1;
+  transition-duration: 1s;
+  transition-property: opacity;
+}
+
+.show_hover:hover {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hover_recipe {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+}
+
+.hover_recipe:hover {
+  opacity: 0;
 }

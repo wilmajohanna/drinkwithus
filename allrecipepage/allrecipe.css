@@ -21,15 +21,6 @@ h1 {
     justify-content: center;
 }
 
-.show_hover {
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    height: 80%;
-    width: 95%;
-    border-radius: 30px;
-}
-
 p {
     font-size: 40px;
     margin: 10px 0 10px 0;
