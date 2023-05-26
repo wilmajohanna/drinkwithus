@@ -9,6 +9,7 @@ body {
   align-items: center;
   height: 70vh;
   gap: 3vw;
+  margin-bottom: 10vh;
 }
 
 .theme_container {
