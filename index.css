@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Alumni Sans";
-  src: url(../drink_with_us/fonts/AlumniSans-VariableFont_wght.ttf);
-
+  src: url(../fonts/AlumniSans-VariableFont_wght.ttf);
 }
 
 * {
@@ -155,7 +154,7 @@ footer>h2 {
   margin-top: 28px;
   width: 13vw;
   margin-left: 45vw;
-
+  
   border-radius: 40px;
   background-color: rgba(53, 53, 53, 0.301);
   color: rgba(244, 239, 236, 0.876);
