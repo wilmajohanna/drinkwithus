@@ -75,6 +75,7 @@ async function login_or_register(event) {
 
       if (!response.ok) {
         console.log("Register Fail");
+        alert("Failed to register, try again!");
       } else {
         console.log("Register Success");
         alert("Register Success");
@@ -94,6 +95,7 @@ function load_loggedOnPage() {
   favourite_button.id = "favourite_button";
   favourite_button.textContent = "FAVORITES";
   document.querySelector("nav").appendChild(favourite_button);
+  document.getElementById("delete_p").style.visibility = "visible";
 
   if (login_home.textContent === "LOG IN") {
     login_home.textContent = "LOG OUT";
@@ -122,8 +124,9 @@ async function delete_account() {
   if (response.ok) {
     const resource = await response.json();
     console.log(resource);
-    alert(userToDelete("has been deleted"));
   }
+
+  alert("your account has been deleted");
 }
 
 document.getElementById("delete_p").addEventListener("click", delete_account);
