@@ -6,27 +6,27 @@ async function renderThemePage() {
     const paramValue = getParam.get("theme");
 
     // Läs in JSON-filen med temadrinks
-    const themeRequest = new Request(`./theme.php?theme=${paramValue}`);
+    const themeRequest = new Request(`../themepage/theme.php?theme=${paramValue})`);
     let data = await fetchThemeRecipe(themeRequest);
     console.log(data);
 
     // Hitta rätt drink baserat på temat
     const selectedTheme = data;
 
-    const themeWrapper = document.getElementById('theme_wrapper');
+    const themeWrapper = document.getElementById("theme_wrapper");
 
     selectedTheme.forEach(drink => {
         // Skapa elementen för temadrinken
         console.log(drink.image);
-        const themeContainer = document.createElement('div');
-        themeContainer.className = 'theme_container';
+        const themeContainer = document.createElement("div");
+        themeContainer.className = "theme_container";
 
         const img = document.createElement("img");
         img.setAttribute("src", drink.image);
         themeContainer.appendChild(img);
 
-        const themeText = document.createElement('p');
-        themeText.className = 'theme_name';
+        const themeText = document.createElement("p");
+        themeText.className = "theme_name";
         themeText.textContent = drink.name;
         themeContainer.appendChild(themeText);
 
@@ -38,6 +38,7 @@ async function renderThemePage() {
 
         themeWrapper.appendChild(themeContainer);
     });
-}
+};
+
 
 renderThemePage();

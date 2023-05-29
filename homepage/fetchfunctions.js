@@ -113,7 +113,7 @@ async function delete_account() {
     username: localStorage.getItem("username")
   }
 
-  const response = await fetch("./homepage/account_management.php", {
+  const response = await fetch("../homepage/account_management.php", {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userToDelete)
@@ -126,4 +126,4 @@ async function delete_account() {
   }
 }
 
-document.getElementById("delete_p").addEventListener("click", delete_account);
+/* document.getElementById("delete_p").addEventListener("click", delete_account); */

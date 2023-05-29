@@ -6,12 +6,6 @@
         "last_name": "tanner"
     },
     {
-        "username": "wilmajohanna",
-        "password": "wilmajohanna",
-        "first_name": "Wilma",
-        "last_name": "Gotthardsson"
-    },
-    {
         "username": "w",
         "password": "w",
         "first_name": "w",
@@ -23,5 +17,29 @@
         "first_name": "besh",
         "last_name": "besh",
         "fav_drinks": []
+    },
+    {
+        "username": "wilmajohanna",
+        "password": "wilmajohanna",
+        "first_name": "",
+        "last_name": "",
+        "fav_drinks": []
+    },
+    {
+        "username": "wjg",
+        "password": "wjg",
+        "first_name": "wjg",
+        "last_name": "wjg",
+        "fav_drinks": []
+    },
+    {
+        "username": "v",
+        "password": "v",
+        "first_name": "v",
+        "last_name": "v",
+        "fav_drinks": [
+            3,
+            4
+        ]
     }
 ]

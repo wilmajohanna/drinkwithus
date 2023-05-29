@@ -38,7 +38,7 @@ if (isset($requestData["firstname"], $requestData["username"], $requestData["pas
 
 
 // Login
-$usersJSON = file_get_contents("users.json");
+$usersJSON = file_get_contents("./users.json");
 $all_users = json_decode($usersJSON, true);
 
 $requestJSON = file_get_contents("php://input");

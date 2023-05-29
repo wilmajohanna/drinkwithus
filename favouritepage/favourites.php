@@ -103,7 +103,4 @@ if ($request_method == "GET") {
     sendJSON($errorMessage, 404);
     };
 
-
-
-
 ?>
