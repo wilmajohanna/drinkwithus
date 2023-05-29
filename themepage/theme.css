@@ -30,3 +30,28 @@ img {
   object-fit: cover;
   border-radius: 30px;
 }
+
+#summer:hover {
+  cursor: pointer;
+  color: #353535;
+}
+
+#bubbly:hover {
+  cursor: pointer;
+  color: #353535;
+}
+
+#lessismore:hover {
+  cursor: pointer;
+  color: #353535;
+}
+
+#retro:hover {
+  cursor: pointer;
+  color: #353535;
+}
+
+#punches:hover {
+  cursor: pointer;
+  color: #353535;
+}

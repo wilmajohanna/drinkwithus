@@ -50,6 +50,16 @@ nav>button {
   color: #f4efec;
 }
 
+#home_button:hover {
+  cursor: pointer;
+  background-color: #3535357a;
+}
+
+#login_home:hover {
+  cursor: pointer;
+  background-color: #3535357a;
+}
+
 h2 {
   text-align: center;
   font-size: 7vh;
@@ -110,6 +120,7 @@ p {
   position: relative;
 }
 
+
 .show_hover {
   background-size: cover;
   background-repeat: no-repeat;
@@ -154,13 +165,18 @@ footer>h2 {
   margin-top: 28px;
   width: 13vw;
   margin-left: 45vw;
-  
+
   border-radius: 40px;
   background-color: rgba(53, 53, 53, 0.301);
   color: rgba(244, 239, 236, 0.876);
   text-align: center;
 }
 
-footer>h2:hover {
-  user-select: none;
+#delete_p {
+  visibility: hidden;
+}
+
+#delete_p:hover {
+  cursor: pointer;
+  color: #353535;
 }
