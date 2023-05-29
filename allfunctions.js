@@ -5,7 +5,7 @@ if (login_register_button !== undefined) {
 };
 
 function relocateToFavourites() {
-    window.location.replace("../recipepage");
+    window.location.replace("../favouritepage");
 };
 
 function relocateToAllRecipes() {

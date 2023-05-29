@@ -8,7 +8,7 @@ function redirectToRecipe(drinkName) {
 
 function redirectToTheme(theme) {
     const encodedTheme = encodeURIComponent(theme);
-    window.location.href = "../themepage/theme.html?theme=${encodedTheme}";
+    window.location.href = `../themepage/theme.html?theme=${encodedTheme}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {

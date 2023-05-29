@@ -9,8 +9,10 @@ if (current_username !== null) {
 
 async function display_FavoriteDrinks() {
   try {
-    const response = await fetch(`./favourites.php?username=${current_username}`);
+    const response = await fetch(`../favouritepage/favourites.php?username=${current_username}`);
     const data = await response.json();
+
+
 
     console.log(current_username);
 
@@ -19,18 +21,18 @@ async function display_FavoriteDrinks() {
       // Display the favorite drinks
       const container = document.getElementById("container");
       container.innerHTML = ""; // Clear the container
-      
+
       data.forEach((drink) => {
         const drinkContainer = document.createElement("div");
         drinkContainer.classList.add("drink-container");
-        
+
         const drinkName = document.createElement("p");
         drinkName.textContent = drink.name;
-        
+
         const image = document.createElement("img");
         image.setAttribute("src", drink.image);
         drinkContainer.appendChild(image);
-        
+
         drinkContainer.appendChild(drinkName);
         container.appendChild(drinkContainer);
 
@@ -48,3 +50,4 @@ async function display_FavoriteDrinks() {
     console.log("An error occurred:", error);
   }
 }
+

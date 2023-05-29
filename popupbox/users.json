@@ -16,7 +16,9 @@
         "password": "besh",
         "first_name": "besh",
         "last_name": "besh",
-        "fav_drinks": []
+        "fav_drinks": [
+            1
+        ]
     },
     {
         "username": "wilmajohanna",
