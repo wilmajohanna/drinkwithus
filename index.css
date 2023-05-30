@@ -172,9 +172,9 @@ footer>h2 {
   text-align: center;
 }
 
-#delete_p {
+/* #delete_p {
   visibility: hidden;
-}
+} */
 
 #delete_p:hover {
   cursor: pointer;

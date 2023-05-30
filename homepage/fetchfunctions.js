@@ -119,11 +119,12 @@ async function delete_account() {
     body: JSON.stringify(userToDelete)
   })
 
+  console.log(response)
   if (response.ok) {
     const resource = await response.json();
     console.log(resource);
-    alert(userToDelete("has been deleted"));
+    alert(userToDelete.username + " has been deleted");
   }
-}
+};
 
-/* document.getElementById("delete_p").addEventListener("click", delete_account); */
+document.getElementById("delete_p").addEventListener("click", delete_account);
