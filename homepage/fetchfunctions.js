@@ -64,7 +64,7 @@ async function login_or_register(event) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          username: document.querySelector("#reg_user").value,
+          username: document.querySelector("#reg_user").value, //hämtar värdena
           password: document.querySelector("#reg_pass").value,
           firstname: document.querySelector("#first_name").value,
           lastname: document.querySelector("#last_name").value,
@@ -79,7 +79,7 @@ async function login_or_register(event) {
         console.log("Register Success");
         alert("Register Success");
       }
-      reg_user_field.value = "";
+      reg_user_field.value = ""; 
       reg_pass_field.value = "";
       firstname_field.value = "";
       lastname_field.value = "";
