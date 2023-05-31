@@ -167,19 +167,12 @@ footer {
 
 }
 
-#delete_button {
+#delete_account_button {
   padding: 1vh;
   width: 130px;
   margin: 40px;
-  background-color: rgba(223, 217, 213, 0.891);
-
-  border-radius: 40px;
-  padding: 1vh;
-  font-size: var(--storlek);
-  color: #f4efec;
-  visibility: hidden;
 }
 
-#delete_button:hover {
+#delete_account_butto:hover {
   background-color: #3535357a;
 }

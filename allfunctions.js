@@ -33,6 +33,13 @@ function home_button_page() {
     window.location.replace("../index.html")
 };
 
+function settings_toggle() {
+
+    const toggle = document.createElement("button");
+    dom.classList.toggle("settings_option");
+
+}
+
 home_button.addEventListener("click", home_button_page);
 
 document.querySelectorAll(".fp_images").forEach(container => {
