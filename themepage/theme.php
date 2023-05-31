@@ -9,7 +9,6 @@ function sendJSON($message, $statuscode = 200)
     exit();
 }
 
-
 $sentTheme = $_GET["theme"];
 
 if(empty($sentTheme)){

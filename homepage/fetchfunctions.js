@@ -95,6 +95,12 @@ function load_loggedOnPage() {
   favourite_button.textContent = "FAVORITES";
   document.querySelector("nav").appendChild(favourite_button);
 
+  const delete_account_button = document.createElement("button");
+  delete_account_button.id = "delete_account_button";
+  delete_account_button.textContent = "DELETE ACCOUNT";
+  document.querySelector("footer").appendChild(delete_account_button);
+
+
   if (login_home.textContent === "LOG IN") {
     login_home.textContent = "LOG OUT";
   }
@@ -126,4 +132,4 @@ async function delete_account() {
   }
 }
 
-/* document.getElementById("delete_p").addEventListener("click", delete_account); */
+document.getElementById("delete_account_button").addEventListener("click", delete_account);

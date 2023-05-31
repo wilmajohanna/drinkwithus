@@ -13,7 +13,6 @@ async function display_FavoriteDrinks() {
     const data = await response.json();
 
 
-
     console.log(current_username);
 
     // Check if the response contains favorite drinks
