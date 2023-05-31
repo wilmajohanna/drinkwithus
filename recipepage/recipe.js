@@ -2,9 +2,9 @@
 
 async function renderRecipePage() {
 
-    const sentDrink = new URLSearchParams(window.location.search).get("drink"); //skapar ett nytt URL objekt
-    let recipeRequest = new Request(`../recipepage/recipe.php?drink=${sentDrink}`); //Tar drinknamnet som parameter och skapar baserat på URL
-    let data = await fetchThemeRecipe(recipeRequest); 
+    const sentDrink = new URLSearchParams(window.location.search).get("drink");
+    let recipeRequest = new Request(`../recipepage/recipe.php?drink=${sentDrink}`);
+    let data = await fetchThemeRecipe(recipeRequest);
     let name = data.name;
     let image = data.image;
     let ingredients = data.ingredients;

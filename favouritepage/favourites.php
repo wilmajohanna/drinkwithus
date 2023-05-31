@@ -29,14 +29,12 @@ if ($request_method == "PATCH") {
     $message = [];
     $favorite_drinks = [];
 
-    //Kollar om drinkes namn matchar inkommande drinknamnet -> om match tilldelas drink ID till $incomingDrinkID
     foreach ($all_drinks as $drink) {
         if ($drink["name"] == $incomingDrinkName) {
             $incomingDrinkID = $drink["id"];
         }
     }
 
-    //Kontrollerar om användarnamnet matchar inkommande användarnamnet
     foreach ($all_users as $index => $user) {
 
         if ($incomingUsername == $user["username"]) {
@@ -65,8 +63,8 @@ if ($request_method == "PATCH") {
             // Om drickan inte redan finns med i arrayen.
             // Då lägger den till drickan i användarens array.
             $fav_drinks[] = $incomingDrinkID;
-            $user["fav_drinks"] = $fav_drinks; //Favoritdryckens array uppdateras med den nya drycken.
-            $all_users[$index] = $user; //Den uppdaterade användardatan återställs
+            $user["fav_drinks"] = $fav_drinks;
+            $all_users[$index] = $user;
             file_put_contents("../popupbox/users.json", json_encode($all_users, JSON_PRETTY_PRINT));
             $message = ["Notification" => "Success"];
             sendJSON($message);
@@ -85,7 +83,6 @@ if ($request_method == "GET") {
     $userDrinkNames = [];
     $userDrinkIDs;
 
-    //Kontrollerar om användarnamnet matchar det skickade användarnamnet. Om match -> tilldelas drink ID till $userDrinksIDs
     foreach ($all_users as $index => $user) {
         if ($user["username"] == $sentUsername) {
             $userDrinkIDs = $user["fav_drinks"];

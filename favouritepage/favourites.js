@@ -46,7 +46,7 @@ async function display_FavoriteDrinks() {
       indexP.style.visibility = "visible";
     }
   } catch (error) {
-    /* console.log("An error occurred"); */
+    console.log("An error occurred");
   }
 }
 

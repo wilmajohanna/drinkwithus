@@ -14,14 +14,14 @@ $usersJSON = file_get_contents("./users.json");
 $all_users = json_decode($usersJSON, true);
 
 $requestJSON = file_get_contents("php://input");
-$requestData = json_decode($requestJSON, true); //associativ array
+$requestData = json_decode($requestJSON, true);
 
-if (isset($requestData["firstname"], $requestData["username"], $requestData["password"], $requestData["lastname"])) { //kontrollerar om dessa finns i begäran
+if (isset($requestData["firstname"], $requestData["username"], $requestData["password"], $requestData["lastname"])) {
 
     if ($all_users != null) { // om all_users inte är tom
         foreach ($all_users as $user) { // om användaren finns
 
-            $username = $user["username"]; 
+            $username = $user["username"];
 
             if ($username == $requestData["username"]) {
                 $errorMessage = ["message" => "Conflict (The username is already taken)"];
@@ -33,7 +33,7 @@ if (isset($requestData["firstname"], $requestData["username"], $requestData["pas
     $message = ["username" => $requestData["username"], "password" => $requestData["password"], "first_name" => $requestData["firstname"], "last_name" => $requestData["lastname"], "fav_drinks" => []];
     $all_users[] = $message;
     file_put_contents("users.json", json_encode($all_users, JSON_PRETTY_PRINT));
-    sendJSON($message, 200); //skapar användare
+    sendJSON($message, 200);
 }
 
 
