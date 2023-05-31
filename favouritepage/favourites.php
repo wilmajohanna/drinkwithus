@@ -59,7 +59,6 @@ if ($request_method == "PATCH") {
                 }
             }
 
-
             // Om drickan inte redan finns med i arrayen.
             // Då lägger den till drickan i användarens array.
             $fav_drinks[] = $incomingDrinkID;

@@ -98,7 +98,6 @@ register_link.addEventListener("click", css_switch); // Ändrar från Login till
 
 
 if (login_home.textContent === "LOG IN") {
-
     document.querySelectorAll(".hearts").forEach(heart => { heart.style.visibility = "hidden" });
 } else {
     document.querySelectorAll(".hearts").forEach(heart => { heart.style.visibility = "visible" });
