@@ -64,7 +64,7 @@ async function login_or_register(event) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          username: document.querySelector("#reg_user").value,
+          username: document.querySelector("#reg_user").value, //hämtar värdena
           password: document.querySelector("#reg_pass").value,
           firstname: document.querySelector("#first_name").value,
           lastname: document.querySelector("#last_name").value,
@@ -125,11 +125,12 @@ async function delete_account() {
     body: JSON.stringify(userToDelete)
   })
 
+  console.log(response)
   if (response.ok) {
     const resource = await response.json();
     console.log(resource);
-    alert(userToDelete("has been deleted"));
+    alert(userToDelete.username + " has been deleted");
   }
-}
+};
 
 document.getElementById("delete_account_button").addEventListener("click", delete_account);
