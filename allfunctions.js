@@ -5,14 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
         login_register_button.addEventListener("click", login_or_register);
     };
 
-    /*     function relocateToFavourites() {
-            window.location.replace("../favouritepage");
-        };
-    
-        function relocateToAllRecipes() {
-            window.location.replace("../allrecipepage");
-        };
-     */
     function home_button_page() {
         window.location.replace("../index.html")
     };
@@ -36,5 +28,4 @@ function relocateToFavourites() {
 function relocateToAllRecipes() {
     window.location.replace("../allrecipepage");
 };
-
 
