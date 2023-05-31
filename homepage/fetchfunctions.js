@@ -94,11 +94,7 @@ function load_loggedOnPage() {
   favourite_button.id = "favourite_button";
   favourite_button.textContent = "FAVORITES";
   document.querySelector("nav").appendChild(favourite_button);
-
-  const delete_account_button = document.createElement("button");
-  delete_account_button.id = "delete_account_button";
-  delete_account_button.textContent = "DELETE ACCOUNT";
-  document.querySelector("footer").appendChild(delete_account_button);
+  document.getElementById("delete_button").style.visibility = "visible";
 
 
   if (login_home.textContent === "LOG IN") {
@@ -123,14 +119,23 @@ async function delete_account() {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userToDelete)
-  })
+  });
 
   console.log(response)
-  if (response.ok) {
-    const resource = await response.json();
-    console.log(resource);
-    alert(userToDelete.username + " has been deleted");
-  }
+
+  const resource = await response.json();
+  console.log(resource);
+
+
+  if (!response.ok) {
+    console.log("Unable to remove account");
+
+  } else {
+
+    console.log("Your account has been delete");
+    alert("Account deleted");
+    refresh_page();
+  };
 };
 
-document.getElementById("delete_account_button").addEventListener("click", delete_account);
+document.getElementById("delete_button").addEventListener("click", delete_account);
