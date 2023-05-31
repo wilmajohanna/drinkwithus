@@ -29,13 +29,6 @@ function relocateToAllRecipes() {
     window.location.replace("../allrecipepage");
 };
 
-
-if (document.getElementById("see_all") !== null) {
-    const see_all_button = document.getElementById("see_all");
-    see_all_button.addEventListener("click", relocateToAllRecipes);
-}
-
-
 function home_button_page() {
     window.location.replace("../index.html")
 };
