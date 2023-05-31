@@ -1,7 +1,7 @@
 "use strict";
-
 const login_register_button = document.getElementById("login_or_register_button");
 const login_home = document.getElementById("login_home");
+refresh_page();
 const home_button = document.getElementById("home_button");
 
 function refresh_page() {
@@ -11,7 +11,6 @@ function refresh_page() {
   }
 };
 
-refresh_page();
 console.log(window.localStorage);
 
 async function login_or_register(event) {
@@ -94,6 +93,7 @@ function load_loggedOnPage() {
   const favourite_button = document.createElement("button");
   favourite_button.id = "favourite_button";
   favourite_button.textContent = "FAVORITES";
+  document.querySelector("nav").appendChild(favourite_button);
   document.getElementById("delete_button").style.visibility = "visible";
 
 
@@ -133,7 +133,7 @@ async function delete_account() {
   } else {
 
     console.log("Your account has been delete");
-    /*     alert("Account deleted"); */
+    alert("Account deleted");
     refresh_page();
   };
 };
