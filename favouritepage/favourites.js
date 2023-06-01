@@ -12,9 +12,6 @@ async function display_FavoriteDrinks() {
     const response = await fetch(`../favouritepage/favourites.php?username=${current_username}`);
     const data = await response.json();
 
-
-    console.log(current_username);
-
     // Check if the response contains favorite drinks
     if (Array.isArray(data) && data.length > 0) {
       // Display the favorite drinks
@@ -38,7 +35,7 @@ async function display_FavoriteDrinks() {
         indexP.style.visibility = "hidden";
 
         drinkContainer.addEventListener("click", (event) => {
-          const drinkName = event.target.parentElement.querySelector("p").textContent
+          const drinkName = event.target.parentElement.querySelector("p").textContent;
           window.location = `../recipepage/recipe.html?drink=${drinkName}`;
         });
       });
@@ -46,7 +43,6 @@ async function display_FavoriteDrinks() {
       indexP.style.visibility = "visible";
     }
   } catch (error) {
-    console.log("An error occurred");
+    console.error("An error occurred:", error);
   }
 }
-

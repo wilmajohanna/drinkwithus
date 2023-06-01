@@ -11,6 +11,12 @@ function redirectToTheme(theme) {
     window.location.href = `../themepage/theme.html?theme=${encodedTheme}`;
 }
 
+function relocateToFavourites() {
+    // Function logic goes here
+    // This function will be called when the favourite_button is clicked
+    window.location.replace("../favouritepage");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
     async function send_to_favorites(event) {

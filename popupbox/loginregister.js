@@ -105,9 +105,16 @@ if (login_home.textContent === "LOG IN") {
     favourite_button.addEventListener("click", relocateToFavourites);
 
 }
+
+function relocateToFavourites() {
+    // Function logic goes here
+    // This function will be called when the favourite_button is clicked
+    window.location.replace("../favouritepage");
+}
 /*----------------------------*/
 
 if (document.getElementById("see_all") !== null) {
     const see_all_button = document.getElementById("see_all");
     see_all_button.addEventListener("click", relocateToAllRecipes);
 }
+

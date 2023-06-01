@@ -17,7 +17,11 @@
         "first_name": "besh",
         "last_name": "besh",
         "fav_drinks": [
-            1
+            1,
+            4,
+            5,
+            2,
+            6
         ]
     },
     {
