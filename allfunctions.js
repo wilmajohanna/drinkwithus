@@ -5,15 +5,15 @@ if (login_register_button !== undefined) {
 };
 
 function relocateToFavourites() {
-    window.location.href = "../favouritepage";
+    window.location.href = "./favouritepage";
 };
 
 function relocateToAllRecipes() {
-    window.location.href = "../allrecipepage";
+    window.location.href = "./allrecipepage";
 };
 
 function home_button_page() {
-    window.location.href = "../index.html";
+    window.location.href = "./index.html";
 };
 
 home_button.addEventListener("click", home_button_page);
