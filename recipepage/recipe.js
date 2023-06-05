@@ -3,7 +3,7 @@
 async function renderRecipePage() {
 
     const sentDrink = new URLSearchParams(window.location.search).get("drink");
-    let recipeRequest = new Request(`./recipepage/recipe.php?drink=${sentDrink}`);
+    let recipeRequest = new Request(`../recipepage/recipe.php?drink=${sentDrink}`);
     let data = await fetchThemeRecipe(recipeRequest);
     let name = data.name;
     let image = data.image;
