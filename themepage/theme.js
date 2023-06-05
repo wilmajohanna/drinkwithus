@@ -6,7 +6,7 @@ async function renderThemePage() {
     const paramValue = getParam.get("theme");
 
     // Läs in JSON-filen med temadrinks
-    const themeRequest = new Request(`../themepage/theme.php?theme=${paramValue}`);
+    const themeRequest = new Request(`./themepage/theme.php?theme=${paramValue}`);
     let data = await fetchThemeRecipe(themeRequest);
     console.log(data);
 
