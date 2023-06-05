@@ -5,11 +5,11 @@ if (login_register_button !== undefined) {
 };
 
 function relocateToFavourites() {
-    window.location.replace("../favouritepage");
+    window.location.replace("./favouritepage");
 };
 
 function relocateToAllRecipes() {
-    window.location.replace("../allrecipepage");
+    window.location.replace("./allrecipepage");
 };
 
 function home_button_page() {
@@ -30,6 +30,6 @@ document.querySelectorAll(".fp_images").forEach(container => {
         console.log(event);
         const themeName = event.explicitOriginalTarget.id;
 
-        window.location = `../themepage/theme.html?theme=${themeName.toUpperCase()}`;
+        window.location = `./themepage/theme.html?theme=${themeName.toUpperCase()}`;
     })
 });
