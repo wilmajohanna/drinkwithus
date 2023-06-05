@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+#home_button {
+    visibility: hidden;
+}
+
 #pics {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
