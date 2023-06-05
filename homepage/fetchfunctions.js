@@ -133,4 +133,4 @@ async function delete_account() {
   }
 }
 
-/* document.getElementById("delete_account_button").addEventListener("click", delete_account); */
+document.getElementById("delete_account_button").addEventListener("click", delete_account);
