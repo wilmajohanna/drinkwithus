@@ -37,7 +37,7 @@
 #cocktails {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    padding: 2vh;
     align-items: center;
 }
 
@@ -54,7 +54,7 @@
     height: 8vh;
     width: 162px;
     font-size: 20px;
-    margin-left: 300px;
+    margin-left: 35vw;
 }
 
 #flip_card {
