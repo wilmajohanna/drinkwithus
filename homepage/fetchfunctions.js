@@ -25,7 +25,7 @@ async function login_or_register(event) {
 
   if (login_register_button.textContent === "LOG IN") {
     try {
-      let response = await fetch("./popupbox/index.php", {
+      let response = await fetch("../popupbox/index.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -60,7 +60,7 @@ async function login_or_register(event) {
     }
   } else {
     try {
-      let response = await fetch("./popupbox/index.php", {
+      let response = await fetch("../popupbox/index.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -119,7 +119,7 @@ async function delete_account() {
     username: localStorage.getItem("username")
   }
 
-  const response = await fetch("./homepage/account_management.php", {
+  const response = await fetch("account_management.php", {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userToDelete)
@@ -132,5 +132,3 @@ async function delete_account() {
 
   }
 }
-
-document.getElementById("delete_account_button").addEventListener("click", delete_account);
