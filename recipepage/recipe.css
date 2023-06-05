@@ -9,6 +9,7 @@ body {
   gap: 1.5vw;
   margin: 0 10vh 0 10vh;
   justify-content: center;
+  padding-bottom: 4vh;
 }
 
 #instructions>h1,
