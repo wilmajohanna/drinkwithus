@@ -40,6 +40,7 @@ function popup_box(event) { // Gör så att popup_boxen dyker upp
 };
 
 function login_or_logout(event) {
+
     if (cover_background.style.visibility === "hidden") {
         cover_background.style.visibility = "visible";
     }
@@ -54,7 +55,7 @@ function login_or_logout(event) {
         favourite_button.remove();
         location.reload();
     }
-}
+};
 
 login_home.addEventListener("click", login_or_logout); // click event till login_home
 

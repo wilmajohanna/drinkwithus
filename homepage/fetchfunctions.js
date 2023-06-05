@@ -14,7 +14,7 @@ function refresh_page() {
 console.log(window.localStorage);
 
 async function login_or_register(event) {
-  console.log("Welcome");
+
   const log_user_field = document.querySelector("#log_user");
   const log_pass_field = document.querySelector("#log_pass");
 
@@ -25,7 +25,7 @@ async function login_or_register(event) {
 
   if (login_register_button.textContent === "LOG IN") {
     try {
-      let response = await fetch("../popupbox/index.php", {
+      let response = await fetch("./popupbox/index.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -60,7 +60,7 @@ async function login_or_register(event) {
     }
   } else {
     try {
-      let response = await fetch("../popupbox/index.php", {
+      let response = await fetch("./popupbox/index.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
