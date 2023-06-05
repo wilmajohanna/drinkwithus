@@ -128,7 +128,8 @@ async function delete_account() {
   if (response.ok) {
     const resource = await response.json();
     console.log(resource);
-    alert(userToDelete("has been deleted"));
+    alert("User has been deleted");
+    
   }
 }
 
