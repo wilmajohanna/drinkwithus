@@ -38,11 +38,7 @@ if (isset($requestData["firstname"], $requestData["username"], $requestData["pas
 
 
 // Login
-$usersJSON = file_get_contents("users.json");
-$all_users = json_decode($usersJSON, true);
 
-$requestJSON = file_get_contents("php://input");
-$requestData = json_decode($requestJSON, true);
 
 if (isset($requestData["username"], $requestData["password"])) {
     if (isset($requestData["username"], $requestData["password"])) {
@@ -59,7 +55,13 @@ if (isset($requestData["username"], $requestData["password"])) {
 
         $errorMessage = ["message" => "User Not Found"];
         sendJSON($errorMessage, 404);
+    } else {
+        sendJSON("crap 2", 400);    
     }
+} else {
+    sendJSON("crap", 400);
 }
+
+
 
 ?>

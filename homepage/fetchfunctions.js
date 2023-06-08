@@ -1,13 +1,16 @@
 "use strict";
+
+let url_prefix = "";
+
+if (window.location.hostname != "localhost") {
+  url_prefix = "https://students.maumt.se/WDU22/wilma/drinkwithus";
+}
+
 const login_register_button = document.getElementById("login_or_register_button");
 const login_home = document.getElementById("login_home");
 refresh_page();
 const home_button = document.getElementById("home_button");
 
-let url = "";
-if (window.location.hostname != "localhost") {
-  url = "http://students.maumt.se/WDU22/wilma/drinkwithus";
-}
 
 function refresh_page() {
   if (window.localStorage.getItem("username") !== null) {
@@ -30,7 +33,7 @@ async function login_or_register(event) {
 
   if (login_register_button.textContent === "LOG IN") {
     try {
-      let response = await fetch(`${url}/popupbox/index.php`, {
+      let response = await fetch(`${url_prefix}/popupbox/index.php`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -65,7 +68,7 @@ async function login_or_register(event) {
     }
   } else {
     try {
-      let response = await fetch(`${url}/popupbox/index.php`, {
+      let response = await fetch(`${url_prefix}/popupbox/index.php`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -124,7 +127,7 @@ async function delete_account() {
     username: localStorage.getItem("username")
   }
 
-  const response = await fetch("account_management.php", {
+  const response = await fetch(`${url_prefix}/popupbox/"account_management.php`, {
     method: "DELETE",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userToDelete)

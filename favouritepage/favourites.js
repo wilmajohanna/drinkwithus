@@ -9,7 +9,7 @@ if (current_username !== null) {
 
 async function display_FavoriteDrinks() {
   try {
-    const response = await fetch(`favourites.php?username=${current_username}`);
+    const response = await fetch(`${url_prefix}/favouritepage/favourites.php?username=${current_username}`);
     const data = await response.json();
 
     // Check if the response contains favorite drinks
@@ -36,7 +36,7 @@ async function display_FavoriteDrinks() {
 
         drinkContainer.addEventListener("click", (event) => {
           const drinkName = event.target.parentElement.querySelector("p").textContent;
-          window.location = `../recipepage/recipe.html?drink=${drinkName}`;
+          window.location = `./recipe.html?drink=${drinkName}`;
         });
       });
     } else {

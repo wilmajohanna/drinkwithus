@@ -19,6 +19,8 @@ function redirectToTheme(theme) {
 document.addEventListener("DOMContentLoaded", () => {
 
     async function send_to_favorites(event) {
+
+
         const heartsSpan = event.currentTarget;
         heartsSpan.classList.toggle('liked');
 
@@ -38,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            await fetch("../favouritepage/favourites.php", {
+            await fetch(`${url_prefix}/favouritepage/favourites.php`, {
                 method: "PATCH",
-                headers: { "content-type": "application/json" },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data_to_send)
 
             })
