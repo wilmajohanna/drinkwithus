@@ -4,6 +4,11 @@ const login_home = document.getElementById("login_home");
 refresh_page();
 const home_button = document.getElementById("home_button");
 
+let url = "";
+if (window.location.hostname != "localhost") {
+  url = "http://students.maumt.se/WDU22/wilma/drinkwithus";
+}
+
 function refresh_page() {
   if (window.localStorage.getItem("username") !== null) {
     load_loggedOnPage();
@@ -25,7 +30,7 @@ async function login_or_register(event) {
 
   if (login_register_button.textContent === "LOG IN") {
     try {
-      let response = await fetch("./popupbox/index.php", {
+      let response = await fetch(`${url}/popupbox/index.php`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -60,7 +65,7 @@ async function login_or_register(event) {
     }
   } else {
     try {
-      let response = await fetch("./popupbox/index.php", {
+      let response = await fetch(`${url}/popupbox/index.php`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
