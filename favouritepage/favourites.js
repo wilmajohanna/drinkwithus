@@ -9,7 +9,7 @@ if (current_username !== null) {
 
 async function display_FavoriteDrinks() {
   try {
-    const response = await fetch(`favourites.php?username=${current_username}`);
+    const response = await fetch(`/favouritepage/favourites.php?username=${current_username}`);
     const data = await response.json();
 
     // Check if the response contains favorite drinks

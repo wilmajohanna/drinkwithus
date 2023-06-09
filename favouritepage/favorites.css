@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "Alumni Sans";
-  src: url(/fonts/AlumniSans-VariableFont_wght.ttf);
-}
-
-* {
-  font-family: Alumni Sans;
-}
-
 body {
   margin: 0;
   background-color: #f4efec;
