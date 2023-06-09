@@ -1,16 +1,14 @@
 "use strict";
-
-let url_prefix = "";
-
-if (window.location.hostname != "localhost") {
-  url_prefix = "https://students.maumt.se/WDU22/wilma/drinkwithus";
-}
-
 const login_register_button = document.getElementById("login_or_register_button");
 const login_home = document.getElementById("login_home");
 refresh_page();
 const home_button = document.getElementById("home_button");
 
+let url_prefix = "";
+
+if (window.location.hostname != "localhost") {
+  url_prefix = "http://students.maumt.se/WDU22/wilma/drinkwithus";
+}
 
 function refresh_page() {
   if (window.localStorage.getItem("username") !== null) {
@@ -123,15 +121,15 @@ async function fetchThemeRecipe(request) {
 
 async function delete_account() {
 
-  const userToDelete = {
+  let userToDelete = {
     username: localStorage.getItem("username")
   }
 
-  const response = await fetch(`${url_prefix}/popupbox/"account_management.php`, {
+  let response = await fetch(`${url_prefix}account_management.php`, {
     method: "DELETE",
-    headers: { "Content-type": "application/json" },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(userToDelete)
-  })
+  });
 
   if (response.ok) {
     const resource = await response.json();
