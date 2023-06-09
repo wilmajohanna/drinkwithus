@@ -27,12 +27,12 @@ foreach ($drinks as $drink) {
         $description = $drink["description"];
         break;
     }
-}
+};
 
 if (empty($name)) {
     $errorMessage = ["error" => "Drink not found"];
     sendJSON($errorMessage, 404);
-}
+};
 
 
 // Skapa en array med relevant data
