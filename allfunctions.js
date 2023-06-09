@@ -4,9 +4,9 @@ if (login_register_button !== undefined) {
     login_register_button.addEventListener("click", login_or_register);
 };
 
-/* function relocateToFavourites() {
-    window.location.href = "../favouritepage";
-}; */
+function relocateToFavourites() {
+    window.location.href = "./favouritepage";
+};
 
 function relocateToAllRecipes() {
     window.location.href = "./allrecipepage";
@@ -15,7 +15,6 @@ function relocateToAllRecipes() {
 function home_button_page() {
     window.location.href = "../index.html";
 };
-
 
 function settings_toggle() {
 

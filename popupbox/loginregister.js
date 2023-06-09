@@ -95,10 +95,6 @@ function css_switch(event) {
     }
 };
 
-function relocateToFavourites() {
-    window.location.href = "../favouritepage";
-};
-
 register_link.addEventListener("click", css_switch); // Ändrar från Login till registrering
 
 
@@ -108,10 +104,16 @@ if (login_home.textContent === "LOG IN") {
 } else {
     document.querySelectorAll(".hearts").forEach(heart => { heart.style.visibility = "visible" });
     favourite_button.addEventListener("click", relocateToFavourites);
+
 }
+
+function relocateToFavourites() {
+    window.location.href = "../favouritepage";
+}
+
 
 if (document.getElementById("see_all") !== null) {
     const see_all_button = document.getElementById("see_all");
     see_all_button.addEventListener("click", relocateToAllRecipes);
-}
+};
 
