@@ -11,14 +11,12 @@ async function renderRecipePage() {
     let instructions = data.instructions;
     let description = data.description;
 
-    console.log(data);
-
     document.getElementById("drink_name").textContent = name;
     document.getElementById("desc").innerHTML = description;
     document.getElementById("drink_bg_image").setAttribute("src", image);
 
     const ingredientList = document.getElementById("ingredient");
-    console.log(ingredients); // Log the ingredients array
+
     ingredients.forEach(ingredient => {
         const listItem = document.createElement("li");
         listItem.textContent = ingredient;

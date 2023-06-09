@@ -35,33 +35,33 @@ if (isset($requestData["firstname"], $requestData["username"], $requestData["pas
     $all_users[] = $message;
     file_put_contents("users.json", json_encode($all_users, JSON_PRETTY_PRINT));
     sendJSON($message, 200);
-}
+};
+
 
 // Login
-$usersJSON = file_get_contents("users.json");
-$all_users = json_decode($usersJSON, true);
 
-if (isset($requestData["username"], $requestData["password"])) {
     if (isset($requestData["username"], $requestData["password"])) {
-        foreach ($all_users as $user) {
+        if (isset($requestData["username"], $requestData["password"])) {
+             foreach ($all_users as $user) {
 
-            $username = $user["username"];
-            $password = $user["password"];
+                $username = $user["username"];
+                $password = $user["password"];
 
-            if ($username == $requestData["username"] and $password == $requestData["password"]) {
+                if ($username == $requestData["username"] and $password == $requestData["password"]) {
                 $message = ["username" => $user["username"], "password" => $user["password"]];
                 sendJSON($message);
+                };
             };
+
+            $errorMessage = ["message" => "User Not Found"];
+            sendJSON($errorMessage, 404);
+
+        } else {
+       
+            sendJSON("crap 2", 400);    
         };
-
-        $errorMessage = ["message" => "User Not Found"];
-        sendJSON($errorMessage, 404);
-
     } else {
-        sendJSON("crap 2", 400);    
-    };
-} else {
-    sendJSON("crap", 400);
+        sendJSON("crap", 400);
 };
 
 ?>

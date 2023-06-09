@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             heartsSpan.style.color = ''; // Remove inline color style to revert to original color
         }
-        // LocalStorage är ett objekt. Här hämtar vi namnet på användarens namn som vi har sparat i nyckeln "username".
+
         let current_username = localStorage.getItem("username");
         let drink_name = event.target.parentElement.querySelector("p").textContent;
 
@@ -38,11 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            await fetch(`${url_prefix}/favouritepage/favourites.php`, {
+            await fetch(`../favouritepage/favourites.php`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data_to_send)
-
             })
 
         } catch (error) {

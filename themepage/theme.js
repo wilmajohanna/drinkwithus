@@ -8,7 +8,6 @@ async function renderThemePage() {
     // Läs in JSON-filen med temadrinks
     const themeRequest = new Request(`theme.php?theme=${paramValue}`);
     let data = await fetchThemeRecipe(themeRequest);
-    console.log(data);
 
     // Hitta rätt drink baserat på temat
     const selectedTheme = data;
@@ -17,7 +16,6 @@ async function renderThemePage() {
 
     selectedTheme.forEach(drink => {
         // Skapa elementen för temadrinken
-        console.log(drink.image);
         const themeContainer = document.createElement("div");
         themeContainer.className = "theme_container";
 
@@ -32,7 +30,6 @@ async function renderThemePage() {
 
         themeContainer.addEventListener("click", () => {
             const drinkName = themeText.textContent;
-            console.log(drinkName);
             window.location = `../recipepage/recipe.html?drink=${drinkName}`;
         });
 

@@ -1,16 +1,18 @@
 "use strict";
 
 let current_username = localStorage.getItem("username");
-const indexP = document.getElementById("index_p");
+let indexP = document.getElementById("index_p");
 
 if (current_username !== null) {
   display_FavoriteDrinks();
-}
+};
 
 async function display_FavoriteDrinks() {
+
   try {
-    const response = await fetch(`/favouritepage/favourites.php?username=${current_username}`);
-    const data = await response.json();
+    let response = await fetch(`./favourites.php?username=${current_username}`);
+    let data = await response.json();
+
 
     // Check if the response contains favorite drinks
     if (Array.isArray(data) && data.length > 0) {
@@ -42,7 +44,8 @@ async function display_FavoriteDrinks() {
     } else {
       indexP.style.visibility = "visible";
     }
+
   } catch (error) {
     console.error("An error occurred:", error);
   }
-}
+};

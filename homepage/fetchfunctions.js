@@ -1,14 +1,16 @@
 "use strict";
-const login_register_button = document.getElementById("login_or_register_button");
-const login_home = document.getElementById("login_home");
-refresh_page();
-const home_button = document.getElementById("home_button");
 
 let url_prefix = "";
 
 if (window.location.hostname != "localhost") {
   url_prefix = "http://students.maumt.se/WDU22/wilma/drinkwithus";
 }
+
+const login_register_button = document.getElementById("login_or_register_button");
+const login_home = document.getElementById("login_home");
+refresh_page();
+const home_button = document.getElementById("home_button");
+
 
 function refresh_page() {
   if (window.localStorage.getItem("username") !== null) {
@@ -17,7 +19,6 @@ function refresh_page() {
   }
 };
 
-console.log(window.localStorage);
 
 async function login_or_register(event) {
 
@@ -61,9 +62,15 @@ async function login_or_register(event) {
       if (response.status === 404) {
         alert("Error");
       }
+
+      if (response.status === 409) {
+        alert("Wrong username or password");
+      }
+
     } catch (error) {
       console.log(error);
     }
+
   } else {
     try {
       let response = await fetch(`${url_prefix}/popupbox/index.php`, {
@@ -79,16 +86,23 @@ async function login_or_register(event) {
 
       let data = await response.json();
 
-      if (!response.ok) {
-        console.log("Register Fail");
-      } else {
-        console.log("Register Success");
+      if (response.status === 200) {
         alert("Register Success");
       }
+
+      if (response.status === 400) {
+        alert("There seems to be a Network Error, please try again");
+      }
+
+      if (response.status === 409) {
+        alert("Username is already taken");
+      }
+
       reg_user_field.value = "";
       reg_pass_field.value = "";
       firstname_field.value = "";
       lastname_field.value = "";
+
     } catch (error) {
       console.log("Error");
     }
@@ -105,6 +119,7 @@ function load_loggedOnPage() {
   delete_account_button.id = "delete_account_button";
   delete_account_button.textContent = "DELETE ACCOUNT";
   document.querySelector("footer").appendChild(delete_account_button);
+  delete_account_button.addEventListener("click", delete_account);
 
 
   if (login_home.textContent === "LOG IN") {
@@ -125,7 +140,7 @@ async function delete_account() {
     username: localStorage.getItem("username")
   }
 
-  let response = await fetch(`${url_prefix}account_management.php`, {
+  let response = await fetch(`${url_prefix}/homepage/account_management.php`, {
     method: "DELETE",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(userToDelete)
@@ -133,8 +148,14 @@ async function delete_account() {
 
   if (response.ok) {
     const resource = await response.json();
-    console.log(resource);
-    alert("User has been deleted");
 
+    localStorage.clear();
+    alert("User has been deleted");
+    location.reload();
   }
+
+}
+
+function relocateToFavourites() {
+  window.location.href = `${url_prefix}/favouritepage`;
 }
