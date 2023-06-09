@@ -19,8 +19,6 @@ function redirectToTheme(theme) {
 document.addEventListener("DOMContentLoaded", () => {
 
     async function send_to_favorites(event) {
-
-
         const heartsSpan = event.currentTarget;
         heartsSpan.classList.toggle('liked');
 
@@ -56,5 +54,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const like_buttons = document.querySelectorAll(".hearts");
     like_buttons.forEach((like_button) =>
         like_button.addEventListener("click", send_to_favorites)
-    );
+    )
 });
