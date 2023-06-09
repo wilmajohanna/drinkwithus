@@ -19,6 +19,7 @@ header {
 
 #container {
   display: grid;
+  height: 80vh;
   grid-template-columns: repeat(3, 1fr);
   margin: 0 10vh 0 10vh;
   gap: 1.5vw;

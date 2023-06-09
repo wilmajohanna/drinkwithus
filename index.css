@@ -161,14 +161,16 @@ p {
 footer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 7vh;
+  align-items: flex-end;
+  height: 15vh;
+  margin-top: 6vh;
   background-color: rgba(223, 217, 213, 0.891);
-
 }
 
 #delete_account_button {
-  width: 130px;
+  width: 125px;
+  margin-bottom: 2vh;
+  background-color: rgba(223, 217, 213, 0.891);
 }
 
 #delete_account_butto:hover {
